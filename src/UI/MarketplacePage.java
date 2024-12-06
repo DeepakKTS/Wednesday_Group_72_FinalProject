@@ -6,7 +6,7 @@ package UI;
 
 /**
  *
- * @author Evita Alice Paul
+ * @author deepakzedler
  */
 public class MarketplacePage extends javax.swing.JFrame {
 
