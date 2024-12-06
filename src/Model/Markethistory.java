@@ -48,7 +48,7 @@ public class Markethistory {
         list.add(mp);
     }
     
-           
+ /*method for MarketHistory*/          
     public void getMarketHistory()
     {
         try {
