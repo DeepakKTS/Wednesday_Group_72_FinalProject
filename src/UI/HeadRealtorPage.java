@@ -105,7 +105,7 @@ public class HeadRealtorPage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnaddbrokersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddbrokersActionPerformed
-        // TODO add your handling code here:
+      
         AddBroker addbroker = new AddBroker();
         SplitPane.setRightComponent(addbroker);
     }//GEN-LAST:event_btnaddbrokersActionPerformed
