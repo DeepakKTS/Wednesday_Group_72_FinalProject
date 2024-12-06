@@ -8,7 +8,7 @@ import java.sql.Blob;
 
 /**
  *
- * @author Evita Alice Paul
+ * @author deepakzedler
  */
 public class Apartmentlistings {
     int ID;
