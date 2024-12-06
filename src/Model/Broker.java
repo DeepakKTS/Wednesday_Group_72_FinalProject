@@ -16,6 +16,15 @@ public class Broker {
     String USERNAME;
     String PASSWORD;
     String management;
+    String email;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
     
 public void setLicenseno(int licenseno) {
         this.licenseno = licenseno;
