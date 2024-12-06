@@ -20,7 +20,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Pritika
+ * @author deepakzedler
  */
 public class DisplayBrokers extends javax.swing.JPanel {
 
