@@ -710,7 +710,7 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
         // TODO add your handling code here:
         // Handle booking an apartment tour
      // WORKING   
-        try {
+        /*try {
             Connection con =SQLconnection.dbconnector();
              Statement stmt=con.createStatement();
            String Query= "INSERT INTO ApartmentBooking (ApartmentName,ApartmentType,Price,LandlordName,ApartmentID) values ('"+txtaptname.getText()+"','"+txtapttype.getText()+"','"+txtprice.getText()+"','"+txtlandname.getText()+"','"+txtid.getText()+"')"; 
@@ -738,9 +738,26 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
 
                 frame.setDefaultCloseOperation(StudentDetailsPage.EXIT_ON_CLOSE);
                 frame.setResizable(false);
-          } 
+          } */
         //-------------------
-   
+        try {
+        Connection con = SQLconnection.dbconnector();
+        PreparedStatement stmt = con.prepareStatement(
+            "INSERT INTO ApartmentBooking (ApartmentName, ApartmentType, Price, LandlordName, ApartmentID) VALUES (?, ?, ?, ?, ?)"
+        );
+        stmt.setString(1, txtaptname.getText());
+        stmt.setString(2, txtapttype.getText());
+        stmt.setString(3, txtprice.getText());
+        stmt.setString(4, txtlandname.getText());
+        stmt.setInt(5, Integer.parseInt(txtid.getText()));
+        stmt.executeUpdate();
+        stmt.close();
+        con.close();
+        JOptionPane.showMessageDialog(this, "Booking Successful!");
+    } catch (SQLException ex) {
+        JOptionPane.showMessageDialog(this, "Error during booking: " + ex.getMessage());
+        ex.printStackTrace();
+    }
 
         
     }//GEN-LAST:event_btnbooktourActionPerformed
@@ -787,16 +804,17 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
 
     private void PopulateTable() {
     DefaultTableModel model = (DefaultTableModel) tblapartmentlistings.getModel();
-    model.setRowCount(0); // Clear table rows before populating
+    model.setRowCount(0); // Clear existing rows
 
     for (Apartmentlistings a : ad.getList()) {
-        Object[] row = new Object[6]; // Match the number of displayed columns
-        row[0] = a.getApartmenttype();
-        row[1] = a.getLandlordname();
-        row[2] = a.getPrice();
-        row[3] = a.getBrokerName();
-        row[4] = a.getApartmentname();
-        row[5] = a.getID();
+        Object[] row = {
+            a.getApartmenttype(),
+            a.getLandlordname(),
+            a.getPrice(),
+            a.getBrokerName(),
+            a.getApartmentname(),
+            a.getID()
+        };
         model.addRow(row);
     }
 }
