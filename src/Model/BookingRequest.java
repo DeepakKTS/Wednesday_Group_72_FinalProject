@@ -4,23 +4,20 @@
  */
 package Model;
 
-/**
- *
- * @author Sneghashree
- */
-public class Marketrequeststudent {
- private int id;
+public class BookingRequest {
+    private int id;
     private String name;
-    private String contactNumber;
+    private String contactNo;
     private String emailId;
 
-    public Marketrequeststudent(int id, String name, String contactNumber, String emailId) {
+    public BookingRequest(int id, String name, String contactNo, String emailId) {
         this.id = id;
         this.name = name;
-        this.contactNumber = contactNumber;
+        this.contactNo = contactNo;
         this.emailId = emailId;
     }
 
+    // Getters and setters
     public int getId() {
         return id;
     }
@@ -29,11 +26,12 @@ public class Marketrequeststudent {
         return name;
     }
 
-    public String getContactNumber() {
-        return contactNumber;
+    public String getContactNo() {
+        return contactNo;
     }
 
     public String getEmailId() {
         return emailId;
     }
 }
+

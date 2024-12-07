@@ -182,7 +182,7 @@ public class StudentView extends javax.swing.JFrame {
 
     private void btnreportissueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnreportissueActionPerformed
         // TODO add your handling code here:
-        ViewReportissue viewreportissue = new ViewReportissue();
+        ViewReportedissues viewreportissue = new ViewReportedissues();
         
         SplitPane.setRightComponent(viewreportissue);
     }//GEN-LAST:event_btnreportissueActionPerformed

@@ -4,72 +4,56 @@
  */
 package Model;
 
+import com.mysql.cj.xdevapi.Statement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.sql.Connection;
+import java.sql.ResultSet;
+
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  *
  * @author nsarv
  */
 public class Marketrequeststudenthistory {
-     private ArrayList<Marketrequeststudent>h;
-    
-    public Marketrequeststudenthistory(){
-        this.h=new ArrayList<Marketrequeststudent>();
-        
+     
+    private List<Marketrequeststudent> marketRequests;
+
+    public Marketrequeststudenthistory() {
+        marketRequests = new ArrayList<>();
+        fetchStudentDataFromDatabase();
     }
 
-    public ArrayList<Marketrequeststudent> getHistory() {
-        return h;
-    }
+    private void fetchStudentDataFromDatabase() {
+        try (Connection con = SQLconnection.dbconnector();
+             java.sql.Statement stmt = con.createStatement()) {
+            String query = "SELECT Name, ContactNo, Email FROM Student";
+            ResultSet rs = stmt.executeQuery(query);
 
-    public void setHistory(ArrayList<Marketrequeststudent> history) {
-        this.h = h;
-    }
-    public Marketrequeststudent addNewEmp(){
-        
-        Marketrequeststudent newMarketrequeststudent= new Marketrequeststudent();
-        h.add(newMarketrequeststudent);
-        return newMarketrequeststudent;
-    }
-    public void deletetblMarketrequeststudent(Marketrequeststudent rs){
-        h.remove(rs);
-    }
-    public void getMarketrequeststudentHistory()
-    {
-        try {
-            Connection con=SQLconnection.dbconnector();
-            
-            PreparedStatement stmt=con.prepareStatement("SELECT * FROM BookingRequest");
-          
-            ResultSet rs=stmt.executeQuery();
-           
-             while(rs.next())
-             {
-                 Marketrequeststudent s=new Marketrequeststudent();
-                
-                  s.setId(rs.getInt("ID"));
-                  s.setName(rs.getString("Name"));
-                  s.setContactNumber(rs.getString("Contactno"));
-                  
-                  s.setEmailId(rs.getString("EmailId"));
-             
-                  
-                 
-               
-                  h.add(s);
-             
-                  
-             }
-        } catch (SQLException ex) {
-            Logger.getLogger(Marketrequeststudenthistory.class.getName()).log(Level.SEVERE, null, ex);
+            while (rs.next()) {
+                String name = rs.getString("Name");
+                String contactNo = rs.getString("ContactNo");
+                String email = rs.getString("Email");
+
+                Marketrequeststudent student = new Marketrequeststudent(name, contactNo, email);
+                marketRequests.add(student);
+            }
+            rs.close();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-    
     }
-    
+
+    public List<Marketrequeststudent> getHistory() {
+        return marketRequests;
+    }
 }
