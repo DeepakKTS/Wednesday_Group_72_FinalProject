@@ -5,6 +5,7 @@
 package UI;
 
 import Model.AppointmentReq;
+import Model.EmailUtility;
 import Model.Requeststudent;
 import Model.SQLconnection;
 import Model.Studenthistory;
@@ -125,48 +126,29 @@ public class ViewHouseTourrequests extends javax.swing.JPanel {
 
     private void btnaccepttourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaccepttourActionPerformed
         // TODO add your handling code here:
-        int selectedRowIndex = tblviewstudent.getSelectedRow();
-         
+        // Check if a row is selected
+    int selectedRowIndex = tblviewstudent.getSelectedRow();
 
-        DefaultTableModel model=(DefaultTableModel) tblviewstudent.getModel();
-            String  ToEmail = tblviewstudent.getValueAt(selectedRowIndex, 3).toString();
-           String FromEmail = "aedproject123@gmail.com";//studyviral2@gmail.com
-        String FromEmailPassword = "wiiwhakaddhmcypq";//You email Password from you want to send email
-        String Subjects = "Appointment Accepted";
-        
-        Properties properties = new Properties();
-        properties.put("mail.smtp.auth","true");
-        properties.put("mail.smtp.starttls.enable","true");
-        properties.put("mail.smtp.host","smtp.gmail.com");
-        properties.put("mail.smtp.port","587");
-        properties.put("mail.smtp.starttls.required", "true");
-properties.put("mail.smtp.ssl.protocols", "TLSv1.2");
-properties.put("mail.debug", "true");
-        
-       
-           
-        
-       Session session = Session.getDefaultInstance(properties,new javax.mail.Authenticator() {
-            @Override
-            protected PasswordAuthentication getPasswordAuthentication(){
-                return new PasswordAuthentication(FromEmail, FromEmailPassword);
-            }
-     
-        });
-       try{
-            MimeMessage message = new MimeMessage(session);
-            message.setFrom(new InternetAddress(FromEmail));
-            message.addRecipient(Message.RecipientType.TO, new InternetAddress(ToEmail));
-            message.setSubject(Subjects);
-      
-            message.setText("Thank you for contacting us! We will contact you shortly.Your appointment has been successfully booked. This is an auto generated email");
-            Transport.send(message);
-            
-            JOptionPane.showMessageDialog(this, "Success");
-           
-              }catch(Exception ex){
-            JOptionPane.showMessageDialog(this,null);
-        }
+    if (selectedRowIndex < 0) {
+        JOptionPane.showMessageDialog(this, "Please select a row to accept the tour.");
+        return;
+    }
+
+    // Fetch data from the selected row
+    DefaultTableModel model = (DefaultTableModel) tblviewstudent.getModel();
+    String toEmail = model.getValueAt(selectedRowIndex, 3).toString(); // Email ID from the table
+    String subject = "Appointment Accepted";
+    String body = "Thank you for contacting us! We will contact you shortly. Your appointment has been successfully booked. This is an auto-generated email.";
+
+    try {
+        // Use the EmailUtility to send the email
+        EmailUtility.sendEmail(toEmail, subject, body);
+        JOptionPane.showMessageDialog(this, "Appointment accepted. Email sent successfully to: " + toEmail);
+
+    } catch (Exception ex) {
+        JOptionPane.showMessageDialog(this, "Error while sending the email: " + ex.getMessage());
+        ex.printStackTrace();
+    }
  
     
     }//GEN-LAST:event_btnaccepttourActionPerformed
