@@ -49,8 +49,9 @@ public class ApartmentlistingsDirectory {
     try {
         Connection con = SQLconnection.dbconnector();
         PreparedStatement stmt = con.prepareStatement(
-            "SELECT ApartmentType, LandlordName, Price, BrokerName, ApartmentName, ID FROM Apartments"
+    "SELECT ApartmentType, LandlordName, Price, BrokerName, ApartmentName, ID FROM Apartments"
         );
+
         ResultSet rs = stmt.executeQuery();
 
         while (rs.next()) {
