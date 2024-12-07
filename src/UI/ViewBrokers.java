@@ -34,8 +34,8 @@ public class ViewBrokers extends javax.swing.JPanel {
      * Creates new form ViewBrokers
      */
     BrokerDirectory bd = new BrokerDirectory();
-    ArrayList<Broker > blist;
-  DefaultTableModel model;
+    ArrayList<Broker> blist;
+    DefaultTableModel model;
   
     public ViewBrokers() {
         initComponents();
@@ -44,9 +44,8 @@ public class ViewBrokers extends javax.swing.JPanel {
         
 
         PopulateTable();
-        
-        
     }
+   
    
     /**
      * This method is called from within the constructor to initialize the form.
@@ -293,29 +292,22 @@ public class ViewBrokers extends javax.swing.JPanel {
         // TODO add your handling code here:
 
         
-        int selectedRowIndex = tblbrokers.getSelectedRow();
+       int selectedRowIndex = tblbrokers.getSelectedRow();
 
-        if(selectedRowIndex < 0){
-            JOptionPane.showMessageDialog(this,"Select a row to View");
+        if (selectedRowIndex < 0) {
+            JOptionPane.showMessageDialog(this, "Select a row to view details.");
             return;
         }
-        DefaultTableModel model=(DefaultTableModel) tblbrokers.getModel();
-        //Broker SelectedBroker = (Broker) model.getValueAt(selectedRowIndex, 5);
 
-        //txtlicenseno.setText(Integer.toString(SelectedBroker.getLicenseno()));
-        //txtname.setText(String.valueOf(SelectedBroker.getName()));
-        //txtcontactno.setText(String.valueOf(SelectedBroker.getContactno()));
-        //txtbrokerfee.setText(Integer.toString(SelectedBroker.getBrokerfee()));
-        //txtmanagement.setText(String.valueOf(SelectedBroker.getManagement()));
-        // txtemail.setText(String.valueOf(SelectedBroker.getEmail()));
-        txtlicenseno.setText(model.getValueAt(selectedRowIndex,0).toString());
+        DefaultTableModel model = (DefaultTableModel) tblbrokers.getModel();
+
+        // Populate text fields with the selected row's data
+        txtlicenseno.setText(model.getValueAt(selectedRowIndex, 0).toString());
         txtname.setText(model.getValueAt(selectedRowIndex, 1).toString());
         txtcontactno.setText(model.getValueAt(selectedRowIndex, 2).toString());
         txtbrokerfee.setText(model.getValueAt(selectedRowIndex, 3).toString());
         txtmanagement.setText(model.getValueAt(selectedRowIndex, 4).toString());
         txtemailid.setText(model.getValueAt(selectedRowIndex, 5).toString());
-        //txtemail.setText(model.getValueAt(selectedRowIndex, 5).toString());
-
     }//GEN-LAST:event_btnviewActionPerformed
 
     private void btnbookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbookActionPerformed
@@ -340,30 +332,33 @@ public class ViewBrokers extends javax.swing.JPanel {
     private void btnrefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnrefreshActionPerformed
         // TODO add your handling code here:
 
-        PopulateTable();
+        // Clear fields
         txtlicenseno.setText("");
         txtname.setText("");
         txtcontactno.setText("");
         txtbrokerfee.setText("");
         txtmanagement.setText("");
         txtemailid.setText("");
-        buttonGroup.clearSelection();
+
+        // Repopulate table
+        PopulateTable();
 
     }//GEN-LAST:event_btnrefreshActionPerformed
 
     private void btnsearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsearchActionPerformed
         // TODO add your handling code here:
-        String query = cmbbrokerfee.getSelectedItem().toString();
+       String query = cmbbrokerfee.getSelectedItem().toString();
 
         DefaultTableModel model = (DefaultTableModel) tblbrokers.getModel();
-        TableRowSorter<DefaultTableModel> trs =new TableRowSorter<>(model);
+        TableRowSorter<DefaultTableModel> trs = new TableRowSorter<>(model);
         tblbrokers.setRowSorter(trs);
 
-        if(query != "Select"){
+        if (!query.equals("Select")) {
             trs.setRowFilter(RowFilter.regexFilter(query));
-        }else  {
-            tblbrokers.setRowSorter(trs);
+        } else {
+            tblbrokers.setRowSorter(trs); // Reset sorting
         }
+    
     }//GEN-LAST:event_btnsearchActionPerformed
 
     private void cmbbrokerfeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbbrokerfeeActionPerformed
@@ -403,23 +398,32 @@ public class ViewBrokers extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
  private void PopulateTable()
     {
-      
-  
-        DefaultTableModel model=(DefaultTableModel) tblbrokers.getModel();
+        // Clear existing rows
+        DefaultTableModel model = (DefaultTableModel) tblbrokers.getModel();
         model.setRowCount(0);
-        for(Broker b: bd.getList())
-        {
-             Object[] row=new Object[7];
-             row[0]=b.getLicenseno();
-             row[1]=b.getName();
-             row[2]=b.getContactno();
-             row[3]=b.getBrokerfee();
-             row[4]=b.getManagement();
-             row[5]=b.getEmail();
-             row[6]=b;
-    
-             model.addRow(row);
-        }  
+
+        try {
+            Connection con = SQLconnection.dbconnector(); // Establish connection
+            PreparedStatement stmt = con.prepareStatement("SELECT * FROM Brokers"); // Query for fetching broker data
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                Object[] row = new Object[6]; // Match the column count in your table
+                row[0] = rs.getInt("LicenseNumber");
+                row[1] = rs.getString("Name");
+                row[2] = rs.getString("ContactNumber");
+                row[3] = rs.getInt("BrokerFee");
+                row[4] = rs.getString("Management");
+                row[5] = rs.getString("EmailID");
+
+                model.addRow(row); // Add row to table
+            }
+            stmt.close();
+            con.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Error fetching broker data: " + ex.getMessage());
+        }
     }
  public void search(String str,int i) {
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
