@@ -29,6 +29,29 @@ public class BrokerDirectory {
     public BrokerDirectory(){
         this.list = new ArrayList<Broker>();
     }
+    public void updateSelectedBroker(Broker broker) {
+    try {
+        Connection con = SQLconnection.dbconnector();
+        // Update query for the Brokers table
+        String query = "UPDATE Brokers SET name = ?, contactno = ?, brokerfee = ?, management = ?, EmailID = ? WHERE licenseno = ?";
+        PreparedStatement stmt = con.prepareStatement(query);
+
+        stmt.setString(1, broker.getName());
+        stmt.setString(2, broker.getContactno());
+        stmt.setInt(3, broker.getBrokerfee());
+        stmt.setString(4, broker.getManagement());
+        stmt.setString(5, broker.getEmail());
+        stmt.setInt(6, broker.getLicenseno());
+
+        stmt.executeUpdate(); // Execute the update query
+        stmt.close();
+        con.close();
+
+        System.out.println("Broker updated successfully!");
+    } catch (SQLException ex) {
+        Logger.getLogger(BrokerDirectory.class.getName()).log(Level.SEVERE, null, ex);
+    }
+}
 
 
     public void setBrokerDirectory(ArrayList<Broker> brokerDirectory) {

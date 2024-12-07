@@ -17,6 +17,8 @@ import java.util.logging.Logger;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import java.sql.ResultSet;
+
 
 /**
  *
@@ -27,20 +29,13 @@ public class DisplayBrokers extends javax.swing.JPanel {
     /**
      * Creates new form DisplayBrokers
      */
+    
     BrokerDirectory bd = new BrokerDirectory();
-    ArrayList <Broker > list;
-     Broker b;
-  DefaultTableModel model;
-   int BrokerId;
-      Broker selectedbroker;
+    DefaultTableModel model;
+    
     public DisplayBrokers() {
         initComponents();
-          
         bd.getBrokerDirectory();
-       // this.list=  list;
-      this.b= b;
-
-
         PopulateTable();
       
     }
@@ -255,62 +250,35 @@ public class DisplayBrokers extends javax.swing.JPanel {
 
     private void btnupdatebrokerdetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnupdatebrokerdetailsActionPerformed
         // TODO add your handling code here:
-          int selectedRowIndex= tblbroker.getSelectedRow();
-         String brokername = txtbrokername.getText();
-        String Licenseno = txtlicenseno.getText();
-        String contact = txtcontactno.getText();
-        String email = txtemailid.getText();
-        String brokerfee = txtbrokerfee.getText();
-        String username = txtusername.getText();
-        //String password = txtpassword.getText();
-        String management = txtmanagement.getText();
         
-          System.out.println("Running");
-          
-          DefaultTableModel model =(DefaultTableModel) tblbroker.getModel();
-               Broker b = (Broker)model.getValueAt(selectedRowIndex,8);
-          
-          bd.updateSelectedBroker(b);
-               /*  for(Broker b: bd.getList()){
-                     bd.updateSelectedBroker(b);
-                   {*/
-                         
-                   b.setName(txtbrokername.getText());
-                    b.setLicenseno(Integer.parseInt(txtlicenseno.getText()));
-                    b.setEmail(txtemailid.getText());
-                    b.setBrokerfee(Integer.parseInt(txtbrokerfee.getText()));
-                    b.setUSERNAME(txtusername.getText());
-                    b.setManagement(txtmanagement.getText());
-                   
-                    b.setContactno(txtcontactno.getText());
-                          
-                   JOptionPane.showMessageDialog(this, "Updated Successfully");
-                     PopulateTable();
-             //        }
-             //    }
-                 try {
-              Connection con=SQLconnection.dbconnector();
-              //Statement stmt;
-    
-            //stmt = con.createStatement();
-        
-          PreparedStatement stmt=con.prepareStatement("update Brokers set name=?,licenseno=?,contactno=?,EmailID=?,brokerfee=?,USERNAME=?,PASSWORD=?, where management=?");
-          
- stmt.setString(0, String.valueOf(brokername));
- stmt.setString(1, String.valueOf(Licenseno));
- stmt.setString(2, String.valueOf(contact));
- stmt.setString(3, String.valueOf(email));
- stmt.setString(4, String.valueOf(brokerfee));
- stmt.setString(5, username);
-  stmt.setString(6, management);
- 
- stmt.executeUpdate();
-             
-            
-           
-              PopulateTable();
+        int selectedRowIndex = tblbroker.getSelectedRow();
+        if (selectedRowIndex < 0) {
+            JOptionPane.showMessageDialog(this, "Please select a row to update details.");
+            return;
+        }
+
+        try {
+            // Update the selected row in the database
+            Connection con = SQLconnection.dbconnector();
+            PreparedStatement stmt = con.prepareStatement("UPDATE Brokers SET Name=?, ContactNumber=?, EmailID=?, BrokerFee=?, Management=? WHERE LicenseNumber=?");
+
+            stmt.setString(1, txtbrokername.getText());
+            stmt.setString(2, txtcontactno.getText());
+            stmt.setString(3, txtemailid.getText());
+            stmt.setInt(4, Integer.parseInt(txtbrokerfee.getText()));
+            stmt.setString(5, txtmanagement.getText());
+            stmt.setInt(6, Integer.parseInt(txtlicenseno.getText()));
+
+            stmt.executeUpdate();
+
+            JOptionPane.showMessageDialog(this, "Broker details updated successfully.");
+            PopulateTable();
+
+            stmt.close();
+            con.close();
         } catch (SQLException ex) {
-            Logger.getLogger(DisplayBrokers.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Error updating broker details: " + ex.getMessage());
         }
               
          
@@ -319,48 +287,33 @@ public class DisplayBrokers extends javax.swing.JPanel {
 
     private void btndeletebrokerdetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndeletebrokerdetailsActionPerformed
         // TODO add your handling code here:
-         
-        int selectedRowIndex= tblbroker.getSelectedRow();
         
-        // String Name = model.getValueAt(selectedRowIndex, 0).toString();
-          //  String Licenseno=model.getValueAt(selectedRowIndex, 1).toString();
-            //String Contactno=model.getValueAt(selectedRowIndex, 2).toString();
-            //String Emailid=model.getValueAt(selectedRowIndex, 3).toString();
-             //  String Brokerfee= model.getValueAt(selectedRowIndex, 4).toString();
-               //      String Management= model.getValueAt(selectedRowIndex, 7).toString();
-            //System.out.println(Name);
-            
-        if(selectedRowIndex<0){
-            JOptionPane.showMessageDialog(this,"Please select a row to delete.");
-  
-       // System.out.println("Before try statement executed");
+        int selectedRowIndex = tblbroker.getSelectedRow();
+        if (selectedRowIndex < 0) {
+            JOptionPane.showMessageDialog(this, "Please select a row to delete.");
+            return;
         }
-        else{
-            
-               
-        
-   try {
-           DefaultTableModel model =(DefaultTableModel) tblbroker.getModel();
-               Broker b = (Broker)model.getValueAt(selectedRowIndex,8);
-               bd.deleteBroker(b);
-           // System.out.println("Inside try statement executed");
-            // JOptionPane.showMessageDialog(this, "Record deleted Successfully");
-              Connection con=SQLconnection.dbconnector();
-              Statement stmt =  con.createStatement();
-              
-           String idea;
-            idea= (String) model.getValueAt(selectedRowIndex,0);
-           String query = "delete from Brokers where name='"+idea+"' ";
-            stmt.executeUpdate(query);
-            stmt.close();
-         
+
+        try {
+            // Delete the selected row from the database
+            Connection con = SQLconnection.dbconnector();
+            PreparedStatement stmt = con.prepareStatement("DELETE FROM Brokers WHERE LicenseNumber=?");
+
+            int licenseNo = Integer.parseInt(tblbroker.getValueAt(selectedRowIndex, 1).toString());
+            stmt.setInt(1, licenseNo);
+
+            stmt.executeUpdate();
+
+            JOptionPane.showMessageDialog(this, "Broker details deleted successfully.");
             PopulateTable();
-            JOptionPane.showMessageDialog(this, "Deleted Successfully");
-              } catch (SQLException ex) {
-                Logger.getLogger(DisplayBrokers.class.getName()).log(Level.SEVERE, null, ex);
-            }      
-           
+
+            stmt.close();
+            con.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Error deleting broker details: " + ex.getMessage());
         }
+         
         
         
     }//GEN-LAST:event_btndeletebrokerdetailsActionPerformed
@@ -368,23 +321,19 @@ public class DisplayBrokers extends javax.swing.JPanel {
     private void btnviewbrokerdetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnviewbrokerdetailsActionPerformed
         // TODO add your handling code here:
         int selectedRowIndex = tblbroker.getSelectedRow();
+        if (selectedRowIndex < 0) {
+            JOptionPane.showMessageDialog(this, "Please select a row to view details.");
+            return;
+        }
 
-    if(selectedRowIndex<0){
-    JOptionPane.showMessageDialog(this,"Select a row to View");
-    return;
-    
-}
-    DefaultTableModel Model=(DefaultTableModel) tblbroker.getModel();
-    Broker b = (Broker) Model.getValueAt(selectedRowIndex, 8);
-    
-    txtbrokername.setText(String.valueOf(b.getName()));
-    txtlicenseno.setText(String.valueOf(b.getLicenseno()));
-    txtcontactno.setText(String.valueOf(b.getContactno()));
-    txtbrokerfee.setText(String.valueOf(b.getBrokerfee()));
-    txtemailid.setText(String.valueOf(b.getEmail()));
-    txtusername.setText(String.valueOf(b.getUSERNAME()));
-    //txtpassword.setText(String.valueOf(b.getPASSWORD()));
-    txtmanagement.setText(String.valueOf(b.getManagement()));
+        // Populate text fields with the selected row's data
+        DefaultTableModel model = (DefaultTableModel) tblbroker.getModel();
+        txtbrokername.setText(model.getValueAt(selectedRowIndex, 0).toString());
+        txtlicenseno.setText(model.getValueAt(selectedRowIndex, 1).toString());
+        txtcontactno.setText(model.getValueAt(selectedRowIndex, 2).toString());
+        txtemailid.setText(model.getValueAt(selectedRowIndex, 3).toString());
+        txtbrokerfee.setText(model.getValueAt(selectedRowIndex, 4).toString());
+        txtmanagement.setText(model.getValueAt(selectedRowIndex, 5).toString());
    
     }//GEN-LAST:event_btnviewbrokerdetailsActionPerformed
 
@@ -414,24 +363,31 @@ private void PopulateTable()
     {
       
   
-        DefaultTableModel model=(DefaultTableModel) tblbroker.getModel();
-        
+        model = (DefaultTableModel) tblbroker.getModel();
         model.setRowCount(0);
-        for(Broker b: bd.getList())
-        {
-             Object[] row=new Object[9];
-         
-             row[0]=b.getName();
-             row[1]=b.getLicenseno();
-             row[2]=b.getContactno();
-             row[3]=b.getEmail();
-             row[4]=b.getBrokerfee();
-             row[5]=b.getUSERNAME();
-             row[6]=b.getPASSWORD();
-             row[7]=b.getManagement();
-             row[8]=b;
-             
-             
-             model.addRow(row);
-        }  
+
+        try {
+            // Fetch broker data from the database
+            Connection con = SQLconnection.dbconnector();
+            PreparedStatement stmt = con.prepareStatement("SELECT * FROM Brokers");
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                Object[] row = new Object[6];
+                row[0] = rs.getString("Name");
+                row[1] = rs.getInt("LicenseNumber");
+                row[2] = rs.getString("ContactNumber");
+                row[3] = rs.getString("EmailID");
+                row[4] = rs.getInt("BrokerFee");
+                row[5] = rs.getString("Management");
+                model.addRow(row);
+            }
+
+            rs.close();
+            stmt.close();
+            con.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Error fetching broker data: " + ex.getMessage());
+        }
     }}

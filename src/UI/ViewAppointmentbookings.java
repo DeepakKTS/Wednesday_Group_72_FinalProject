@@ -4,8 +4,8 @@
  */
 package UI;
 
-import Model.AppointmentReq;
-import Model.AppointmentRequesthistory;
+//import Model.AppointmentReq;
+//import Model.AppointmentRequesthistory;
 import Model.Broker;
 import Model.Requeststudent;
 import Model.SQLconnection;
@@ -13,12 +13,12 @@ import Model.Studenthistory;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.util.Properties;
-import javax.mail.Message;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
+//import javax.mail.Message;
+//import javax.mail.PasswordAuthentication;
+//import javax.mail.Session;
+//import javax.mail.Transport;
+//import javax.mail.internet.InternetAddress;
+//import javax.mail.internet.MimeMessage;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
