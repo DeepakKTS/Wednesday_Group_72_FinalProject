@@ -461,16 +461,18 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
 
     private void btnviewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnviewActionPerformed
         // TODO add your handling code here:
-     
-      
-    
-         int selectedRowIndex = tblapartmentlistings.getSelectedRow();
+        int selectedRowIndex = tblapartmentlistings.getSelectedRow();
 
-        if(selectedRowIndex < 0){
-            JOptionPane.showMessageDialog(this,"Select a row to View");
-            return;
-        }
-        DefaultTableModel model=(DefaultTableModel) tblapartmentlistings.getModel();
+       if (selectedRowIndex < 0) {
+        JOptionPane.showMessageDialog(this, "Select a row to view details");
+        return;
+    }
+       
+       // Get the ID of the selected apartment
+    DefaultTableModel model = (DefaultTableModel) tblapartmentlistings.getModel();
+    int apartmentID = (int) model.getValueAt(selectedRowIndex, 5); // ID column
+    
+        
         //Broker SelectedBroker = (Broker) model.getValueAt(selectedRowIndex, 5);
 
         //txtlicenseno.setText(Integer.toString(SelectedBroker.getLicenseno()));
@@ -479,7 +481,7 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
         //txtbrokerfee.setText(Integer.toString(SelectedBroker.getBrokerfee()));
         //txtmanagement.setText(String.valueOf(SelectedBroker.getManagement()));
         // txtemail.setText(String.valueOf(SelectedBroker.getEmail()));
-        txtaptname.setText(model.getValueAt(selectedRowIndex,9).toString());
+        /*txtaptname.setText(model.getValueAt(selectedRowIndex,9).toString());
         txtapttype.setText(model.getValueAt(selectedRowIndex, 0).toString());
         txtbrokername.setText(model.getValueAt(selectedRowIndex, 7).toString());
         txtemailid.setText(model.getValueAt(selectedRowIndex, 8).toString());
@@ -489,7 +491,41 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
         txtlandname.setText(model.getValueAt(selectedRowIndex, 1).toString());
         txtmbta.setText(model.getValueAt(selectedRowIndex, 6).toString());
         txtprice.setText(model.getValueAt(selectedRowIndex, 2).toString());
-        txtutilities.setText(model.getValueAt(selectedRowIndex, 3).toString());
+        txtutilities.setText(model.getValueAt(selectedRowIndex, 3).toString());*/
+        
+        try {
+        Connection con = SQLconnection.dbconnector();
+        PreparedStatement stmt = con.prepareStatement("SELECT * FROM Apartments WHERE ID = ?");
+        stmt.setInt(1, apartmentID); // Set the ID parameter
+        ResultSet rs = stmt.executeQuery();
+
+        if (rs.next()) {
+            // Populate the fields below the table with detailed information
+            txtapttype.setText(rs.getString("ApartmentType"));
+            txtlandname.setText(rs.getString("LandlordName"));
+            txtprice.setText(rs.getString("Price"));
+            txtutilities.setText(rs.getString("Utilities"));
+            txtgrocery.setText(rs.getString("GroceryStores"));
+            txthospitals.setText(rs.getString("Hospitals"));
+            txtmbta.setText(rs.getString("MBTA"));
+            txtbrokername.setText(rs.getString("BrokerName"));
+            txtemailid.setText(rs.getString("EmailID"));
+            txtaptname.setText(rs.getString("ApartmentName"));
+            txtid.setText(String.valueOf(rs.getInt("ID")));
+            
+            // Set image if available (requires a proper file path or BLOB conversion)
+            String photoPath = rs.getString("Pictures");
+            if (photoPath != null) {
+                ImageIcon icon = new ImageIcon(photoPath);
+                Image image = icon.getImage().getScaledInstance(lblphoto.getWidth(), lblphoto.getHeight(), Image.SCALE_SMOOTH);
+                lblphoto.setIcon(new ImageIcon(image));
+            } else {
+                lblphoto.setIcon(null); // Clear the image if no photo exists
+            }
+        }
+    } catch (SQLException ex) {
+        Logger.getLogger(ViewApartmentlistings.class.getName()).log(Level.SEVERE, null, ex);
+    }
         
    String apt= txtaptname.getText();
       
@@ -735,35 +771,23 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
     private javax.swing.JTextField txtprice;
     private javax.swing.JTextField txtutilities;
     // End of variables declaration//GEN-END:variables
-private void PopulateTable()
-    {
-      
-  
-        DefaultTableModel model=(DefaultTableModel) tblapartmentlistings.getModel();
- 
-        model.setRowCount(0);
-        for(Apartmentlistings a: ad.getList())
-        {
-             Object[] row=new Object[13];
-             row[0]=a.getApartmenttype();
-             
-             row[1]=a.getLandlordname();
-             row[2]=a.getPrice();
-             row[3]=a.getUtilities();
-             row[4]=a.getGrocerystores();
-             row[5]=a.getHospital();
-             row[6]=a.getMBTA();
-             row[7]=a.getBrokerName();
-             row[8]=a.getEmailID();
-             row[9]=a.getApartmentname();
-             row[10]= a.getID();
-             row[11]=a;
-             
-    
-             model.addRow(row);
-             
-        }  
+
+    private void PopulateTable() {
+    DefaultTableModel model = (DefaultTableModel) tblapartmentlistings.getModel();
+    model.setRowCount(0); // Clear existing rows
+
+    for (Apartmentlistings a : ad.getList()) {
+        Object[] row = new Object[6]; // Match with the column count
+        row[0] = a.getApartmenttype();  // Apartment Type
+        row[1] = a.getLandlordname();   // Landlord Name
+        row[2] = a.getPrice();          // Price
+        row[3] = a.getBrokerName();     // Broker Name
+        row[4] = a.getApartmentname();  // Apartment Name
+        row[5] = a.getID();             // ID
+        model.addRow(row); // Add the row to the table
     }
+}
+
  public void search(String str,int i) {
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     System.out.println(str);
