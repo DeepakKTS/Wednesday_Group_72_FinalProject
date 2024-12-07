@@ -151,30 +151,52 @@ public class StudentDetailsPage extends javax.swing.JFrame {
 
     private void btnrequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnrequestActionPerformed
         // TODO add your handling code here:
-        if(txtid.getText().equals("")){
-            JOptionPane.showMessageDialog(this, "Please enter ID");
-        } else if(txtname.getText().equals("")){
-                    JOptionPane.showMessageDialog(this, "Please enter Name");
-                    }else if(txtcontactno.getText().equals("")){
-                  JOptionPane.showMessageDialog(this, "Please enter ContactNumber");       
-        }else if(txtemailid.getText().equals("")){
-            JOptionPane.showMessageDialog(this, "Please enter EmailID");       
-        }else{
-         try {
-            Connection con=SQLconnection.dbconnector();
-             Statement stmt=con.createStatement();
-           String Query= "INSERT INTO BookingRequest (Name,ID,EmailId,Contactno) values ('"+txtname.getText()+"','"+txtid.getText()+"','"+txtemailid.getText()+"','"+txtcontactno.getText()+"')"; 
-        JOptionPane.showMessageDialog(this,"Request sent Successfully");
-        stmt.executeUpdate(Query);
-        stmt.close();
-        con.close();
-        
-        } catch (SQLException ex) {
-            Logger.getLogger(StudentDetailsPage.class.getName()).log(Level.SEVERE, null, ex);
-        }
-         setVisible(false);
-    }//GEN-LAST:event_btnrequestActionPerformed
+        // Validate all fields
+    if (txtid.getText().trim().isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Please enter ID.");
+        return;
     }
+    if (txtname.getText().trim().isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Please enter Name.");
+        return;
+    }
+    if (txtcontactno.getText().trim().isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Please enter Contact Number.");
+        return;
+    }
+    if (txtemailid.getText().trim().isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Please enter Email ID.");
+        return;
+    }
+
+    try {
+        // Establish connection
+        Connection con = SQLconnection.dbconnector();
+
+        // Prepare SQL insert statement
+        PreparedStatement stmt = con.prepareStatement(
+            "INSERT INTO BookingRequest (Name, ID, EmailId, ContactNo) VALUES (?, ?, ?, ?)"
+        );
+        stmt.setString(1, txtname.getText());
+        stmt.setInt(2, Integer.parseInt(txtid.getText())); // Parse ID as integer
+        stmt.setString(3, txtemailid.getText());
+        stmt.setString(4, txtcontactno.getText());
+
+        stmt.executeUpdate(); // Execute the insert query
+        stmt.close(); // Close the statement
+        con.close(); // Close the connection
+
+        JOptionPane.showMessageDialog(this, "Request sent successfully!");
+        this.setVisible(false); // Close the current frame
+    } catch (NumberFormatException ex) {
+        JOptionPane.showMessageDialog(this, "Please ensure ID is a valid number.");
+        ex.printStackTrace();
+    } catch (SQLException ex) {
+        JOptionPane.showMessageDialog(this, "Error sending request: " + ex.getMessage());
+        ex.printStackTrace();
+    }
+    }//GEN-LAST:event_btnrequestActionPerformed
+    
     /**
      * @param args the command line arguments
      */

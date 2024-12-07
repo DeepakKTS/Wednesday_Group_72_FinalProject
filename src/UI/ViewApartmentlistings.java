@@ -740,7 +740,10 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
                 frame.setResizable(false);
           } */
         //-------------------
-        try {
+        
+        //MY WORKING CODE
+        /*try {
+        
         Connection con = SQLconnection.dbconnector();
         PreparedStatement stmt = con.prepareStatement(
             "INSERT INTO ApartmentBooking (ApartmentName, ApartmentType, Price, LandlordName, ApartmentID) VALUES (?, ?, ?, ?, ?)"
@@ -757,7 +760,47 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
     } catch (SQLException ex) {
         JOptionPane.showMessageDialog(this, "Error during booking: " + ex.getMessage());
         ex.printStackTrace();
-    }
+    }*/
+        
+        try {
+    // Establish database connection
+    Connection con = SQLconnection.dbconnector();
+
+    // Prepare the SQL query for inserting data
+    PreparedStatement stmt = con.prepareStatement(
+        "INSERT INTO ApartmentBooking (ApartmentName, ApartmentType, Price, LandlordName, ApartmentID) VALUES (?, ?, ?, ?, ?)"
+    );
+
+    // Set the query parameters from text fields
+    stmt.setString(1, txtaptname.getText());
+    stmt.setString(2, txtapttype.getText());
+    stmt.setString(3, txtprice.getText()); // No parsing to double, store as a string if validation is not required
+    stmt.setString(4, txtlandname.getText());
+    stmt.setString(5, txtid.getText()); // Store ApartmentID as a string if validation is not required
+
+    // Execute the query
+    stmt.executeUpdate();
+
+    // Close the statement and connection
+    stmt.close();
+    con.close();
+
+    // Show success message
+    JOptionPane.showMessageDialog(this, "Booking Successful!");
+
+    // Open the StudentDetailsPage frame
+    StudentDetailsPage frame = new StudentDetailsPage();
+    frame.setTitle("Student Details Page");
+    frame.setVisible(true);
+    frame.setDefaultCloseOperation(StudentDetailsPage.EXIT_ON_CLOSE);
+    frame.setResizable(false);
+
+} catch (SQLException ex) {
+    // Handle SQL errors
+    JOptionPane.showMessageDialog(this, "Error during booking: " + ex.getMessage());
+    ex.printStackTrace();
+}
+
 
         
     }//GEN-LAST:event_btnbooktourActionPerformed
