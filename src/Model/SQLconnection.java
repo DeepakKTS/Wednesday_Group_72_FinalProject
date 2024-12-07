@@ -17,7 +17,7 @@ public class SQLconnection {
   ResultSet rs = null;
 
 public static Connection dbconnector() {
-    try {
+    /*try {
         // Load the SQLite JDBC driver
         Class.forName("org.sqlite.JDBC");
 
@@ -32,6 +32,26 @@ public static Connection dbconnector() {
         e.printStackTrace();
         return null;
     }
-}
+}*/
+     Connection con = null;
+        try {
+            // Load the MySQL JDBC driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            
+            // Replace these with your MySQL database credentials
+            String url = "jdbc:mysql://localhost:3306/StudentHousing"; // Database name is "StudentHousing"
+            String username = "root"; // Default XAMPP username
+            String password = "";    // Leave blank for XAMPP default
 
+            // Establish the connection
+            con = DriverManager.getConnection(url, username, password);
+            System.out.println("Connection Successful!");
+        } catch (ClassNotFoundException e) {
+            System.err.println("MySQL JDBC Driver not found: " + e.getMessage());
+        } catch (SQLException e) {
+            System.err.println("Connection Failed: " + e.getMessage());
+        }
+        return con;
+
+}
 }

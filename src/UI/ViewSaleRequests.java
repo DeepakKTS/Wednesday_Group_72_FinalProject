@@ -22,7 +22,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 /**
  *
- * @author deepakzedler
+ * @author sneghashree
  */
 public class ViewSaleRequests extends javax.swing.JPanel {
 

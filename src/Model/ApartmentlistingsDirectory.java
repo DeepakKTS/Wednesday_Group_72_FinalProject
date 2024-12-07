@@ -44,45 +44,36 @@ public class ApartmentlistingsDirectory {
     public void deleteApartmentlistings(Apartmentlistings newApartmentlistings){
         list.remove(newApartmentlistings);
     }
-    public void getApartmentlistingsDirectory()
-    {
-        try {
-            Connection con=SQLconnection.dbconnector();
-            
-            PreparedStatement stmt=con.prepareStatement("SELECT * FROM Apartments");
-          
-            ResultSet rs=stmt.executeQuery();
-           
-             while(rs.next())
-             {
-                 
-                 Apartmentlistings a=new Apartmentlistings();
-                 a.setID(rs.getInt("ID"));
-                 
-                   a.setApartmentname(rs.getString("Apartment name"));
-                  a.setLandlordname(rs.getString("Landlord name"));
-                  a.setApartmenttype(rs.getString("Apartment type"));
-                  a.setPrice(rs.getString("Price"));
-                  a.setUtilities(rs.getString("Utilities"));
-                  a.setGrocerystores(rs.getString("Grocerystores"));
-                  a.setHospital(rs.getString("Hospitals"));
-                 a.setMBTA(rs.getString("MBTA"));
-                 a.setBrokerName(rs.getString("Broker Name"));
-                 a.setEmailID(rs.getString("Email ID"));
-                //a.setphoto(rs.getBlob("Pictures"));
-                //java.sql.Blob blob = rs.getBlob(11);
-   
-                  list.add(a);
-             
-                  
-             }
-        } catch (SQLException ex) {
-            Logger.getLogger(ApartmentlistingsDirectory.class.getName()).log(Level.SEVERE, null, ex);
+    public void getApartmentlistingsDirectory() {
+    list.clear(); // Clear existing data to prevent duplication
+    try {
+        Connection con = SQLconnection.dbconnector();
+        PreparedStatement stmt = con.prepareStatement(
+    "SELECT ApartmentType, LandlordName, Price, BrokerName, ApartmentName, ID FROM Apartments"
+        );
+
+        ResultSet rs = stmt.executeQuery();
+
+        while (rs.next()) {
+            Apartmentlistings a = new Apartmentlistings();
+
+            a.setApartmenttype(rs.getString("ApartmentType"));
+            a.setLandlordname(rs.getString("LandlordName"));
+            a.setPrice(rs.getString("Price"));
+            a.setBrokerName(rs.getString("BrokerName"));
+            a.setApartmentname(rs.getString("ApartmentName"));
+            a.setID(rs.getInt("ID"));
+
+            list.add(a);
         }
-        //return list;
-        //return list;
+        stmt.close();
+        con.close();
+    } catch (SQLException ex) {
+        ex.printStackTrace();
     }
-    
+}
+
+
 }
 
     
