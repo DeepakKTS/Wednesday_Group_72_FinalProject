@@ -3,15 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/deepakzedler/Documents/Wednesday_Group_72_FinalProject/src/Model/Marketrequeststudent.java</file>
+            <file>file:/Users/deepakzedler/Documents/Wednesday_Group_72_FinalProject/src/Model/BrokerDirectory.java</file>
+            <file>file:/Users/deepakzedler/Documents/Wednesday_Group_72_FinalProject/src/Model/Broker.java</file>
+            <file>file:/Users/deepakzedler/Documents/Wednesday_Group_72_FinalProject/src/UI/AddBroker.java</file>
+            <file>file:/Users/deepakzedler/Documents/Wednesday_Group_72_FinalProject/src/UI/ViewSaleRequests.java</file>
+            <file>file:/Users/deepakzedler/Documents/Wednesday_Group_72_FinalProject/src/UI/StudentView.java</file>
+            <file>file:/Users/deepakzedler/Documents/Wednesday_Group_72_FinalProject/src/UI/ViewHouseTourrequests.java</file>
+            <file>file:/Users/deepakzedler/Documents/Wednesday_Group_72_FinalProject/src/Model/SQLconnection.java</file>
+            <file>file:/Users/deepakzedler/Documents/Wednesday_Group_72_FinalProject/src/UI/ViewBrokers.java</file>
+            <file>file:/Users/deepakzedler/Documents/Wednesday_Group_72_FinalProject/src/UI/HeadRealtorPage.java</file>
             <file>file:/Users/deepakzedler/Documents/Wednesday_Group_72_FinalProject/src/UI/ViewReportedissues.java</file>
+            <file>file:/Users/deepakzedler/Documents/Wednesday_Group_72_FinalProject/src/UI/ViewAppointmentbookings.java</file>
             <file>file:/Users/deepakzedler/Documents/Wednesday_Group_72_FinalProject/src/Model/ApartmentlistingsDirectory.java</file>
-            <file>file:/Users/deepakzedler/Documents/Wednesday_Group_72_FinalProject/src/UI/LogonPage.java</file>
-            <file>file:/Users/deepakzedler/Documents/Wednesday_Group_72_FinalProject/src/Model/Apartmentlistings.java</file>
-            <file>file:/Users/deepakzedler/Documents/Wednesday_Group_72_FinalProject/src/Model/Marketrequeststudenthistory.java</file>
+            <file>file:/Users/deepakzedler/Documents/Wednesday_Group_72_FinalProject/src/UI/DisplayBrokers.java</file>
             <file>file:/Users/deepakzedler/Documents/Wednesday_Group_72_FinalProject/src/UI/ViewApartmentlistings.java</file>
-            <file>file:/Users/deepakzedler/Documents/Wednesday_Group_72_FinalProject/src/Model/Requestapartment.java</file>
-            <file>file:/Users/deepakzedler/Documents/Wednesday_Group_72_FinalProject/src/UI/StudentDetailsApp.java</file>
         </group>
     </open-files>
 </project-private>
