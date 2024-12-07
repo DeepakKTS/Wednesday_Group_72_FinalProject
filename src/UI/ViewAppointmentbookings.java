@@ -6,7 +6,11 @@ package UI;
 
 //import Model.AppointmentReq;
 //import Model.AppointmentRequesthistory;
+import Model.AppointmentReq;
+import Model.AppointmentRequesthistory;
+import Model.BookingRequest;
 import Model.Broker;
+import Model.EmailUtility;
 import Model.Requeststudent;
 import Model.SQLconnection;
 import Model.Studenthistory;
@@ -22,6 +26,8 @@ import java.util.Properties;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
+
+
 /**
  *
  * @author deepakzedler
@@ -32,12 +38,11 @@ public class ViewAppointmentbookings extends javax.swing.JPanel {
     /**
      * Creates new form ViewAppointmentbookings
      */
-AppointmentRequesthistory his =  new AppointmentRequesthistory();
+AppointmentRequesthistory history = new AppointmentRequesthistory();
+
     public ViewAppointmentbookings() {
         initComponents();
-          his.getAppointmentHistory();
-    
-          PopulateTable();
+        PopulateTable();
     }
 
     /**
@@ -212,70 +217,52 @@ AppointmentRequesthistory his =  new AppointmentRequesthistory();
 
     private void btnacceptbookingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnacceptbookingActionPerformed
         // TODO add your handling code here:
-        
-         String ToEmail = txtemailid.getText();
-        String FromEmail = "aedproject123@gmail.com";//studyviral2@gmail.com
-        String FromEmailPassword = "wiiwhakaddhmcypq";//You email Password from you want to send email
-        String Subjects = "Appointment Accepted";
-        
-        Properties properties = new Properties();
-        properties.put("mail.smtp.auth","true");
-        properties.put("mail.smtp.starttls.enable","true");
-        properties.put("mail.smtp.host","smtp.gmail.com");
-        properties.put("mail.smtp.port","587");
-        properties.put("mail.smtp.starttls.required", "true");
-properties.put("mail.smtp.ssl.protocols", "TLSv1.2");
-properties.put("mail.debug", "true");
-        
-       
-           
-        
-       Session session = Session.getDefaultInstance(properties,new javax.mail.Authenticator() {
-            @Override
-            protected PasswordAuthentication getPasswordAuthentication(){
-                return new PasswordAuthentication(FromEmail, FromEmailPassword);
-            }
-     
-        });
-       try{
-            MimeMessage message = new MimeMessage(session);
-            message.setFrom(new InternetAddress(FromEmail));
-            message.addRecipient(Message.RecipientType.TO, new InternetAddress(ToEmail));
-            message.setSubject(Subjects);
-      
-            message.setText("Thank you for contacting us! We will contact you shortly.Your appointment has been successfully booked. This is an auto generated email");
-            Transport.send(message);
-            
-            int selectedRowIndex = tblviewstudent.getSelectedRow();
-            DefaultTableModel model =(DefaultTableModel) tblviewstudent.getModel();
-               AppointmentReq a = (AppointmentReq)model.getValueAt(selectedRowIndex,4);
-               his.deleteAppointmentReq(a);
-           // System.out.println("Inside try statement executed");
-            // JOptionPane.showMessageDialog(this, "Record deleted Successfully");
-              Connection con=SQLconnection.dbconnector();
-              Statement stmt =  con.createStatement();
-              
-           String idea;
-            idea= (String) model.getValueAt(selectedRowIndex,0);
-           String query = "delete from BookRequest where name='"+idea+"' ";
+        int selectedRowIndex = tblviewstudent.getSelectedRow();
+        if (selectedRowIndex < 0) {
+            JOptionPane.showMessageDialog(this, "Please select a row to accept the booking.");
+            return;
+        }
+
+        DefaultTableModel model = (DefaultTableModel) tblviewstudent.getModel();
+        String toEmail = model.getValueAt(selectedRowIndex, 3).toString(); // Email ID
+        String studentId = model.getValueAt(selectedRowIndex, 0).toString(); // Student ID
+        String studentName = model.getValueAt(selectedRowIndex, 1).toString(); // Name
+
+        try {
+            // Send confirmation email
+            String subject = "Booking Accepted";
+            String body = "Dear " + studentName + ",\n\nYour booking has been accepted.\nThank you for reaching out.\n\nBest regards,\nRealty Team";
+            EmailUtility.sendEmail(toEmail, subject, body);
+
+            // Delete the record from the database
+            Connection con = SQLconnection.dbconnector();
+            Statement stmt = con.createStatement();
+            String query = "DELETE FROM BookingRequest WHERE ID = '" + studentId + "'";
             stmt.executeUpdate(query);
             stmt.close();
-            
-              }catch(Exception ex){
-            JOptionPane.showMessageDialog(this,ex);
+            con.close();
+
+            // Update table
+            model.removeRow(selectedRowIndex);
+
+            JOptionPane.showMessageDialog(this, "Booking accepted and email sent successfully!");
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(this, "Error while processing: " + ex.getMessage());
+            ex.printStackTrace();
         }
-        
+          
     }//GEN-LAST:event_btnacceptbookingActionPerformed
 
     private void btnviewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnviewActionPerformed
         // TODO add your handling code here:
-        int selectedRow= tblviewstudent.getSelectedRow();
-          if(selectedRow< 0){
-            JOptionPane.showMessageDialog(this,"Select a row to View");
+        int selectedRow = tblviewstudent.getSelectedRow();
+        if (selectedRow < 0) {
+            JOptionPane.showMessageDialog(this, "Please select a row to view details.");
             return;
         }
-        DefaultTableModel model=(DefaultTableModel) tblviewstudent.getModel();
-          txtstudentid.setText(model.getValueAt(selectedRow,0).toString());
+
+        DefaultTableModel model = (DefaultTableModel) tblviewstudent.getModel();
+        txtstudentid.setText(model.getValueAt(selectedRow, 0).toString());
         txtstudentname.setText(model.getValueAt(selectedRow, 1).toString());
         txtcontactno.setText(model.getValueAt(selectedRow, 2).toString());
         txtemailid.setText(model.getValueAt(selectedRow, 3).toString());
@@ -285,57 +272,43 @@ properties.put("mail.debug", "true");
 
     private void btncancelbookingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncancelbookingActionPerformed
         // TODO add your handling code here:
-         String ToEmail = txtemailid.getText();
-        String FromEmail = "aedproject123@gmail.com";//studyviral2@gmail.com
-        String FromEmailPassword = "wiiwhakaddhmcypq";//You email Password from you want to send email
-        String Subjects = "Appointment Denied";
-        
-        Properties properties = new Properties();
-        properties.put("mail.smtp.auth","true");
-        properties.put("mail.smtp.starttls.enable","true");
-        properties.put("mail.smtp.host","smtp.gmail.com");
-        properties.put("mail.smtp.port","587");
-        properties.put("mail.smtp.starttls.required", "true");
-properties.put("mail.smtp.ssl.protocols", "TLSv1.2");
-properties.put("mail.debug", "true");
-        
-       
-           
-        
-       Session session = Session.getDefaultInstance(properties,new javax.mail.Authenticator() {
-            @Override
-            protected PasswordAuthentication getPasswordAuthentication(){
-                return new PasswordAuthentication(FromEmail, FromEmailPassword);
-            }
-     
-        });
-       try{
-            MimeMessage message = new MimeMessage(session);
-            message.setFrom(new InternetAddress(FromEmail));
-            message.addRecipient(Message.RecipientType.TO, new InternetAddress(ToEmail));
-            message.setSubject(Subjects);
-      
-            message.setText("Thank you for contacting us! Unfortunately your appoitment has been cancelled. Sorry for the inconveinience. This is an auto generated email");
-            Transport.send(message);
-            
-             int selectedRowIndex = tblviewstudent.getSelectedRow();
-            DefaultTableModel model =(DefaultTableModel) tblviewstudent.getModel();
-               AppointmentReq a = (AppointmentReq)model.getValueAt(selectedRowIndex,4);
-               his.deleteAppointmentReq(a);
-           // System.out.println("Inside try statement executed");
-            // JOptionPane.showMessageDialog(this, "Record deleted Successfully");
-              Connection con=SQLconnection.dbconnector();
-              Statement stmt =  con.createStatement();
-              
-           String idea;
-            idea= (String) model.getValueAt(selectedRowIndex,0);
-           String query = "delete from BookRequest where name='"+idea+"' ";
+        int selectedRowIndex = tblviewstudent.getSelectedRow();
+        if (selectedRowIndex < 0) {
+            JOptionPane.showMessageDialog(this, "Please select a row to cancel the booking.");
+            return;
+        }
+
+        DefaultTableModel model = (DefaultTableModel) tblviewstudent.getModel();
+        String toEmail = model.getValueAt(selectedRowIndex, 3).toString(); // Email ID
+        String studentId = model.getValueAt(selectedRowIndex, 0).toString(); // Student ID
+        String studentName = model.getValueAt(selectedRowIndex, 1).toString(); // Name
+
+        try {
+            // Send cancellation email
+            String subject = "Booking Cancelled";
+            String body = "Dear " + studentName + ",\n\nYour booking has been cancelled.\nSorry for the inconvenience.\n\nBest regards,\nRealty Team";
+            EmailUtility.sendEmail(toEmail, subject, body);
+
+            // Delete the record from the database
+            Connection con = SQLconnection.dbconnector();
+            Statement stmt = con.createStatement();
+            String query = "DELETE FROM BookingRequest WHERE ID = '" + studentId + "'";
             stmt.executeUpdate(query);
             stmt.close();
-            
-              }catch(Exception ex){
-            JOptionPane.showMessageDialog(this,ex);
-        }
+            con.close();
+
+            // Update table
+            model.removeRow(selectedRowIndex);
+
+            JOptionPane.showMessageDialog(this, "Booking cancelled and email sent successfully!");
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(this, "Error while processing: " + ex.getMessage());
+            ex.printStackTrace();
+        } 
+     
+     
+    
+      
     }//GEN-LAST:event_btncancelbookingActionPerformed
 
 
@@ -358,21 +331,17 @@ properties.put("mail.debug", "true");
     // End of variables declaration//GEN-END:variables
 
 private void PopulateTable() {
-        
-        DefaultTableModel model= (DefaultTableModel) tblviewstudent.getModel();
+    DefaultTableModel model = (DefaultTableModel) tblviewstudent.getModel();
         model.setRowCount(0);
-        
-        for (AppointmentReq a : his.getHistory()){
-        
-        Object[] row = new Object[6];
-            row[0] = a.getId();
-            row[1] = a.getName();
-            row[2] = a.getContactNumber();
-            row[3] = a.getEmailId();
-            row[4]= a.getTimeslot();
-            row[5] = a;
-           
+
+        for (BookingRequest request : history.getBookingHistory()) {
+            Object[] row = new Object[5];
+            row[0] = request.getId();
+            row[1] = request.getName();
+            row[2] = request.getContactNo();
+            row[3] = request.getEmailId();
+            //row[4] = request.getTimeSlot();
             model.addRow(row);
-        }
-        
-        }}
+}
+
+}}

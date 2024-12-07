@@ -6,6 +6,7 @@ package UI;
 
 
 //import Model.AppointmentRequesthistory;
+import Model.AppointmentRequesthistory;
 import Model.SQLconnection;
 import java.awt.List;
 import java.sql.Connection;
@@ -100,6 +101,11 @@ public class StudentDetailsApp extends javax.swing.JFrame {
         });
 
         cmbtime.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "9 - 12", "12 - 3", "3 - 5" }));
+        cmbtime.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbtimeActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -210,6 +216,10 @@ public class StudentDetailsApp extends javax.swing.JFrame {
     private void txtemailidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtemailidActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtemailidActionPerformed
+
+    private void cmbtimeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbtimeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbtimeActionPerformed
 
     /**
      * @param args the command line arguments

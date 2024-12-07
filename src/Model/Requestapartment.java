@@ -9,50 +9,59 @@ package Model;
  * @author nsarv
  */
 public class Requestapartment {
-    String ApartmentName;
-    String ApartmentType;
-    int Price;
-    String LandlordName;
-    int ApartmentID;
+    private String apartmentName;
+    private String apartmentType;
+    private String price;
+    private String landlordName;
+    private int apartmentID;
 
-    public String getApartmentName() {
-        return ApartmentName;
+    public Requestapartment(String apartmentName, String apartmentType, String price, String landlordName, int apartmentID) {
+        this.apartmentName = apartmentName;
+        this.apartmentType = apartmentType;
+        this.price = price;
+        this.landlordName = landlordName;
+        this.apartmentID = apartmentID;
     }
 
-    public void setApartmentName(String ApartmentName) {
-        this.ApartmentName = ApartmentName;
+    // Getters and Setters
+    public String getApartmentName() {
+        return apartmentName;
+    }
+
+    public void setApartmentName(String apartmentName) {
+        this.apartmentName = apartmentName;
     }
 
     public String getApartmentType() {
-        return ApartmentType;
+        return apartmentType;
     }
 
-    public void setApartmentType(String ApartmentType) {
-        this.ApartmentType = ApartmentType;
+    public void setApartmentType(String apartmentType) {
+        this.apartmentType = apartmentType;
     }
 
-    public int getPrice() {
-        return Price;
+    public String getPrice() {
+        return price;
     }
 
-    public void setPrice(int Price) {
-        this.Price = Price;
+    public void setPrice(String price) {
+        this.price = price;
     }
 
     public String getLandlordName() {
-        return LandlordName;
+        return landlordName;
     }
 
-    public void setLandlordName(String LandlordName) {
-        this.LandlordName = LandlordName;
+    public void setLandlordName(String landlordName) {
+        this.landlordName = landlordName;
     }
 
     public int getApartmentID() {
-        return ApartmentID;
+        return apartmentID;
     }
 
-    public void setApartmentID(int ApartmentID) {
-        this.ApartmentID = ApartmentID;
+    public void setApartmentID(int apartmentID) {
+        this.apartmentID = apartmentID;
     }
     
     

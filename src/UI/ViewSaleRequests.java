@@ -13,6 +13,7 @@ import com.lowagie.text.pdf.PdfPTable;
 import com.lowagie.text.pdf.PdfWriter;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFileChooser;
@@ -20,6 +21,8 @@ import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
+
+
 /**
  *
  * @author sneghashree
@@ -29,11 +32,11 @@ public class ViewSaleRequests extends javax.swing.JPanel {
     /**
      * Creates new form ViewSaleRequests
      */
-    Marketrequeststudenthistory h = new  Marketrequeststudenthistory();
+   private final Marketrequeststudenthistory history;
     public ViewSaleRequests() {
         initComponents();
-        h.getMarketrequeststudentHistory();
-        PopulateTable();
+        history = new Marketrequeststudenthistory(); // Fetch market request history
+        populateTable();
     }
 
     /**
@@ -103,64 +106,49 @@ public class ViewSaleRequests extends javax.swing.JPanel {
 
     private void btnpdfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnpdfActionPerformed
         // TODO add your handling code here:
-         String path="";
-        JFileChooser j = new JFileChooser();
-        j.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-        int x=j.showSaveDialog(this);
-        
-        if(x==JFileChooser.APPROVE_OPTION)
-        {
-            path=j.getSelectedFile().getPath();
-            
+        String path = "";
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+        int option = fileChooser.showSaveDialog(this);
+
+        if (option == JFileChooser.APPROVE_OPTION) {
+            path = fileChooser.getSelectedFile().getPath();
         }
-        
+
+        if (path.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Please select a valid directory!");
+            return;
+        }
+
         Document doc = new Document();
         try {
-            PdfWriter.getInstance(doc, new FileOutputStream(path+"TourRequestAcceptance.pdf"));
-            
+            PdfWriter.getInstance(doc, new FileOutputStream(path + "/MarketRequests.pdf"));
             doc.open();
-            
-            PdfPTable tb1 = new PdfPTable(4);
-            
-      //      PdfPTable tb2 = new PdfPTable(3);
-         
-    //     System.out.println("The Bill\n");
-         
-           
-            tb1.addCell("Name");
-            tb1.addCell("Id");
-            tb1.addCell("ContactNumber");
-            tb1.addCell("EmailId");
-            
-            
 
+            PdfPTable table = new PdfPTable(4);
+            table.addCell("ID");
+            table.addCell("Name");
+            table.addCell("Contact Number");
+            table.addCell("Email");
 
-            for(int i=0;i<tblviewstudent.getRowCount();i++)
-            {
-                String Name=tblviewstudent.getValueAt(i,1).toString();
-                 String ID=tblviewstudent.getValueAt(i,0).toString();
-                  String ContactNumber=tblviewstudent.getValueAt(i,2).toString();
-                   String EmailId=tblviewstudent.getValueAt(i,3).toString();
-                
-               
-                
-                tb1.addCell(Name);
-                tb1.addCell(ID);
-                tb1.addCell(ContactNumber);
-                tb1.addCell(EmailId);
-               
-                
+            DefaultTableModel model = (DefaultTableModel) tblviewstudent.getModel();
+
+            for (int i = 0; i < model.getRowCount(); i++) {
+                table.addCell(model.getValueAt(i, 0).toString());
+                table.addCell(model.getValueAt(i, 1).toString());
+                table.addCell(model.getValueAt(i, 2).toString());
+                table.addCell(model.getValueAt(i, 3).toString());
             }
-            doc.add(tb1);
-                    
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(ViewHouseTourrequests.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (DocumentException ex) {
-            Logger.getLogger(ViewHouseTourrequests.class.getName()).log(Level.SEVERE, null, ex);
+
+            doc.add(table);
+            JOptionPane.showMessageDialog(this, "PDF Generated Successfully!");
+
+        } catch (FileNotFoundException | DocumentException e) {
+            Logger.getLogger(ViewSaleRequests.class.getName()).log(Level.SEVERE, null, e);
+            JOptionPane.showMessageDialog(this, "Error while generating PDF: " + e.getMessage());
+        } finally {
+            doc.close();
         }
-        
-        doc.close();
-        JOptionPane.showMessageDialog(this,"Sale Processed");
     }//GEN-LAST:event_btnpdfActionPerformed
 
 
@@ -169,21 +157,18 @@ public class ViewSaleRequests extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblviewstudent;
     // End of variables declaration//GEN-END:variables
-private void PopulateTable() {
-        
-        DefaultTableModel model= (DefaultTableModel) tblviewstudent.getModel();
+private void populateTable() {
+        DefaultTableModel model = (DefaultTableModel) tblviewstudent.getModel();
         model.setRowCount(0);
-        
-        for (Marketrequeststudent s : h.getHistory()){
-        
-        Object[] row = new Object[5];
-            row[0] = s.getId();
-            row[1] = s.getName();
-            row[2] = s.getContactNumber();
-            row[3] = s.getEmailId();
-            row[4] = s;
-           
+
+        List<Marketrequeststudent> marketRequests = history.getHistory();
+
+        for (Marketrequeststudent request : marketRequests) {
+            Object[] row = new Object[4];
+            row[0] = request.getId();
+            row[1] = request.getName();
+            row[2] = request.getContactNumber();
+            row[3] = request.getEmailId();
             model.addRow(row);
         }
-        
-        }}
+    }}
