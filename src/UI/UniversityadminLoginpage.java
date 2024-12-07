@@ -176,7 +176,7 @@ public class UniversityadminLoginpage extends javax.swing.JFrame {
 
         try {
             Connection con=SQLconnection.dbconnector();
-            PreparedStatement stmt=con.prepareStatement("SELECT * from University WHERE USERNAME=? AND PASSWORD=?");
+            PreparedStatement stmt=con.prepareStatement("SELECT * from UniversityAdmin WHERE USERNAME=? AND PASSWORD=?");
             // PreparedStatement smt=con.prepareStatement("SELECT * from Brokers WHERE USERNAME=? AND PASSWORD=?");
 
             stmt.setString(1,USERNAME);

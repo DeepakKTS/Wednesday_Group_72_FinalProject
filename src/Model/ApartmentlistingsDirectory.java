@@ -45,25 +45,34 @@ public class ApartmentlistingsDirectory {
         list.remove(newApartmentlistings);
     }
     public void getApartmentlistingsDirectory() {
+    list.clear(); // Clear existing data to prevent duplication
     try {
-        Connection con = SQLconnection.dbconnector(); // Establish database connection
-        PreparedStatement stmt = con.prepareStatement("SELECT ID, ApartmentType, LandlordName, Price, BrokerName, ApartmentName FROM Apartments");
+        Connection con = SQLconnection.dbconnector();
+        PreparedStatement stmt = con.prepareStatement(
+            "SELECT ApartmentType, LandlordName, Price, BrokerName, ApartmentName, ID FROM Apartments"
+        );
         ResultSet rs = stmt.executeQuery();
 
         while (rs.next()) {
             Apartmentlistings a = new Apartmentlistings();
-            a.setID(rs.getInt("ID"));
+
             a.setApartmenttype(rs.getString("ApartmentType"));
             a.setLandlordname(rs.getString("LandlordName"));
             a.setPrice(rs.getString("Price"));
             a.setBrokerName(rs.getString("BrokerName"));
             a.setApartmentname(rs.getString("ApartmentName"));
-            list.add(a); // Add the record to the list
+            a.setID(rs.getInt("ID"));
+
+            list.add(a);
         }
+        stmt.close();
+        con.close();
     } catch (SQLException ex) {
-        Logger.getLogger(ApartmentlistingsDirectory.class.getName()).log(Level.SEVERE, null, ex);
+        ex.printStackTrace();
     }
-  } 
+}
+
+
 }
 
     

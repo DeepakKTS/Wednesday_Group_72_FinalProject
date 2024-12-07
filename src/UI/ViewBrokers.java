@@ -415,7 +415,7 @@ public class ViewBrokers extends javax.swing.JPanel {
              row[2]=b.getContactno();
              row[3]=b.getBrokerfee();
              row[4]=b.getManagement();
-             row[5]=b.getEmailid();
+             row[5]=b.getEmail();
              row[6]=b;
     
              model.addRow(row);

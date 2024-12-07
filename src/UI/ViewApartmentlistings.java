@@ -156,15 +156,23 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
                 {null, null, null, null, null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
                 "Apartment Type", "Landlord Name", "Price", "Utilities", "Grocery Stores", "Hospitals", "MBTA", "Broker Name", "Email ID", "Apartment Name", "ID", "Title 12"
             }
         ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Integer.class, java.lang.Object.class
+            };
             boolean[] canEdit = new boolean [] {
                 false, false, false, false, false, false, false, false, false, false, false, false
             };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
@@ -495,6 +503,7 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
         
         try {
         Connection con = SQLconnection.dbconnector();
+        
         PreparedStatement stmt = con.prepareStatement("SELECT * FROM Apartments WHERE ID = ?");
         stmt.setInt(1, apartmentID); // Set the ID parameter
         ResultSet rs = stmt.executeQuery();
@@ -699,9 +708,10 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
 
     private void btnbooktourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbooktourActionPerformed
         // TODO add your handling code here:
-          // TODO add your handling code here:
+        // Handle booking an apartment tour
+     // WORKING   
         try {
-            Connection con=SQLconnection.dbconnector();
+            Connection con =SQLconnection.dbconnector();
              Statement stmt=con.createStatement();
            String Query= "INSERT INTO ApartmentBooking (ApartmentName,ApartmentType,Price,LandlordName,ApartmentID) values ('"+txtaptname.getText()+"','"+txtapttype.getText()+"','"+txtprice.getText()+"','"+txtlandname.getText()+"','"+txtid.getText()+"')"; 
         //JOptionPane.showMessageDialog(this,"Request sent Successfully");
@@ -728,7 +738,10 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
 
                 frame.setDefaultCloseOperation(StudentDetailsPage.EXIT_ON_CLOSE);
                 frame.setResizable(false);
-          }
+          } 
+        //-------------------
+   
+
         
     }//GEN-LAST:event_btnbooktourActionPerformed
 
@@ -774,19 +787,22 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
 
     private void PopulateTable() {
     DefaultTableModel model = (DefaultTableModel) tblapartmentlistings.getModel();
-    model.setRowCount(0); // Clear existing rows
+    model.setRowCount(0); // Clear table rows before populating
 
     for (Apartmentlistings a : ad.getList()) {
-        Object[] row = new Object[6]; // Match with the column count
-        row[0] = a.getApartmenttype();  // Apartment Type
-        row[1] = a.getLandlordname();   // Landlord Name
-        row[2] = a.getPrice();          // Price
-        row[3] = a.getBrokerName();     // Broker Name
-        row[4] = a.getApartmentname();  // Apartment Name
-        row[5] = a.getID();             // ID
-        model.addRow(row); // Add the row to the table
+        Object[] row = new Object[6]; // Match the number of displayed columns
+        row[0] = a.getApartmenttype();
+        row[1] = a.getLandlordname();
+        row[2] = a.getPrice();
+        row[3] = a.getBrokerName();
+        row[4] = a.getApartmentname();
+        row[5] = a.getID();
+        model.addRow(row);
     }
 }
+
+
+
 
  public void search(String str,int i) {
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
