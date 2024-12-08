@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package UI;
+import Model.BookingRequest;
 import Model.Marketrequeststudent;
 import Model.Marketrequeststudenthistory;
 import Model.Requeststudent;
@@ -36,7 +37,7 @@ public class ViewSaleRequests extends javax.swing.JPanel {
     public ViewSaleRequests() {
         initComponents();
         history = new Marketrequeststudenthistory(); // Fetch market request history
-        populateTable();
+        PopulateTable();
     }
 
     /**
@@ -129,7 +130,7 @@ public class ViewSaleRequests extends javax.swing.JPanel {
             table.addCell("ID");
             table.addCell("Name");
             table.addCell("Contact Number");
-            table.addCell("Email");
+            table.addCell("EmailId");
 
             DefaultTableModel model = (DefaultTableModel) tblviewstudent.getModel();
 
@@ -157,18 +158,18 @@ public class ViewSaleRequests extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblviewstudent;
     // End of variables declaration//GEN-END:variables
-private void populateTable() {
-        DefaultTableModel model = (DefaultTableModel) tblviewstudent.getModel();
-        model.setRowCount(0);
+private void PopulateTable() {
+    DefaultTableModel model = (DefaultTableModel) tblviewstudent.getModel();
+    model.setRowCount(0);
 
-        List<Marketrequeststudent> marketRequests = history.getHistory();
+    for (Marketrequeststudent request : history.getHistory()) {
+        Object[] row = new Object[4]; // Match the table column count
+        row[0] = request.getId();         // ID
+        row[1] = request.getName();       // Name
+        row[2] = request.getContactNumber(); // Contact Number
+        row[3] = request.getEmailId();    // Email ID
+        model.addRow(row);
+    }
+}
 
-        for (Marketrequeststudent request : marketRequests) {
-            Object[] row = new Object[4];
-            row[0] = request.getId();
-            row[1] = request.getName();
-            row[2] = request.getContactNumber();
-            row[3] = request.getEmailId();
-            model.addRow(row);
-        }
-    }}
+}
