@@ -103,23 +103,21 @@ public class ViewProducts extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblmarketplace;
     // End of variables declaration//GEN-END:variables
-
+private void PopulateTable() {
         
-      private void PopulateTable() {
-    DefaultTableModel model = (DefaultTableModel) tblmarketplace.getModel();
-    model.setRowCount(0);
- 
-    for (Market mp : mh.getList()) {
+        DefaultTableModel model= (DefaultTableModel) tblmarketplace.getModel();
+        model.setRowCount(0);
+        
+        for (Market mp : mh.getList()){
+        
         Object[] row = new Object[5];
-        row[0] = mp.getProductID();     // ProductID
-        row[1] = mp.getProductName();  // ProductName
-        row[2] = mp.getPrice();        // Price
-        row[3] = mp.getUsedStatus();   // UsedStatus
-        row[4] = mp.getImagePath();    // ImagePath (optional, if you display or use)
- 
-        model.addRow(row);
-    }
-}
-
-
+            row[0] = mp.getName();
+            row[1] = mp.getPrice();
+            row[2] = mp.getUsed();
+            
+            row[3] = mp;
+           
+            model.addRow(row);
         }
+        
+        }}
