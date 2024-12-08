@@ -4,47 +4,59 @@
  */
 package Model;
 
+import java.math.BigDecimal;
+
 /**
  *
  * @author sneghashree
  */
 public class Market {
-    String Name;
-    int Price;
-    String Used;
-    String Image;
+    private int productID;           // ProductID column
+    private String productName;      // ProductName column
+    private BigDecimal price;        // Price column
+    private String usedStatus;       // UsedStatus column
+    private String imagePath;        // ImagePath column
 
-    public String getImage() {
-        return Image;
+    // Getters and Setters
+    public int getProductID() {
+        return productID;
     }
 
-    public void setImage(String Image) {
-        this.Image = Image;
+    public void setProductID(int productID) {
+        this.productID = productID;
     }
 
-    public String getName() {
-        return Name;
+    public String getProductName() {
+        return productName;
     }
 
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
-    public int getPrice() {
-        return Price;
+    public BigDecimal getPrice() {
+        return price;
     }
 
-    public void setPrice(int Price) {
-        this.Price = Price;
+    public void setPrice(BigDecimal price) {
+        this.price = price;
     }
 
-    public String getUsed() {
-        return Used;
+    public String getUsedStatus() {
+        return usedStatus;
     }
 
-    public void setUsed(String Used) {
-        this.Used = Used;
+    public void setUsedStatus(String usedStatus) {
+        this.usedStatus = usedStatus;
     }
-    
-    
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
+    }
 }
+
+
