@@ -34,7 +34,7 @@
               <Component id="btntwobhk" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
               <Component id="btnthreebhk" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="461" max="32767" attributes="0"/>
+              <EmptySpace pref="473" max="32767" attributes="0"/>
               <Component id="btnsearch" min="-2" pref="110" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
           </Group>
@@ -228,8 +228,11 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="12" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="1 BHK"/>
+        <Property name="text" type="java.lang.String" value="1BHK"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnonebhkActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="btntwobhk">
       <Properties>
@@ -239,8 +242,11 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="12" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="2 BHK"/>
+        <Property name="text" type="java.lang.String" value="2BHK"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btntwobhkActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="btnthreebhk">
       <Properties>
@@ -250,8 +256,11 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="12" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="3 BHK"/>
+        <Property name="text" type="java.lang.String" value="3BHK"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnthreebhkActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnsearch">
       <Properties>
@@ -285,7 +294,7 @@
                 <Column editable="false" title="Grocery Stores" type="java.lang.Object"/>
                 <Column editable="false" title="Hospitals" type="java.lang.Object"/>
                 <Column editable="false" title="MBTA" type="java.lang.Object"/>
-                <Column editable="false" title="Broker Name" type="java.lang.String"/>
+                <Column editable="false" title="BrokerName" type="java.lang.String"/>
                 <Column editable="false" title="Email ID" type="java.lang.Object"/>
                 <Column editable="false" title="Apartment Name" type="java.lang.Object"/>
                 <Column editable="false" title="ID" type="java.lang.Integer"/>
