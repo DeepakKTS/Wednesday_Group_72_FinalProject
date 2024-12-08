@@ -17,7 +17,8 @@ public class StartPage extends javax.swing.JFrame {
         initComponents();
         this.setResizable(false);
 
-          this.setExtendedState(MAXIMIZED_BOTH);
+          this.setSize(1024, 768); // Set to your desired fixed size
+
     }
 
     /**
@@ -42,19 +43,21 @@ public class StartPage extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1024, 768));
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 153));
-        jPanel1.setPreferredSize(new java.awt.Dimension(1280, 720));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1024, 768));
         jPanel1.setLayout(null);
 
         jLabel3.setFont(new java.awt.Font("AppleMyungjo", 1, 24)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("HuskyHomestead");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(0, 20, 1280, 50);
+        jLabel3.setBounds(0, 20, 1040, 50);
 
         btnstudent.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnstudent.setText("Student ");
+        btnstudent.setBorder(null);
         btnstudent.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnstudent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,7 +65,7 @@ public class StartPage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnstudent);
-        btnstudent.setBounds(550, 140, 150, 24);
+        btnstudent.setBounds(430, 120, 150, 30);
 
         btnuniversity.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnuniversity.setText("University Admin");
@@ -73,7 +76,7 @@ public class StartPage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnuniversity);
-        btnuniversity.setBounds(550, 190, 150, 24);
+        btnuniversity.setBounds(430, 170, 150, 24);
 
         btnheadrealtor.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnheadrealtor.setText("Head Realtor");
@@ -84,7 +87,7 @@ public class StartPage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnheadrealtor);
-        btnheadrealtor.setBounds(550, 240, 150, 24);
+        btnheadrealtor.setBounds(430, 220, 150, 24);
 
         btnbroker.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnbroker.setText("Broker");
@@ -95,7 +98,7 @@ public class StartPage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnbroker);
-        btnbroker.setBounds(550, 290, 150, 24);
+        btnbroker.setBounds(430, 270, 150, 24);
 
         btnlandlord.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnlandlord.setText("Landlord");
@@ -106,7 +109,7 @@ public class StartPage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnlandlord);
-        btnlandlord.setBounds(550, 340, 150, 24);
+        btnlandlord.setBounds(430, 320, 150, 24);
 
         btnmarketplaceadmin.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnmarketplaceadmin.setText("Marketplace Admin");
@@ -117,7 +120,7 @@ public class StartPage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnmarketplaceadmin);
-        btnmarketplaceadmin.setBounds(550, 390, 144, 24);
+        btnmarketplaceadmin.setBounds(430, 370, 144, 24);
 
         btntechsupport.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btntechsupport.setText("Tech Support");
@@ -128,7 +131,7 @@ public class StartPage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btntechsupport);
-        btntechsupport.setBounds(550, 440, 150, 24);
+        btntechsupport.setBounds(430, 420, 150, 24);
 
         btnsysadmin.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnsysadmin.setText("System Admin");
@@ -139,22 +142,24 @@ public class StartPage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnsysadmin);
-        btnsysadmin.setBounds(550, 490, 150, 24);
+        btnsysadmin.setBounds(430, 470, 150, 24);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/deepakzedler/Downloads/DALL·E 2024-12-08 02.55.41 - A realistic, high-resolution landscape background for an apartment or housing application. The scene features modern apartment buildings with well-lit.jpg")); // NOI18N
+        jLabel1.setBackground(java.awt.Color.white);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/DALL·E 2024-12-08 02.55.41 - A realistic, high-resolution landscape background for an apartment or housing application. The scene features modern apartment buildings with well-lit.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
+        jLabel1.setPreferredSize(new java.awt.Dimension(1024, 768));
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(-310, -40, 1650, 770);
+        jLabel1.setBounds(-420, -10, 1560, 760);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1280, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1044, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 720, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 735, Short.MAX_VALUE)
         );
 
         pack();
