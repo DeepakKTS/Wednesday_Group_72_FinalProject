@@ -158,15 +158,13 @@ public class AddstudentsPage extends javax.swing.JPanel {
     }//GEN-LAST:event_txtnameActionPerformed
 
     private void btnaddstudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddstudentActionPerformed
-        // TODO add your handling code here:
+       // TODO add your handling code here:
          String name = txtname.getText();
         String id= txtid.getText();
         String contactno = txtcontactno.getText();
         String emailid = txtemailid.getText();
-       
         String username = txtusername.getText();
         String password = txtpassword.getText();
-        
         
         if(name.isBlank() ){
             JOptionPane.showMessageDialog(this,"Please enter the Name");
@@ -176,7 +174,6 @@ public class AddstudentsPage extends javax.swing.JPanel {
              JOptionPane.showMessageDialog(this,"Please enter the Contact Number");
         }else if(emailid.isBlank()){
                JOptionPane.showMessageDialog(this,"Please enter the Email ID");
-        
         }else if(username.isBlank()){
             JOptionPane.showMessageDialog(this,"Please enter the Username");
         }else if(password.isBlank()){
@@ -184,29 +181,30 @@ public class AddstudentsPage extends javax.swing.JPanel {
         }else{
             //JOptionPane.showMessageDialog(this,"Registeration Successfull");
         
-        System.out.println("Before try statement executed");
+            System.out.println("Before try statement executed");
        
-        try {
-            System.out.println("Inside try statement executed");
-              Connection con=SQLconnection.dbconnector();
-            Statement stmt=con.createStatement();
-            
-          String Query= "INSERT INTO Student (ID,Name,ContactNumber,EmailId,USERNAME,PASSWORD) values('"+txtname.getText()+"','"+txtid.getText()+"','"+txtcontactno.getText()+"','"+txtemailid.getText()+"','"+txtusername.getText()+"','"+txtpassword.getText()+"')";
-          
-         
-            stmt.executeUpdate(Query);
-          stmt.close();
-          con.close();
-            JOptionPane.showMessageDialog(this, "Registered Sucessfully");
-       
-            
-        
-       
-        } catch (SQLException ex) {
-            Logger.getLogger(AddstudentsPage.class.getName()).log(Level.SEVERE, null, ex);
+            try {
+                System.out.println("Inside try statement executed");
+                Connection con=SQLconnection.dbconnector();
+                Statement stmt=con.createStatement();
+                
+                // Updated Query to match the Student table column names
+                String Query= "INSERT INTO student (ID, Name, ContactNo, EmailID, Username, Password) VALUES ('"
+                        + txtid.getText() + "', '"
+                        + txtname.getText() + "', '"
+                        + txtcontactno.getText() + "', '"
+                        + txtemailid.getText() + "', '"
+                        + txtusername.getText() + "', '"
+                        + txtpassword.getText() + "')";
+                
+                stmt.executeUpdate(Query);
+                stmt.close();
+                con.close();
+                JOptionPane.showMessageDialog(this, "Registered Successfully");
+            } catch (SQLException ex) {
+                Logger.getLogger(AddstudentsPage.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
-        
-}
     }//GEN-LAST:event_btnaddstudentActionPerformed
 
 
