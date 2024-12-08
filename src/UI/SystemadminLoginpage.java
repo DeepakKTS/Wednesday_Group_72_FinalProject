@@ -190,11 +190,11 @@ public class SystemadminLoginpage extends javax.swing.JFrame {
 
             else if ( rs.next()){
                 JOptionPane.showMessageDialog(this, "Login Successfull");
-                StudentView frame=new StudentView();
-                frame.setTitle("StudentView");
+                adminView frame=new adminView();
+                frame.setTitle("adminView");
                 frame.setVisible(true);
 
-                frame.setDefaultCloseOperation(StudentView.EXIT_ON_CLOSE);
+                frame.setDefaultCloseOperation(adminView.EXIT_ON_CLOSE);
                 frame.setResizable(false);
 
             } else if(rs.next()){
