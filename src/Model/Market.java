@@ -65,13 +65,4 @@ public class Market {
         this.image = image;
     }
 
-    @Override
-    public String toString() {
-        return "Market{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                ", used='" + used + '\'' +
-                ", image='" + image + '\'' +
-                '}';
-    }
 }
