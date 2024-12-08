@@ -39,7 +39,7 @@ public static Connection dbconnector() {
             Class.forName("com.mysql.cj.jdbc.Driver");
             
             // Replace these with your MySQL database credentials
-            String url = "jdbc:mysql://localhost:3306/StudentHousing"; // Database name is "StudentHousing"
+            String url = "jdbc:mysql://localhost:3306/studenthousing"; // Database name is "StudentHousing"
             String username = "root"; // Default XAMPP username
             String password = "";    // Leave blank for XAMPP default
 

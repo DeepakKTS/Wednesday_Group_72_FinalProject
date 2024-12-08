@@ -172,7 +172,7 @@ private void PopulateTable() {
         
         for (Requeststudent s : history.getHistory()){
         
-        Object[] row = new Object[5];
+        Object[] row = new Object[5];// was 5
             row[0] = s.getId();
             row[1] = s.getName();
             row[2] = s.getContactNumber();
