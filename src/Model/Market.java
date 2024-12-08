@@ -10,53 +10,68 @@ import java.math.BigDecimal;
  *
  * @author sneghashree
  */
+
 public class Market {
-    private int productID;           // ProductID column
-    private String productName;      // ProductName column
-    private BigDecimal price;        // Price column
-    private String usedStatus;       // UsedStatus column
-    private String imagePath;        // ImagePath column
+    private String name;       // Product name
+    private double price;      // Product price
+    private String used;       // Used/Unused status
+    private String image;      // Image file name or path
 
-    // Getters and Setters
-    public int getProductID() {
-        return productID;
+    // Constructor to initialize market object
+    public Market(String name, double price, String used, String image) {
+        this.name = name;
+        this.price = price;
+        this.used = used;
+        this.image = image;
     }
 
-    public void setProductID(int productID) {
-        this.productID = productID;
+    // Default constructor for flexibility
+    public Market() {
     }
 
-    public String getProductName() {
-        return productName;
+    // Getter and Setter for Name
+    public String getName() {
+        return name;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public BigDecimal getPrice() {
+    // Getter and Setter for Price
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(BigDecimal price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
-    public String getUsedStatus() {
-        return usedStatus;
+    // Getter and Setter for Used Status
+    public String getUsed() {
+        return used;
     }
 
-    public void setUsedStatus(String usedStatus) {
-        this.usedStatus = usedStatus;
+    public void setUsed(String used) {
+        this.used = used;
     }
 
-    public String getImagePath() {
-        return imagePath;
+    // Getter and Setter for Image
+    public String getImage() {
+        return image;
     }
 
-    public void setImagePath(String imagePath) {
-        this.imagePath = imagePath;
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    @Override
+    public String toString() {
+        return "Market{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", used='" + used + '\'' +
+                ", image='" + image + '\'' +
+                '}';
     }
 }
-
-

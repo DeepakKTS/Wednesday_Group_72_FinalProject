@@ -23,7 +23,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author nsarv
+ * @author deepakzedler
  */
 public class MarketplaceAddproducts extends javax.swing.JPanel {
 
@@ -110,31 +110,32 @@ public class MarketplaceAddproducts extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btndeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndeleteActionPerformed
-        // TODO add your handling code here:
-        
-        int selectedRowIndex = tblmarketplace.getSelectedRow();
-         try {
-           DefaultTableModel model =(DefaultTableModel) tblmarketplace.getModel();
-               Market mp = (Market)model.getValueAt(selectedRowIndex,4);
-               mh.deleteMarket(mp);
-           // System.out.println("Inside try statement executed");
-            // JOptionPane.showMessageDialog(this, "Record deleted Successfully");
-              Connection con=SQLconnection.dbconnector();
-              Statement stmt =  con.createStatement();
-              
-           String idea;
-            idea= (String) model.getValueAt(selectedRowIndex,0);
-           String query = "delete from Product where Name='"+idea+"' ";
-            stmt.executeUpdate(query);
-            stmt.close();
-         
-            PopulateTable();
-            JOptionPane.showMessageDialog(this, "Deleted Successfully");
-              } catch (SQLException ex) {
-                Logger.getLogger(DisplayBrokers.class.getName()).log(Level.SEVERE, null, ex);
-            }      
-           
-        
+       // Handle product deletion using prepopulated data
+    int selectedRowIndex = tblmarketplace.getSelectedRow();
+
+    try {
+        if (selectedRowIndex < 0) {
+            JOptionPane.showMessageDialog(this, "Please select a valid row to delete!");
+            return;
+        }
+
+        // Access the table model
+        DefaultTableModel model = (DefaultTableModel) tblmarketplace.getModel();
+
+        // Fetch the selected market object using the row index
+        Market mp = mh.getList().get(selectedRowIndex);
+
+        // Remove the selected market object from the list
+        mh.deleteMarket(mp);
+
+        // Refresh the table after deletion
+        PopulateTable();
+
+        // Notify the user about successful deletion
+        JOptionPane.showMessageDialog(this, "Deleted Successfully!");
+    } catch (Exception ex) {
+        JOptionPane.showMessageDialog(this, "An error occurred while deleting the row: " + ex.getMessage());
+    }
     }//GEN-LAST:event_btndeleteActionPerformed
 
 
@@ -145,20 +146,18 @@ public class MarketplaceAddproducts extends javax.swing.JPanel {
     private javax.swing.JTable tblmarketplace;
     // End of variables declaration//GEN-END:variables
 private void PopulateTable() {
-
     DefaultTableModel model = (DefaultTableModel) tblmarketplace.getModel();
-    model.setRowCount(0);
+    model.setRowCount(0); // Clear existing rows in the table
 
+    // Iterate through the prepopulated market list and add rows to the table
     for (Market mp : mh.getList()) {
+        Object[] row = new Object[4]; // Adjusted to match the table columns
+        row[0] = mp.getName();       // Product Name
+        row[1] = mp.getPrice();      // Price
+        row[2] = mp.getUsed();       // Used/Unused Status
+        row[3] = mp.getImage();      // Image Path (optional visibility)
 
-        Object[] row = new Object[4];
-        row[0] = mp.getProductID();    // Product ID
-        row[1] = mp.getProductName();  // Product Name
-        row[2] = mp.getPrice();        // Price
-        row[3] = mp.getUsedStatus();   // UsedStatus
-
-        model.addRow(row);
+        model.addRow(row); // Add the row to the table model
     }
 }
-
 }
