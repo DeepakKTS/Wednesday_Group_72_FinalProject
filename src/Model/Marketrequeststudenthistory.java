@@ -24,35 +24,40 @@ import java.util.List;
  *
  * @author nsarv
  */
+
 public class Marketrequeststudenthistory {
-     
     private List<Marketrequeststudent> marketRequests;
 
+    // Constructor to fetch data when the object is created
     public Marketrequeststudenthistory() {
         marketRequests = new ArrayList<>();
         fetchStudentDataFromDatabase();
     }
 
+    // Method to fetch data from the Student table
     private void fetchStudentDataFromDatabase() {
+        String query = "SELECT Name, ContactNo, Email FROM Student"; // SQL query
         try (Connection con = SQLconnection.dbconnector();
-             java.sql.Statement stmt = con.createStatement()) {
-            String query = "SELECT Name, ContactNo, Email FROM Student";
-            ResultSet rs = stmt.executeQuery(query);
+             PreparedStatement pstmt = con.prepareStatement(query)) {
 
-            while (rs.next()) {
-                String name = rs.getString("Name");
-                String contactNo = rs.getString("ContactNo");
-                String email = rs.getString("Email");
+            try (ResultSet rs = pstmt.executeQuery()) {
+                while (rs.next()) {
+                    // Extract data from ResultSet
+                    String name = rs.getString("Name");
+                    String contactNo = rs.getString("ContactNo");
+                    String email = rs.getString("Email");
 
-                Marketrequeststudent student = new Marketrequeststudent(name, contactNo, email);
-                marketRequests.add(student);
+                    // Add each student record to the marketRequests list
+                    Marketrequeststudent student = new Marketrequeststudent(0, name, contactNo, email);
+                    marketRequests.add(student);
+                }
             }
-            rs.close();
         } catch (Exception e) {
-            e.printStackTrace();
+            e.printStackTrace(); // Handle exceptions
         }
     }
 
+    // Method to return the history of market requests
     public List<Marketrequeststudent> getHistory() {
         return marketRequests;
     }
