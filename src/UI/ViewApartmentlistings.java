@@ -122,15 +122,30 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
 
         buttonGroup.add(btnonebhk);
         btnonebhk.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnonebhk.setText("1 BHK");
+        btnonebhk.setText("1BHK");
+        btnonebhk.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnonebhkActionPerformed(evt);
+            }
+        });
 
         buttonGroup.add(btntwobhk);
         btntwobhk.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btntwobhk.setText("2 BHK");
+        btntwobhk.setText("2BHK");
+        btntwobhk.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btntwobhkActionPerformed(evt);
+            }
+        });
 
         buttonGroup.add(btnthreebhk);
         btnthreebhk.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnthreebhk.setText("3 BHK");
+        btnthreebhk.setText("3BHK");
+        btnthreebhk.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnthreebhkActionPerformed(evt);
+            }
+        });
 
         btnsearch.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
         btnsearch.setText("Search");
@@ -160,7 +175,7 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
                 {null, null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Apartment Type", "Landlord Name", "Price", "Utilities", "Grocery Stores", "Hospitals", "MBTA", "Broker Name", "Email ID", "Apartment Name", "ID", "Title 12"
+                "Apartment Type", "Landlord Name", "Price", "Utilities", "Grocery Stores", "Hospitals", "MBTA", "BrokerName", "Email ID", "Apartment Name", "ID", "Title 12"
             }
         ) {
             Class[] types = new Class [] {
@@ -305,7 +320,7 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
                 .addComponent(btntwobhk)
                 .addGap(70, 70, 70)
                 .addComponent(btnthreebhk)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 461, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 473, Short.MAX_VALUE)
                 .addComponent(btnsearch, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(53, 53, 53))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -804,6 +819,18 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
 
         
     }//GEN-LAST:event_btnbooktourActionPerformed
+
+    private void btnonebhkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnonebhkActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnonebhkActionPerformed
+
+    private void btntwobhkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btntwobhkActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btntwobhkActionPerformed
+
+    private void btnthreebhkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnthreebhkActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnthreebhkActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

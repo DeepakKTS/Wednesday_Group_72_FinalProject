@@ -1,10 +1,10 @@
-/*
+ /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package UI;
 
-import Model.Apartmenthistory;
+import Model.ApartmentHistory;
 import Model.Requestapartment;
 import Model.Requeststudent;
 import Model.Studenthistory;
@@ -21,7 +21,7 @@ public class ViewHousetourbookings extends javax.swing.JPanel {
      * Creates new form ViewHousetourbookings
      */
      Studenthistory history = new Studenthistory();
-     Apartmenthistory hist = new Apartmenthistory();
+     ApartmentHistory hist = new ApartmentHistory();
     public ViewHousetourbookings() {
         initComponents();
         
@@ -170,7 +170,7 @@ public class ViewHousetourbookings extends javax.swing.JPanel {
         DefaultTableModel model= (DefaultTableModel) tblviewapartment.getModel();
         model.setRowCount(0);
         
-        for (Requestapartment a : hist.getHistory()){
+        for (Requestapartment a : hist.getApartmentHistory()){
         
         Object[] row = new Object[6];
             row[0] = a.getApartmentName();

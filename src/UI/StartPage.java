@@ -15,6 +15,8 @@ public class StartPage extends javax.swing.JFrame {
      */
     public StartPage() {
         initComponents();
+        this.setResizable(false);
+
           this.setExtendedState(MAXIMIZED_BOTH);
     }
 
@@ -42,12 +44,16 @@ public class StartPage extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1280, 720));
+        jPanel1.setLayout(null);
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("AppleMyungjo", 1, 24)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("STUDENT HOUSING DATABASE MANAGEMENT SYSTEM");
+        jLabel3.setText("HuskyHomestead");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(0, 20, 1280, 50);
 
-        btnstudent.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        btnstudent.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnstudent.setText("Student ");
         btnstudent.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnstudent.addActionListener(new java.awt.event.ActionListener() {
@@ -55,8 +61,10 @@ public class StartPage extends javax.swing.JFrame {
                 btnstudentActionPerformed(evt);
             }
         });
+        jPanel1.add(btnstudent);
+        btnstudent.setBounds(550, 140, 150, 24);
 
-        btnuniversity.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        btnuniversity.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnuniversity.setText("University Admin");
         btnuniversity.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnuniversity.addActionListener(new java.awt.event.ActionListener() {
@@ -64,8 +72,10 @@ public class StartPage extends javax.swing.JFrame {
                 btnuniversityActionPerformed(evt);
             }
         });
+        jPanel1.add(btnuniversity);
+        btnuniversity.setBounds(550, 190, 150, 24);
 
-        btnheadrealtor.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        btnheadrealtor.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnheadrealtor.setText("Head Realtor");
         btnheadrealtor.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnheadrealtor.addActionListener(new java.awt.event.ActionListener() {
@@ -73,8 +83,10 @@ public class StartPage extends javax.swing.JFrame {
                 btnheadrealtorActionPerformed(evt);
             }
         });
+        jPanel1.add(btnheadrealtor);
+        btnheadrealtor.setBounds(550, 240, 150, 24);
 
-        btnbroker.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        btnbroker.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnbroker.setText("Broker");
         btnbroker.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnbroker.addActionListener(new java.awt.event.ActionListener() {
@@ -82,8 +94,10 @@ public class StartPage extends javax.swing.JFrame {
                 btnbrokerActionPerformed(evt);
             }
         });
+        jPanel1.add(btnbroker);
+        btnbroker.setBounds(550, 290, 150, 24);
 
-        btnlandlord.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        btnlandlord.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnlandlord.setText("Landlord");
         btnlandlord.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnlandlord.addActionListener(new java.awt.event.ActionListener() {
@@ -91,8 +105,10 @@ public class StartPage extends javax.swing.JFrame {
                 btnlandlordActionPerformed(evt);
             }
         });
+        jPanel1.add(btnlandlord);
+        btnlandlord.setBounds(550, 340, 150, 24);
 
-        btnmarketplaceadmin.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        btnmarketplaceadmin.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnmarketplaceadmin.setText("Marketplace Admin");
         btnmarketplaceadmin.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnmarketplaceadmin.addActionListener(new java.awt.event.ActionListener() {
@@ -100,8 +116,10 @@ public class StartPage extends javax.swing.JFrame {
                 btnmarketplaceadminActionPerformed(evt);
             }
         });
+        jPanel1.add(btnmarketplaceadmin);
+        btnmarketplaceadmin.setBounds(550, 390, 144, 24);
 
-        btntechsupport.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        btntechsupport.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btntechsupport.setText("Tech Support");
         btntechsupport.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btntechsupport.addActionListener(new java.awt.event.ActionListener() {
@@ -109,8 +127,10 @@ public class StartPage extends javax.swing.JFrame {
                 btntechsupportActionPerformed(evt);
             }
         });
+        jPanel1.add(btntechsupport);
+        btntechsupport.setBounds(550, 440, 150, 24);
 
-        btnsysadmin.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        btnsysadmin.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnsysadmin.setText("System Admin");
         btnsysadmin.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnsysadmin.addActionListener(new java.awt.event.ActionListener() {
@@ -118,75 +138,23 @@ public class StartPage extends javax.swing.JFrame {
                 btnsysadminActionPerformed(evt);
             }
         });
+        jPanel1.add(btnsysadmin);
+        btnsysadmin.setBounds(550, 490, 150, 24);
 
+        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/deepakzedler/Downloads/DALL·E 2024-12-08 02.55.41 - A realistic, high-resolution landscape background for an apartment or housing application. The scene features modern apartment buildings with well-lit.jpg")); // NOI18N
         jLabel1.setText("jLabel1");
-        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 777, Short.MAX_VALUE)
-                .addGap(50, 50, 50)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnmarketplaceadmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btntechsupport, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnlandlord, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnbroker, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnheadrealtor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnuniversity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnstudent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnsysadmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(120, 120, 120))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(204, 204, 204)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 710, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addComponent(btnstudent)
-                        .addGap(28, 28, 28)
-                        .addComponent(btnuniversity)
-                        .addGap(29, 29, 29)
-                        .addComponent(btnheadrealtor)
-                        .addGap(29, 29, 29)
-                        .addComponent(btnbroker)
-                        .addGap(30, 30, 30)
-                        .addComponent(btnlandlord)
-                        .addGap(30, 30, 30)
-                        .addComponent(btnmarketplaceadmin)
-                        .addGap(29, 29, 29)
-                        .addComponent(btntechsupport)
-                        .addGap(28, 28, 28)
-                        .addComponent(btnsysadmin))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 427, Short.MAX_VALUE)))
-                .addContainerGap(94, Short.MAX_VALUE))
-        );
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(-310, -40, 1650, 770);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 391, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1280, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 218, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 720, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
