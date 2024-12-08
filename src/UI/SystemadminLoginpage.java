@@ -194,7 +194,7 @@ public class SystemadminLoginpage extends javax.swing.JFrame {
                 frame.setTitle("adminView");
                 frame.setVisible(true);
 
-                frame.setDefaultCloseOperation(StudentView.EXIT_ON_CLOSE);
+                frame.setDefaultCloseOperation(adminView.EXIT_ON_CLOSE);
                 frame.setResizable(false);
 
             } else if(rs.next()){
