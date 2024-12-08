@@ -115,3 +115,4 @@ private void PopulateTable() {
             row[3] = mp;
             model.addRow(row);
         }}
+}
