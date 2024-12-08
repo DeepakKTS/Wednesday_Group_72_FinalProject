@@ -186,7 +186,7 @@ public class MarketplaceadminLoginpage extends javax.swing.JFrame {
 
         try {
             Connection con=SQLconnection.dbconnector();
-            PreparedStatement stmt=con.prepareStatement("SELECT * from Product WHERE USERNAME=? AND PASSWORD=?");
+            PreparedStatement stmt=con.prepareStatement("SELECT * from MarketplaceAdmin WHERE USERNAME=? AND PASSWORD=?");
            
             stmt.setString(1,USERNAME);
             stmt.setString(2,PASSWORD);
