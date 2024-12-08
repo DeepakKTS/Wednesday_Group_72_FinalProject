@@ -49,6 +49,7 @@ public class StartPage extends javax.swing.JFrame {
 
         btnstudent.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
         btnstudent.setText("Student ");
+        btnstudent.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnstudent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnstudentActionPerformed(evt);
@@ -57,6 +58,7 @@ public class StartPage extends javax.swing.JFrame {
 
         btnuniversity.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
         btnuniversity.setText("University Admin");
+        btnuniversity.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnuniversity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnuniversityActionPerformed(evt);
@@ -65,6 +67,7 @@ public class StartPage extends javax.swing.JFrame {
 
         btnheadrealtor.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
         btnheadrealtor.setText("Head Realtor");
+        btnheadrealtor.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnheadrealtor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnheadrealtorActionPerformed(evt);
@@ -73,6 +76,7 @@ public class StartPage extends javax.swing.JFrame {
 
         btnbroker.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
         btnbroker.setText("Broker");
+        btnbroker.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnbroker.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnbrokerActionPerformed(evt);
@@ -81,6 +85,7 @@ public class StartPage extends javax.swing.JFrame {
 
         btnlandlord.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
         btnlandlord.setText("Landlord");
+        btnlandlord.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnlandlord.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnlandlordActionPerformed(evt);
@@ -89,6 +94,7 @@ public class StartPage extends javax.swing.JFrame {
 
         btnmarketplaceadmin.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
         btnmarketplaceadmin.setText("Marketplace Admin");
+        btnmarketplaceadmin.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnmarketplaceadmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnmarketplaceadminActionPerformed(evt);
@@ -97,6 +103,7 @@ public class StartPage extends javax.swing.JFrame {
 
         btntechsupport.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
         btntechsupport.setText("Tech Support");
+        btntechsupport.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btntechsupport.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btntechsupportActionPerformed(evt);
@@ -105,6 +112,7 @@ public class StartPage extends javax.swing.JFrame {
 
         btnsysadmin.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
         btnsysadmin.setText("System Admin");
+        btnsysadmin.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnsysadmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnsysadminActionPerformed(evt);
@@ -112,6 +120,7 @@ public class StartPage extends javax.swing.JFrame {
         });
 
         jLabel1.setText("jLabel1");
+        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -119,7 +128,7 @@ public class StartPage extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 777, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 777, Short.MAX_VALUE)
                 .addGap(50, 50, 50)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnmarketplaceadmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -161,7 +170,7 @@ public class StartPage extends javax.swing.JFrame {
                         .addComponent(btnsysadmin))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(45, 45, 45)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 427, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 427, Short.MAX_VALUE)))
                 .addContainerGap(94, Short.MAX_VALUE))
         );
 
@@ -171,13 +180,13 @@ public class StartPage extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 391, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 218, Short.MAX_VALUE))
         );
 
         pack();

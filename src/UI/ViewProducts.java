@@ -108,6 +108,7 @@ public class ViewProducts extends javax.swing.JPanel {
       private void PopulateTable() {
     DefaultTableModel model = (DefaultTableModel) tblmarketplace.getModel();
     model.setRowCount(0);
+    
  
     for (Market mp : mh.getList()) {
         Object[] row = new Object[5];
