@@ -58,6 +58,7 @@ public class MarketplaceAddproducts extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblmarketplace = new javax.swing.JTable();
         btndelete = new javax.swing.JButton();
+        btnAdd = new javax.swing.JButton();
 
         jLabel1.setText("jLabel1");
 
@@ -85,6 +86,13 @@ public class MarketplaceAddproducts extends javax.swing.JPanel {
             }
         });
 
+        btnAdd.setText("ADD");
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -95,6 +103,8 @@ public class MarketplaceAddproducts extends javax.swing.JPanel {
                 .addContainerGap(84, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnAdd)
+                .addGap(38, 38, 38)
                 .addComponent(btndelete)
                 .addGap(104, 104, 104))
         );
@@ -104,7 +114,9 @@ public class MarketplaceAddproducts extends javax.swing.JPanel {
                 .addGap(31, 31, 31)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(63, 63, 63)
-                .addComponent(btndelete)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btndelete)
+                    .addComponent(btnAdd))
                 .addContainerGap(176, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -123,23 +135,119 @@ public class MarketplaceAddproducts extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tblmarketplace.getModel();
 
         // Fetch the selected market object using the row index
-        Market mp = mh.getList().get(selectedRowIndex);
+        String productName = model.getValueAt(selectedRowIndex, 0).toString(); // Get the Name column value
+        double productPrice = Double.parseDouble(model.getValueAt(selectedRowIndex, 1).toString()); // Get the Price column value
 
-        // Remove the selected market object from the list
-        mh.deleteMarket(mp);
+        // Remove the product from the MySQL database
+        try (Connection con = SQLconnection.dbconnector()) {
+            String sql = "DELETE FROM Product WHERE Name = ? AND Price = ?";
+            PreparedStatement stmt = con.prepareStatement(sql);
+            stmt.setString(1, productName);
+            stmt.setDouble(2, productPrice);
+            int rowsAffected = stmt.executeUpdate();
 
-        // Refresh the table after deletion
-        PopulateTable();
+            if (rowsAffected > 0) {
+                // Remove the selected market object from the list
+                Market mp = mh.getList().get(selectedRowIndex);
+                mh.deleteMarket(mp);
 
-        // Notify the user about successful deletion
-        JOptionPane.showMessageDialog(this, "Deleted Successfully!");
+                // Refresh the table after deletion
+                PopulateTable();
+
+                // Notify the user about successful deletion
+                JOptionPane.showMessageDialog(this, "Product deleted successfully!");
+            } else {
+                JOptionPane.showMessageDialog(this, "Failed to delete the product from the database.");
+            }
+        }
+
     } catch (Exception ex) {
-        JOptionPane.showMessageDialog(this, "An error occurred while deleting the row: " + ex.getMessage());
+        JOptionPane.showMessageDialog(this, "An error occurred while deleting the product: " + ex.getMessage());
     }
     }//GEN-LAST:event_btndeleteActionPerformed
 
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+        // TODO add your handling code here:
+        // Handle adding a new product
+    try {
+        // Collect data from the user via input dialogs
+        String name = JOptionPane.showInputDialog(this, "Enter Product Name:");
+        if (name == null || name.isBlank()) {
+            JOptionPane.showMessageDialog(this, "Product Name cannot be empty!");
+            return;
+        }
+
+        String priceInput = JOptionPane.showInputDialog(this, "Enter Product Price:");
+        if (priceInput == null || priceInput.isBlank()) {
+            JOptionPane.showMessageDialog(this, "Product Price cannot be empty!");
+            return;
+        }
+        double price;
+        try {
+            price = Double.parseDouble(priceInput);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Invalid Price! Please enter a numeric value.");
+            return;
+        }
+
+        String[] usedOptions = {"Used", "Unused"};
+        String used = (String) JOptionPane.showInputDialog(
+                this,
+                "Select Product Status:",
+                "Product Status",
+                JOptionPane.QUESTION_MESSAGE,
+                null,
+                usedOptions,
+                usedOptions[0]
+        );
+        if (used == null) {
+            JOptionPane.showMessageDialog(this, "Product Status is required!");
+            return;
+        }
+
+        String image = JOptionPane.showInputDialog(this, "Enter Image Path or URL:");
+        if (image == null || image.isBlank()) {
+            image = "No Image";
+        }
+
+        // Generate a unique ProductID
+        int productID = mh.getList().size() + 1;
+
+        // Create a new Market object
+        Market newProduct = new Market(name, price, used, image);
+
+        // Add the new product to the Markethistory list
+        mh.addNewMarket();
+
+        // Insert the product into the MySQL database
+        try (Connection con = SQLconnection.dbconnector()) {
+            String sql = "INSERT INTO Product (ProductID, Name, Price, `Used/Unused`, Images) VALUES (?, ?, ?, ?, ?)";
+            PreparedStatement stmt = con.prepareStatement(sql);
+            stmt.setInt(1, productID);
+            stmt.setString(2, name);
+            stmt.setDouble(3, price);
+            stmt.setString(4, used);
+            stmt.setString(5, image);
+            stmt.executeUpdate();
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(this, "Database Error: " + ex.getMessage());
+            return;
+        }
+
+        // Refresh the UI Table
+        PopulateTable();
+
+        // Notify the user about successful addition
+        JOptionPane.showMessageDialog(this, "Product added successfully!");
+
+    } catch (Exception ex) {
+        JOptionPane.showMessageDialog(this, "An error occurred while adding the product: " + ex.getMessage());
+    }
+    }//GEN-LAST:event_btnAddActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAdd;
     private javax.swing.JButton btndelete;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
@@ -147,17 +255,22 @@ public class MarketplaceAddproducts extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 private void PopulateTable() {
     DefaultTableModel model = (DefaultTableModel) tblmarketplace.getModel();
-    model.setRowCount(0); // Clear existing rows in the table
+    model.setRowCount(0);
 
-    // Iterate through the prepopulated market list and add rows to the table
-    for (Market mp : mh.getList()) {
-        Object[] row = new Object[4]; // Adjusted to match the table columns
-        row[0] = mp.getName();       // Product Name
-        row[1] = mp.getPrice();      // Price
-        row[2] = mp.getUsed();       // Used/Unused Status
-        row[3] = mp.getImage();      // Image Path (optional visibility)
+    try (Connection con = SQLconnection.dbconnector()) {
+        String sql = "SELECT * FROM Product";
+        PreparedStatement stmt = con.prepareStatement(sql);
+        ResultSet rs = stmt.executeQuery();
 
-        model.addRow(row); // Add the row to the table model
+        while (rs.next()) {
+            Object[] row = new Object[4];
+            row[0] = rs.getString("Name");
+            row[1] = rs.getDouble("Price");
+            row[2] = rs.getString("Used/Unused");
+            row[3] = rs.getString("Images");
+            model.addRow(row);
+        }
+    } catch (SQLException ex) {
+        JOptionPane.showMessageDialog(this, "Error fetching data from database: " + ex.getMessage());
     }
-}
-}
+}}
