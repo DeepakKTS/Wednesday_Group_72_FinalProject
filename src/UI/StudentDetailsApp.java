@@ -192,7 +192,7 @@ public class StudentDetailsApp extends javax.swing.JFrame {
         // m.add(one);
          //m.add(two);
          //m.add(three);
-      
+      //
         String time=cmbtime.getSelectedItem().toString();
         if(time.equals("Select")){
             JOptionPane.showMessageDialog(this,"Please select a valid time slot");
