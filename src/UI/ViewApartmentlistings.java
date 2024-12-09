@@ -166,31 +166,31 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
         tblapartmentlistings.setBackground(new java.awt.Color(204, 255, 204));
         tblapartmentlistings.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "Apartment Type", "Landlord Name", "Price", "Utilities", "Grocery Stores", "Hospitals", "MBTA", "BrokerName", "Email ID", "Apartment Name", "ID", "Title 12"
+                "ID", "Apartment Type", "Landlord Name", "Price"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Integer.class, java.lang.Object.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false, false, false, false
+                false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -205,28 +205,8 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
         tblapartmentlistings.setShowHorizontalLines(true);
         tblapartmentlistings.setShowVerticalLines(true);
         jScrollPane1.setViewportView(tblapartmentlistings);
-        if (tblapartmentlistings.getColumnModel().getColumnCount() > 0) {
-            tblapartmentlistings.getColumnModel().getColumn(3).setMinWidth(0);
-            tblapartmentlistings.getColumnModel().getColumn(3).setPreferredWidth(0);
-            tblapartmentlistings.getColumnModel().getColumn(3).setMaxWidth(0);
-            tblapartmentlistings.getColumnModel().getColumn(4).setMinWidth(0);
-            tblapartmentlistings.getColumnModel().getColumn(4).setPreferredWidth(0);
-            tblapartmentlistings.getColumnModel().getColumn(4).setMaxWidth(0);
-            tblapartmentlistings.getColumnModel().getColumn(5).setMinWidth(0);
-            tblapartmentlistings.getColumnModel().getColumn(5).setPreferredWidth(0);
-            tblapartmentlistings.getColumnModel().getColumn(5).setMaxWidth(0);
-            tblapartmentlistings.getColumnModel().getColumn(6).setMinWidth(0);
-            tblapartmentlistings.getColumnModel().getColumn(6).setPreferredWidth(0);
-            tblapartmentlistings.getColumnModel().getColumn(6).setMaxWidth(0);
-            tblapartmentlistings.getColumnModel().getColumn(8).setMinWidth(0);
-            tblapartmentlistings.getColumnModel().getColumn(8).setPreferredWidth(0);
-            tblapartmentlistings.getColumnModel().getColumn(8).setMaxWidth(0);
-            tblapartmentlistings.getColumnModel().getColumn(11).setMinWidth(0);
-            tblapartmentlistings.getColumnModel().getColumn(11).setPreferredWidth(0);
-            tblapartmentlistings.getColumnModel().getColumn(11).setMaxWidth(0);
-        }
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 105, 970, 198));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 105, 890, 198));
 
         lblapttype.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblapttype.setText("Apartment Type :");
@@ -388,7 +368,7 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
        
        // Get the ID of the selected apartment
     DefaultTableModel model = (DefaultTableModel) tblapartmentlistings.getModel();
-    int apartmentID = (int) model.getValueAt(selectedRowIndex, 5); // ID column
+    int apartmentID = (int) model.getValueAt(selectedRowIndex, 0); // ID column
     
         
         //Broker SelectedBroker = (Broker) model.getValueAt(selectedRowIndex, 5);
@@ -717,12 +697,12 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
 
     for (Apartmentlistings a : ad.getList()) {
         Object[] row = {
+            a.getID(),
             a.getApartmenttype(),
             a.getLandlordname(),
-            a.getPrice(),
-            a.getBrokerName(),
-            a.getApartmentname(),
-            a.getID()
+            a.getPrice()
+            
+            
         };
         model.addRow(row);
     }
