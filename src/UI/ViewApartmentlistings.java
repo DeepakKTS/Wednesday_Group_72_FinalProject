@@ -323,9 +323,12 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
         });
         add(btnrefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 320, -1, -1));
 
+<<<<<<< HEAD
+=======
         lblphoto.setText("Photo");
         add(lblphoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 410, 418, 316));
 
+>>>>>>> 4fbd3dffdde2f46a63b0a5a1f76563ff80cab0cc
         btnlocation.setText("Location");
         btnlocation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -345,9 +348,156 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
         cmbtime.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "9 AM - 12 AM", "12 AM - 3 PM", "3 PM - 5 PM" }));
         add(cmbtime, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, -1, -1));
 
+<<<<<<< HEAD
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(94, 94, 94)
+                .addComponent(btnstudio, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(60, 60, 60)
+                .addComponent(btnonebhk)
+                .addGap(64, 64, 64)
+                .addComponent(btntwobhk)
+                .addGap(70, 70, 70)
+                .addComponent(btnthreebhk)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 473, Short.MAX_VALUE)
+                .addComponent(btnsearch, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(53, 53, 53))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(jScrollPane1)
+                .addGap(20, 20, 20))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(59, 59, 59)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblid)
+                    .addComponent(lblaptname)
+                    .addComponent(lblemailid)
+                    .addComponent(lblbrokername)
+                    .addComponent(lblhospitals)
+                    .addComponent(lblgrocery)
+                    .addComponent(lblutilities)
+                    .addComponent(lblprice)
+                    .addComponent(lbllandname)
+                    .addComponent(lblapttype)
+                    .addComponent(lblmbta))
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(txtlandname, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)
+                        .addComponent(txtid)
+                        .addComponent(txtapttype)
+                        .addComponent(txtprice, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(txtutilities, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(txtgrocery, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(txthospitals, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(txtmbta, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(txtbrokername, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(txtemailid)
+                        .addComponent(txtaptname))
+                    .addComponent(btnlocation))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(cmbtime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnbooktour)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(248, 248, 248)
+                        .addComponent(btnview)
+                        .addGap(77, 77, 77)
+                        .addComponent(btnrefresh))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(94, 94, 94)
+                        .addComponent(lblphoto, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(44, 44, 44))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnstudio)
+                    .addComponent(btnonebhk)
+                    .addComponent(btntwobhk)
+                    .addComponent(btnthreebhk)
+                    .addComponent(btnsearch))
+                .addGap(30, 30, 30)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblapttype)
+                    .addComponent(txtapttype, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnview)
+                    .addComponent(btnrefresh))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbllandname)
+                    .addComponent(txtlandname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(15, 15, 15)
+                                .addComponent(lblprice, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(txtprice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cmbtime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lblutilities)
+                                    .addComponent(txtutilities, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(14, 14, 14)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(txtgrocery, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblgrocery, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(28, 28, 28)
+                                .addComponent(btnbooktour)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblhospitals, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txthospitals, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblmbta, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtmbta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtbrokername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblbrokername, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblemailid, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtemailid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(23, 23, 23)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtaptname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblaptname, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblid, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                        .addComponent(btnlocation))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblphoto, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+=======
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
         jLabel1.setText("jLabel1");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 760));
+>>>>>>> 4fbd3dffdde2f46a63b0a5a1f76563ff80cab0cc
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnsearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsearchActionPerformed
@@ -453,17 +603,17 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
       
         if(apt.equals("JVUE")){
         
-            ImageIcon icon = new ImageIcon("C:\\Users\\Evita Alice Paul\\OneDrive\\Documents\\NetBeansProjects\\StudentHousingApplication\\src\\Images\\jvue.jpg");
+            ImageIcon icon = new ImageIcon("C:\\Users\\sneghashree\\Documents\\Wednesday_Group_72_FinalProject\\src\\Project Images\\jvue.png");
 
            Image image=icon.getImage().getScaledInstance(lblphoto.getWidth(),lblphoto.getHeight(),Image.SCALE_SMOOTH);
         
         lblphoto.setIcon(icon);
       
-
+//cc
               
         }else if(apt.equals("Longwood") ){
             
-            ImageIcon icon = new ImageIcon("C:\\Users\\Evita Alice Paul\\OneDrive\\Documents\\NetBeansProjects\\StudentHousingApplication\\src\\Images\\longwood.jpg");
+            ImageIcon icon = new ImageIcon("C:\\Users\\sneghashree\\Documents\\Wednesday_Group_72_FinalProject\\src\\Project Images\\longwood.png");
 
            Image image=icon.getImage().getScaledInstance(lblphoto.getWidth(),lblphoto.getHeight(),Image.SCALE_SMOOTH);
         
@@ -471,68 +621,11 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
         
         }else if(apt.equals("Mission Hill")){
             
-            ImageIcon icon = new ImageIcon("C:\\Users\\Evita Alice Paul\\OneDrive\\Documents\\NetBeansProjects\\StudentHousingApplication\\src\\Images\\missionhill.jpg");
+            ImageIcon icon = new ImageIcon("C:\\Users\\sneghashree\\Documents\\Wednesday_Group_72_FinalProject\\src\\Project Images\\missionhill.png");
 
            Image image=icon.getImage().getScaledInstance(lblphoto.getWidth(),lblphoto.getHeight(),Image.SCALE_SMOOTH);
         
         lblphoto.setIcon(icon);
-        
-        }else if(apt.equals("Mission Park")){
-            
-            ImageIcon icon = new ImageIcon("C:\\Users\\Evita Alice Paul\\OneDrive\\Documents\\NetBeansProjects\\StudentHousingApplication\\src\\Images\\missionpark.jpg");
-
-           Image image=icon.getImage().getScaledInstance(lblphoto.getWidth(),lblphoto.getHeight(),Image.SCALE_SMOOTH);
-        
-        lblphoto.setIcon(icon);
-        
-        }else if(apt.equals("West Square")){
-            
-            ImageIcon icon = new ImageIcon("C:\\Users\\Evita Alice Paul\\OneDrive\\Documents\\NetBeansProjects\\StudentHousingApplication\\src\\Images\\westsquare.jpg");
-
-           Image image=icon.getImage().getScaledInstance(lblphoto.getWidth(),lblphoto.getHeight(),Image.SCALE_SMOOTH);
-        
-        lblphoto.setIcon(icon);
-        
-        }else if(apt.equals("Parkway")){
-            
-            ImageIcon icon = new ImageIcon("C:\\Users\\Evita Alice Paul\\OneDrive\\Documents\\NetBeansProjects\\StudentHousingApplication\\src\\Images\\parkway.jpg");
-
-           Image image=icon.getImage().getScaledInstance(lblphoto.getWidth(),lblphoto.getHeight(),Image.SCALE_SMOOTH);
-        
-        lblphoto.setIcon(icon);
-        
-        }else if(apt.equals("Westland")){
-            
-            ImageIcon icon = new ImageIcon("C:\\Users\\Evita Alice Paul\\OneDrive\\Documents\\NetBeansProjects\\StudentHousingApplication\\src\\Images\\westland.jpg");
-
-           Image image=icon.getImage().getScaledInstance(lblphoto.getWidth(),lblphoto.getHeight(),Image.SCALE_SMOOTH);
-        
-        lblphoto.setIcon(icon);
-        
-        }else if(apt.equals("Vero")){
-            
-            ImageIcon icon = new ImageIcon("C:\\Users\\Evita Alice Paul\\OneDrive\\Documents\\NetBeansProjects\\StudentHousingApplication\\src\\Images\\vero.jpg");
-
-           Image image=icon.getImage().getScaledInstance(lblphoto.getWidth(),lblphoto.getHeight(),Image.SCALE_SMOOTH);
-        
-        lblphoto.setIcon(icon);
-        
-        }else if(apt.equals("Church Park")){
-            
-            ImageIcon icon = new ImageIcon("C:\\Users\\Evita Alice Paul\\OneDrive\\Documents\\NetBeansProjects\\StudentHousingApplication\\src\\Images\\churchpark.jpg");
-
-           Image image=icon.getImage().getScaledInstance(lblphoto.getWidth(),lblphoto.getHeight(),Image.SCALE_SMOOTH);
-        
-        lblphoto.setIcon(icon);
-        
-        }else if(apt.equals("Greenhouse")){
-            
-            ImageIcon icon = new ImageIcon("C:\\Users\\Evita Alice Paul\\OneDrive\\Documents\\NetBeansProjects\\StudentHousingApplication\\src\\Images\\greenhouse.jpg");
-
-           Image image=icon.getImage().getScaledInstance(lblphoto.getWidth(),lblphoto.getHeight(),Image.SCALE_SMOOTH);
-        
-        lblphoto.setIcon(icon);
-        
         }else{
              JOptionPane.showMessageDialog(this,"Error");
         }   

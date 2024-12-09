@@ -76,7 +76,7 @@ public class StartPage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnuniversity);
-        btnuniversity.setBounds(430, 170, 150, 24);
+        btnuniversity.setBounds(430, 170, 150, 26);
 
         btnheadrealtor.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnheadrealtor.setText("Head Realtor");
@@ -87,7 +87,7 @@ public class StartPage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnheadrealtor);
-        btnheadrealtor.setBounds(430, 220, 150, 24);
+        btnheadrealtor.setBounds(430, 220, 150, 26);
 
         btnbroker.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnbroker.setText("Broker");
@@ -98,7 +98,7 @@ public class StartPage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnbroker);
-        btnbroker.setBounds(430, 270, 150, 24);
+        btnbroker.setBounds(430, 270, 150, 26);
 
         btnlandlord.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnlandlord.setText("Landlord");
@@ -109,7 +109,7 @@ public class StartPage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnlandlord);
-        btnlandlord.setBounds(430, 320, 150, 24);
+        btnlandlord.setBounds(430, 320, 150, 26);
 
         btnmarketplaceadmin.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnmarketplaceadmin.setText("Marketplace Admin");
@@ -120,7 +120,7 @@ public class StartPage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnmarketplaceadmin);
-        btnmarketplaceadmin.setBounds(430, 370, 144, 24);
+        btnmarketplaceadmin.setBounds(430, 370, 164, 26);
 
         btntechsupport.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btntechsupport.setText("Tech Support");
@@ -131,7 +131,7 @@ public class StartPage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btntechsupport);
-        btntechsupport.setBounds(430, 420, 150, 24);
+        btntechsupport.setBounds(430, 420, 150, 26);
 
         btnsysadmin.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnsysadmin.setText("System Admin");
@@ -142,7 +142,7 @@ public class StartPage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnsysadmin);
-        btnsysadmin.setBounds(430, 470, 150, 24);
+        btnsysadmin.setBounds(430, 470, 150, 26);
 
         jLabel1.setBackground(java.awt.Color.white);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/StartPage.jpg"))); // NOI18N

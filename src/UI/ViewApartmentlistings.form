@@ -23,8 +23,190 @@
     <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,-9,0,0,3,-5"/>
   </AuxValues>
 
+<<<<<<< HEAD
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
+              <Component id="btnstudio" min="-2" pref="73" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+              <Component id="btnonebhk" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+              <Component id="btntwobhk" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
+              <Component id="btnthreebhk" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="473" max="32767" attributes="0"/>
+              <Component id="btnsearch" min="-2" pref="110" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+              <Component id="jScrollPane1" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="lblid" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblaptname" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblemailid" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblbrokername" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblhospitals" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblgrocery" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblutilities" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblprice" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbllandname" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblapttype" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblmbta" alignment="1" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="txtlandname" alignment="0" pref="213" max="32767" attributes="0"/>
+                      <Component id="txtid" alignment="0" max="32767" attributes="0"/>
+                      <Component id="txtapttype" max="32767" attributes="0"/>
+                      <Component id="txtprice" alignment="1" max="32767" attributes="0"/>
+                      <Component id="txtutilities" alignment="1" max="32767" attributes="0"/>
+                      <Component id="txtgrocery" alignment="1" max="32767" attributes="0"/>
+                      <Component id="txthospitals" alignment="1" max="32767" attributes="0"/>
+                      <Component id="txtmbta" alignment="1" max="32767" attributes="0"/>
+                      <Component id="txtbrokername" alignment="1" max="32767" attributes="0"/>
+                      <Component id="txtemailid" alignment="0" max="32767" attributes="0"/>
+                      <Component id="txtaptname" alignment="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Component id="btnlocation" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="cmbtime" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="btnbooktour" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="248" max="-2" attributes="0"/>
+                      <Component id="btnview" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
+                      <Component id="btnrefresh" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
+                      <Component id="lblphoto" min="-2" pref="425" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnstudio" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnonebhk" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btntwobhk" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnthreebhk" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnsearch" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+              <Component id="jScrollPane1" min="-2" pref="198" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblapttype" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtapttype" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnview" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnrefresh" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lbllandname" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtlandname" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                              <Component id="lblprice" min="-2" pref="19" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="txtprice" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cmbtime" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lblutilities" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtutilities" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="txtgrocery" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblgrocery" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                              <Component id="btnbooktour" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblhospitals" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="txthospitals" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblmbta" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="txtmbta" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="txtbrokername" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblbrokername" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblemailid" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="txtemailid" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtaptname" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblaptname" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblid" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="txtid" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="12" max="32767" attributes="0"/>
+                      <Component id="btnlocation" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lblphoto" min="-2" pref="349" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+=======
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
     <Property name="useNullLayout" type="boolean" value="false"/>
+>>>>>>> 4fbd3dffdde2f46a63b0a5a1f76563ff80cab0cc
   </Layout>
   <SubComponents>
     <Component class="javax.swing.JRadioButton" name="btnstudio">
@@ -516,6 +698,8 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="lblphoto">
+<<<<<<< HEAD
+=======
       <Properties>
         <Property name="text" type="java.lang.String" value="Photo"/>
       </Properties>
@@ -524,6 +708,7 @@
           <AbsoluteConstraints x="570" y="410" width="418" height="316"/>
         </Constraint>
       </Constraints>
+>>>>>>> 4fbd3dffdde2f46a63b0a5a1f76563ff80cab0cc
     </Component>
     <Component class="javax.swing.JButton" name="btnlocation">
       <Properties>
