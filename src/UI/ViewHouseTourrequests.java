@@ -67,8 +67,10 @@ public class ViewHouseTourrequests extends javax.swing.JPanel {
         btndenytour = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblviewstudent = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 153, 153));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnaccepttour.setText("Accept Tour");
         btnaccepttour.addActionListener(new java.awt.event.ActionListener() {
@@ -76,6 +78,7 @@ public class ViewHouseTourrequests extends javax.swing.JPanel {
                 btnaccepttourActionPerformed(evt);
             }
         });
+        add(btnaccepttour, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 260, 104, -1));
 
         btndenytour.setText("Deny Tour");
         btndenytour.addActionListener(new java.awt.event.ActionListener() {
@@ -83,6 +86,7 @@ public class ViewHouseTourrequests extends javax.swing.JPanel {
                 btndenytourActionPerformed(evt);
             }
         });
+        add(btndenytour, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 260, 106, -1));
 
         tblviewstudent.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -97,32 +101,11 @@ public class ViewHouseTourrequests extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tblviewstudent);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(179, 179, 179)
-                .addComponent(btnaccepttour, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(72, 72, 72)
-                .addComponent(btndenytour, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(217, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(jScrollPane1)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(83, 83, 83)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(101, 101, 101)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnaccepttour)
-                    .addComponent(btndenytour))
-                .addContainerGap(179, Short.MAX_VALUE))
-        );
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 658, 110));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 770));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnaccepttourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaccepttourActionPerformed
@@ -163,6 +146,7 @@ public class ViewHouseTourrequests extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnaccepttour;
     private javax.swing.JButton btndenytour;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblviewstudent;
     // End of variables declaration//GEN-END:variables

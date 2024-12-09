@@ -32,6 +32,7 @@ public class MarketplacePage extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         btnviewproducts = new javax.swing.JButton();
         btnsalrequests = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -57,6 +58,10 @@ public class MarketplacePage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnsalrequests, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 234, 117, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, -1));
 
         SplitPane.setLeftComponent(jPanel1);
 
@@ -137,6 +142,7 @@ public class MarketplacePage extends javax.swing.JFrame {
     private javax.swing.JButton btnsalrequests;
     private javax.swing.JButton btnviewproducts;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables

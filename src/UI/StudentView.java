@@ -59,6 +59,7 @@ public class StudentView extends javax.swing.JFrame {
         btnroommate = new javax.swing.JButton();
         btnreportissue = new javax.swing.JButton();
         btnlogout = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -67,6 +68,7 @@ public class StudentView extends javax.swing.JFrame {
         SplitPane.setBackground(new java.awt.Color(0, 204, 204));
 
         jPanel3.setBackground(new java.awt.Color(0, 204, 204));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnbrokers.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
         btnbrokers.setText("View Brokers");
@@ -75,6 +77,7 @@ public class StudentView extends javax.swing.JFrame {
                 btnbrokersActionPerformed(evt);
             }
         });
+        jPanel3.add(btnbrokers, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 178, -1));
 
         btnapartment.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
         btnapartment.setText("Apartment Listings");
@@ -83,6 +86,7 @@ public class StudentView extends javax.swing.JFrame {
                 btnapartmentActionPerformed(evt);
             }
         });
+        jPanel3.add(btnapartment, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 188, -1));
 
         btnroommate.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
         btnroommate.setText("Products for Sale");
@@ -91,6 +95,7 @@ public class StudentView extends javax.swing.JFrame {
                 btnroommateActionPerformed(evt);
             }
         });
+        jPanel3.add(btnroommate, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 188, -1));
 
         btnreportissue.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
         btnreportissue.setText("Report an Issue");
@@ -99,6 +104,7 @@ public class StudentView extends javax.swing.JFrame {
                 btnreportissueActionPerformed(evt);
             }
         });
+        jPanel3.add(btnreportissue, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 188, -1));
 
         btnlogout.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
         btnlogout.setText("Logout");
@@ -107,49 +113,20 @@ public class StudentView extends javax.swing.JFrame {
                 btnlogoutActionPerformed(evt);
             }
         });
+        jPanel3.add(btnlogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 641, -1, -1));
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnroommate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnapartment, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
-                            .addComponent(btnreportissue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnbrokers, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(84, 84, 84)
-                        .addComponent(btnlogout)))
-                .addGap(30, 30, 30))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(76, 76, 76)
-                .addComponent(btnbrokers)
-                .addGap(37, 37, 37)
-                .addComponent(btnapartment)
-                .addGap(36, 36, 36)
-                .addComponent(btnroommate)
-                .addGap(94, 94, 94)
-                .addComponent(btnreportissue)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 314, Short.MAX_VALUE)
-                .addComponent(btnlogout)
-                .addGap(71, 71, 71))
-        );
-
-        jPanel3Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnapartment, btnbrokers, btnreportissue, btnroommate});
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 750));
 
         SplitPane.setLeftComponent(jPanel3);
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 153));
         jPanel1.setLayout(null);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(180, 120, 800, 600);
+        jLabel1.setBounds(0, 0, 910, 770);
 
         SplitPane.setRightComponent(jPanel1);
 
@@ -157,7 +134,7 @@ public class StudentView extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(SplitPane)
+            .addComponent(SplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 998, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -250,6 +227,7 @@ public class StudentView extends javax.swing.JFrame {
     private javax.swing.JButton btnreportissue;
     private javax.swing.JButton btnroommate;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables

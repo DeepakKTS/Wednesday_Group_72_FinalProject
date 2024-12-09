@@ -47,8 +47,10 @@ public class ViewReportedissues extends javax.swing.JPanel {
         lblstudentemail = new javax.swing.JLabel();
         txtemail = new javax.swing.JTextField();
         btnemail = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 153, 153));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         buttonGroup.add(rbtnresolved);
         rbtnresolved.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -58,6 +60,7 @@ public class ViewReportedissues extends javax.swing.JPanel {
                 rbtnresolvedActionPerformed(evt);
             }
         });
+        add(rbtnresolved, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 220, -1, -1));
 
         buttonGroup.add(rbtnpending);
         rbtnpending.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -67,16 +70,22 @@ public class ViewReportedissues extends javax.swing.JPanel {
                 rbtnpendingActionPerformed(evt);
             }
         });
+        add(rbtnpending, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 270, -1, -1));
 
         txtsolution.setColumns(20);
         txtsolution.setRows(5);
         jScrollPane1.setViewportView(txtsolution);
 
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, 377, 172));
+
         lblsuggest.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblsuggest.setText("Suggest a Solution:");
+        add(lblsuggest, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 140, -1, -1));
 
         lblstudentemail.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblstudentemail.setText("Student Email ID:");
+        add(lblstudentemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 360, -1, -1));
+        add(txtemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 360, 258, -1));
 
         btnemail.setText("Send ");
         btnemail.addActionListener(new java.awt.event.ActionListener() {
@@ -84,49 +93,10 @@ public class ViewReportedissues extends javax.swing.JPanel {
                 btnemailActionPerformed(evt);
             }
         });
+        add(btnemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 420, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(302, 302, 302)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rbtnresolved)
-                    .addComponent(rbtnpending))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(130, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnemail)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(lblstudentemail)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(txtemail))
-                        .addComponent(lblsuggest)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(199, 199, 199))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addComponent(rbtnresolved)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(rbtnpending)
-                .addGap(30, 30, 30)
-                .addComponent(lblsuggest)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblstudentemail)
-                    .addComponent(txtemail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(btnemail)
-                .addContainerGap(75, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void rbtnpendingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnpendingActionPerformed
@@ -245,6 +215,7 @@ properties.put("mail.debug", "true");
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnemail;
     private javax.swing.ButtonGroup buttonGroup;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblstudentemail;
     private javax.swing.JLabel lblsuggest;
