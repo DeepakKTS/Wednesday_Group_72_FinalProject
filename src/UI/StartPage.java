@@ -145,7 +145,7 @@ public class StartPage extends javax.swing.JFrame {
         btnsysadmin.setBounds(430, 470, 150, 24);
 
         jLabel1.setBackground(java.awt.Color.white);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/DALL·E 2024-12-08 02.55.41 - A realistic, high-resolution landscape background for an apartment or housing application. The scene features modern apartment buildings with well-lit.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/StartPage.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
         jLabel1.setPreferredSize(new java.awt.Dimension(1024, 768));
         jPanel1.add(jLabel1);

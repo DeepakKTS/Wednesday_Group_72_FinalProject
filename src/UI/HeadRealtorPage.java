@@ -14,7 +14,8 @@ public class HeadRealtorPage extends javax.swing.JFrame {
     /** Creates new form HeadRealtorPage */
     public HeadRealtorPage() {
         initComponents();
-        this.setExtendedState(MAXIMIZED_BOTH);
+        this.setSize(1024, 768);
+        
     }
 
     /** This method is called from within the constructor to
@@ -30,11 +31,14 @@ public class HeadRealtorPage extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         btnaddbrokers = new javax.swing.JButton();
         btnviewbrokers = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(0, 204, 204));
+        jPanel1.setBackground(new java.awt.Color(255, 153, 51));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnaddbrokers.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         btnaddbrokers.setText("Add Brokers");
@@ -43,6 +47,7 @@ public class HeadRealtorPage extends javax.swing.JFrame {
                 btnaddbrokersActionPerformed(evt);
             }
         });
+        jPanel1.add(btnaddbrokers, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
 
         btnviewbrokers.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         btnviewbrokers.setText("View Brokers");
@@ -51,42 +56,20 @@ public class HeadRealtorPage extends javax.swing.JFrame {
                 btnviewbrokersActionPerformed(evt);
             }
         });
+        jPanel1.add(btnviewbrokers, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnviewbrokers)
-                    .addComponent(btnaddbrokers))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(151, 151, 151)
-                .addComponent(btnaddbrokers)
-                .addGap(48, 48, 48)
-                .addComponent(btnviewbrokers)
-                .addContainerGap(237, Short.MAX_VALUE))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 380, 770));
 
         SplitPane.setLeftComponent(jPanel1);
 
         jPanel2.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 555, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 482, Short.MAX_VALUE)
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 770));
 
         SplitPane.setRightComponent(jPanel2);
 
@@ -94,7 +77,7 @@ public class HeadRealtorPage extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(SplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 698, Short.MAX_VALUE)
+            .addComponent(SplitPane)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,6 +139,8 @@ public class HeadRealtorPage extends javax.swing.JFrame {
     private javax.swing.JSplitPane SplitPane;
     private javax.swing.JButton btnaddbrokers;
     private javax.swing.JButton btnviewbrokers;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables

@@ -22,7 +22,7 @@ public class ViewProducts extends javax.swing.JPanel {
     Market mp;
     public ViewProducts() {
         initComponents();
-        
+        this.setSize(1024, 768);
         mh.getMarketHistory();
         this.mp=mp;
          PopulateTable();

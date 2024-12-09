@@ -33,6 +33,9 @@ public class AddBroker extends javax.swing.JPanel {
   DefaultTableModel model;
     public AddBroker() {
         initComponents();
+        
+
+          this.setSize(1024, 768);
         bd=new BrokerDirectory();
         this.b = b;
         //this.blist = bd;
@@ -65,46 +68,80 @@ public class AddBroker extends javax.swing.JPanel {
         txtpassword = new javax.swing.JTextField();
         txtmanagement = new javax.swing.JTextField();
         btnaddbroker = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 153, 153));
+        setLayout(null);
 
         lblbrokername.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblbrokername.setText("Broker Name:");
+        add(lblbrokername);
+        lblbrokername.setBounds(330, 60, 83, 15);
 
         lbllicenseno.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lbllicenseno.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lbllicenseno.setText("License No:");
+        add(lbllicenseno);
+        lbllicenseno.setBounds(330, 100, 83, 15);
 
         lblcontactno.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblcontactno.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblcontactno.setText("Contact No:");
+        add(lblcontactno);
+        lblcontactno.setBounds(350, 130, 72, 15);
 
         lblemail.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblemail.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblemail.setText("Email ID:");
+        add(lblemail);
+        lblemail.setBounds(330, 170, 83, 15);
 
         lblbrokerfee.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblbrokerfee.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblbrokerfee.setText("Broker Fee:");
+        add(lblbrokerfee);
+        lblbrokerfee.setBounds(330, 210, 83, 15);
 
         lblusername.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblusername.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblusername.setText("Username:");
         lblusername.setFocusTraversalPolicyProvider(true);
+        add(lblusername);
+        lblusername.setBounds(330, 260, 83, 15);
 
         lblpassword.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblpassword.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblpassword.setText("Password:");
+        add(lblpassword);
+        lblpassword.setBounds(330, 300, 83, 15);
 
         lblmanagement.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblmanagement.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblmanagement.setText("Management:");
+        add(lblmanagement);
+        lblmanagement.setBounds(330, 340, 83, 15);
 
         txtbrokername.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtbrokernameActionPerformed(evt);
             }
         });
+        add(txtbrokername);
+        txtbrokername.setBounds(440, 50, 145, 23);
+        add(txtlicenseno);
+        txtlicenseno.setBounds(440, 90, 145, 23);
+        add(txtcontactno);
+        txtcontactno.setBounds(440, 130, 145, 23);
+        add(txtemailid);
+        txtemailid.setBounds(440, 170, 145, 23);
+        add(txtbrokerfee);
+        txtbrokerfee.setBounds(440, 210, 145, 23);
+        add(txtusername);
+        txtusername.setBounds(440, 250, 145, 23);
+        add(txtpassword);
+        txtpassword.setBounds(440, 290, 145, 23);
+        add(txtmanagement);
+        txtmanagement.setBounds(440, 330, 145, 23);
 
         btnaddbroker.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         btnaddbroker.setText("Add Broker");
@@ -113,74 +150,12 @@ public class AddBroker extends javax.swing.JPanel {
                 btnaddbrokerActionPerformed(evt);
             }
         });
+        add(btnaddbroker);
+        btnaddbroker.setBounds(440, 440, 100, 21);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(172, 172, 172)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblbrokername, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lbllicenseno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblcontactno, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblemail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblbrokerfee, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblusername, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblpassword, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblmanagement, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtpassword, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
-                    .addComponent(txtusername)
-                    .addComponent(txtbrokerfee)
-                    .addComponent(txtemailid)
-                    .addComponent(txtcontactno)
-                    .addComponent(txtlicenseno)
-                    .addComponent(txtbrokername)
-                    .addComponent(txtmanagement))
-                .addGap(65, 65, 65)
-                .addComponent(btnaddbroker)
-                .addContainerGap(107, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(105, 105, 105)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblbrokername)
-                    .addComponent(txtbrokername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbllicenseno)
-                    .addComponent(txtlicenseno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblcontactno)
-                    .addComponent(txtcontactno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblemail)
-                    .addComponent(txtemailid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblbrokerfee)
-                    .addComponent(txtbrokerfee, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(19, 19, 19)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblusername)
-                    .addComponent(txtusername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblpassword)
-                    .addComponent(txtpassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblmanagement)
-                    .addComponent(txtmanagement, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnaddbroker))
-                .addContainerGap(91, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
+        add(jLabel1);
+        jLabel1.setBounds(0, -30, 1210, 830);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtbrokernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtbrokernameActionPerformed
@@ -246,6 +221,7 @@ public class AddBroker extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnaddbroker;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblbrokerfee;
     private javax.swing.JLabel lblbrokername;
     private javax.swing.JLabel lblcontactno;

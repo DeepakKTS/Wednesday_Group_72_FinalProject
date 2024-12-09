@@ -26,7 +26,8 @@ public class LogonPage extends javax.swing.JFrame {
      */
     public LogonPage() {
         initComponents();
-         this.setExtendedState(MAXIMIZED_BOTH);
+        this.setSize(1024, 768);
+         
     }
 
     /**

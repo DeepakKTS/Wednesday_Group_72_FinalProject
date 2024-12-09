@@ -15,7 +15,7 @@ public class TechSupportpage extends javax.swing.JFrame {
      */
     public TechSupportpage() {
         initComponents();
-                this.setExtendedState(MAXIMIZED_BOTH);
+               this.setSize(1024, 768);
     }
 
     /**

@@ -26,7 +26,7 @@ public class TechsupportLoginpage extends javax.swing.JFrame {
      */
     public TechsupportLoginpage() {
         initComponents();
-          this.setExtendedState(MAXIMIZED_BOTH);
+          this.setSize(1024, 768);
     }
 
     /**

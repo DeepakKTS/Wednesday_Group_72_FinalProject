@@ -34,7 +34,7 @@ public class StudentView extends javax.swing.JFrame {
   
     public StudentView() {
         initComponents();
-        this.setExtendedState(MAXIMIZED_BOTH);
+        this.setSize(1024, 768);
         getRootPane().setWindowDecorationStyle(JRootPane.FRAME);
         setTitle("Student Housing");
     
