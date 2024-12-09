@@ -289,8 +289,6 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
             }
         });
 
-        lblphoto.setText("Photo");
-
         btnlocation.setText("Location");
         btnlocation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -371,8 +369,8 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
                         .addComponent(btnrefresh))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(94, 94, 94)
-                        .addComponent(lblphoto, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(51, 51, 51))
+                        .addComponent(lblphoto, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(44, 44, 44))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -442,12 +440,13 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblid, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txtid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                        .addComponent(btnlocation))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(lblphoto, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
-                .addComponent(btnlocation)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblphoto, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -555,7 +554,7 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
       
         if(apt.equals("JVUE")){
         
-            ImageIcon icon = new ImageIcon("C:\\Users\\Evita Alice Paul\\OneDrive\\Documents\\NetBeansProjects\\StudentHousingApplication\\src\\Images\\jvue.jpg");
+            ImageIcon icon = new ImageIcon("C:\\Users\\sneghashree\\Documents\\Wednesday_Group_72_FinalProject\\src\\Project Images\\jvue.png");
 
            Image image=icon.getImage().getScaledInstance(lblphoto.getWidth(),lblphoto.getHeight(),Image.SCALE_SMOOTH);
         
@@ -565,7 +564,7 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
               
         }else if(apt.equals("Longwood") ){
             
-            ImageIcon icon = new ImageIcon("C:\\Users\\Evita Alice Paul\\OneDrive\\Documents\\NetBeansProjects\\StudentHousingApplication\\src\\Images\\longwood.jpg");
+            ImageIcon icon = new ImageIcon("C:\\Users\\sneghashree\\Documents\\Wednesday_Group_72_FinalProject\\src\\Project Images\\longwood.png");
 
            Image image=icon.getImage().getScaledInstance(lblphoto.getWidth(),lblphoto.getHeight(),Image.SCALE_SMOOTH);
         
@@ -573,68 +572,11 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
         
         }else if(apt.equals("Mission Hill")){
             
-            ImageIcon icon = new ImageIcon("C:\\Users\\Evita Alice Paul\\OneDrive\\Documents\\NetBeansProjects\\StudentHousingApplication\\src\\Images\\missionhill.jpg");
+            ImageIcon icon = new ImageIcon("C:\\Users\\sneghashree\\Documents\\Wednesday_Group_72_FinalProject\\src\\Project Images\\missionhill.png");
 
            Image image=icon.getImage().getScaledInstance(lblphoto.getWidth(),lblphoto.getHeight(),Image.SCALE_SMOOTH);
         
         lblphoto.setIcon(icon);
-        
-        }else if(apt.equals("Mission Park")){
-            
-            ImageIcon icon = new ImageIcon("C:\\Users\\Evita Alice Paul\\OneDrive\\Documents\\NetBeansProjects\\StudentHousingApplication\\src\\Images\\missionpark.jpg");
-
-           Image image=icon.getImage().getScaledInstance(lblphoto.getWidth(),lblphoto.getHeight(),Image.SCALE_SMOOTH);
-        
-        lblphoto.setIcon(icon);
-        
-        }else if(apt.equals("West Square")){
-            
-            ImageIcon icon = new ImageIcon("C:\\Users\\Evita Alice Paul\\OneDrive\\Documents\\NetBeansProjects\\StudentHousingApplication\\src\\Images\\westsquare.jpg");
-
-           Image image=icon.getImage().getScaledInstance(lblphoto.getWidth(),lblphoto.getHeight(),Image.SCALE_SMOOTH);
-        
-        lblphoto.setIcon(icon);
-        
-        }else if(apt.equals("Parkway")){
-            
-            ImageIcon icon = new ImageIcon("C:\\Users\\Evita Alice Paul\\OneDrive\\Documents\\NetBeansProjects\\StudentHousingApplication\\src\\Images\\parkway.jpg");
-
-           Image image=icon.getImage().getScaledInstance(lblphoto.getWidth(),lblphoto.getHeight(),Image.SCALE_SMOOTH);
-        
-        lblphoto.setIcon(icon);
-        
-        }else if(apt.equals("Westland")){
-            
-            ImageIcon icon = new ImageIcon("C:\\Users\\Evita Alice Paul\\OneDrive\\Documents\\NetBeansProjects\\StudentHousingApplication\\src\\Images\\westland.jpg");
-
-           Image image=icon.getImage().getScaledInstance(lblphoto.getWidth(),lblphoto.getHeight(),Image.SCALE_SMOOTH);
-        
-        lblphoto.setIcon(icon);
-        
-        }else if(apt.equals("Vero")){
-            
-            ImageIcon icon = new ImageIcon("C:\\Users\\Evita Alice Paul\\OneDrive\\Documents\\NetBeansProjects\\StudentHousingApplication\\src\\Images\\vero.jpg");
-
-           Image image=icon.getImage().getScaledInstance(lblphoto.getWidth(),lblphoto.getHeight(),Image.SCALE_SMOOTH);
-        
-        lblphoto.setIcon(icon);
-        
-        }else if(apt.equals("Church Park")){
-            
-            ImageIcon icon = new ImageIcon("C:\\Users\\Evita Alice Paul\\OneDrive\\Documents\\NetBeansProjects\\StudentHousingApplication\\src\\Images\\churchpark.jpg");
-
-           Image image=icon.getImage().getScaledInstance(lblphoto.getWidth(),lblphoto.getHeight(),Image.SCALE_SMOOTH);
-        
-        lblphoto.setIcon(icon);
-        
-        }else if(apt.equals("Greenhouse")){
-            
-            ImageIcon icon = new ImageIcon("C:\\Users\\Evita Alice Paul\\OneDrive\\Documents\\NetBeansProjects\\StudentHousingApplication\\src\\Images\\greenhouse.jpg");
-
-           Image image=icon.getImage().getScaledInstance(lblphoto.getWidth(),lblphoto.getHeight(),Image.SCALE_SMOOTH);
-        
-        lblphoto.setIcon(icon);
-        
         }else{
              JOptionPane.showMessageDialog(this,"Error");
         }   
