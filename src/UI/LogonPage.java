@@ -48,35 +48,30 @@ public class LogonPage extends javax.swing.JFrame {
         btnlogin = new javax.swing.JButton();
         btnclear = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 153));
-        jPanel1.setLayout(null);
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("STUDENT LOGIN PAGE");
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(350, 30, 710, 50);
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 1000, 50));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("USERNAME");
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(970, 184, 90, 30);
-        jPanel1.add(txtusername);
-        txtusername.setBounds(1080, 182, 100, 30);
-        jPanel1.add(txtpassword);
-        txtpassword.setBounds(1080, 250, 102, 30);
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 90, 30));
+        jPanel1.add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 210, 100, 30));
+        jPanel1.add(txtpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 280, 102, 30));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("PASSWORD");
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(970, 250, 90, 30);
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 280, 90, 30));
 
         btnlogin.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
         btnlogin.setText("Login");
@@ -85,8 +80,7 @@ public class LogonPage extends javax.swing.JFrame {
                 btnloginActionPerformed(evt);
             }
         });
-        jPanel1.add(btnlogin);
-        btnlogin.setBounds(1000, 370, 72, 30);
+        jPanel1.add(btnlogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 400, -1, 30));
 
         btnclear.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
         btnclear.setText("Clear");
@@ -95,16 +89,12 @@ public class LogonPage extends javax.swing.JFrame {
                 btnclearActionPerformed(evt);
             }
         });
-        jPanel1.add(btnclear);
-        btnclear.setBounds(1110, 370, 72, 30);
+        jPanel1.add(btnclear, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 400, -1, 30));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("LOGIN");
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(1020, 110, 110, 39);
-        jPanel1.add(jLabel5);
-        jLabel5.setBounds(60, 110, 790, 540);
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 140, 110, 39));
 
         jButton1.setText("Back");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -112,18 +102,20 @@ public class LogonPage extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1);
-        jButton1.setBounds(1120, 520, 72, 23);
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 490, -1, -1));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1070, 760));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1271, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 675, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();

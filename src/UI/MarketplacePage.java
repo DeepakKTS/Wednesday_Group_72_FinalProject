@@ -33,10 +33,12 @@ public class MarketplacePage extends javax.swing.JFrame {
         btnviewproducts = new javax.swing.JButton();
         btnsalrequests = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(0, 204, 204));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnviewproducts.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
         btnviewproducts.setText("View Products");
@@ -45,6 +47,7 @@ public class MarketplacePage extends javax.swing.JFrame {
                 btnviewproductsActionPerformed(evt);
             }
         });
+        jPanel1.add(btnviewproducts, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 162, -1, -1));
 
         btnsalrequests.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
         btnsalrequests.setText("Sale Requests");
@@ -53,42 +56,15 @@ public class MarketplacePage extends javax.swing.JFrame {
                 btnsalrequestsActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnviewproducts, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnsalrequests, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(16, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(162, 162, 162)
-                .addComponent(btnviewproducts)
-                .addGap(51, 51, 51)
-                .addComponent(btnsalrequests)
-                .addContainerGap(360, Short.MAX_VALUE))
-        );
+        jPanel1.add(btnsalrequests, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 234, 117, -1));
 
         SplitPane.setLeftComponent(jPanel1);
 
         jPanel2.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 706, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 619, Short.MAX_VALUE)
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         SplitPane.setRightComponent(jPanel2);
 
@@ -160,6 +136,7 @@ public class MarketplacePage extends javax.swing.JFrame {
     private javax.swing.JSplitPane SplitPane;
     private javax.swing.JButton btnsalrequests;
     private javax.swing.JButton btnviewproducts;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
