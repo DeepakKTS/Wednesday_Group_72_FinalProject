@@ -39,7 +39,7 @@ public class ViewBrokers extends javax.swing.JPanel {
   
     public ViewBrokers() {
         initComponents();
-        
+        this.setSize(1024, 768);
         bd.getBrokerDirectory();
         
 

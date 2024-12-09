@@ -34,6 +34,7 @@ public class adminView extends javax.swing.JFrame {
   
     public adminView() {
         initComponents();
+        this.setSize(1024, 768);
         this.setExtendedState(MAXIMIZED_BOTH);
         getRootPane().setWindowDecorationStyle(JRootPane.FRAME);
         setTitle("Student Housing");

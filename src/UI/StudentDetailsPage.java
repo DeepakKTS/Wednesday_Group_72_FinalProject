@@ -24,6 +24,7 @@ public class StudentDetailsPage extends javax.swing.JFrame {
      */
     public StudentDetailsPage() {
         initComponents();
+        
     }
 
     /**

@@ -27,7 +27,7 @@ public class UniversityadminLoginpage extends javax.swing.JFrame {
      */
     public UniversityadminLoginpage() {
         initComponents();
-          this.setExtendedState(MAXIMIZED_BOTH);
+          this.setSize(1024, 768);
     }
 
     /**

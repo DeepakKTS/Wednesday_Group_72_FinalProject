@@ -15,6 +15,7 @@ public class ViewProductsforsale extends javax.swing.JPanel {
      */
     public ViewProductsforsale() {
         initComponents();
+        this.setSize(1024, 768);
     }
 
     /**

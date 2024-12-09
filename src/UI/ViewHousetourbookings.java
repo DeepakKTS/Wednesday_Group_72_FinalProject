@@ -24,7 +24,7 @@ public class ViewHousetourbookings extends javax.swing.JPanel {
      ApartmentHistory hist = new ApartmentHistory();
     public ViewHousetourbookings() {
         initComponents();
-        
+        this.setSize(1024, 768);
        history.getStudentHistory();
        hist.getApartmentHistory();
         PopulateTable();

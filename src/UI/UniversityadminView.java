@@ -15,7 +15,7 @@ public class UniversityadminView extends javax.swing.JFrame {
      */
     public UniversityadminView() {
         initComponents();
-         this.setExtendedState(MAXIMIZED_BOTH);
+         this.setSize(1024, 768);
     }
 
     /**

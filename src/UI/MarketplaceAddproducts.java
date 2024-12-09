@@ -36,6 +36,7 @@ public class MarketplaceAddproducts extends javax.swing.JPanel {
     Market mp;
     public MarketplaceAddproducts() {
         initComponents();
+        this.setSize(1024, 768);
         mh.getMarketHistory();
         this.mp = mp;
         PopulateTable();

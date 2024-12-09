@@ -26,6 +26,7 @@ public class ViewReportedissues extends javax.swing.JPanel {
      */
     public ViewReportedissues() {
         initComponents();
+        this.setSize(1024, 768);
     }
 
     /**

@@ -15,7 +15,7 @@ public class RealtyCompany extends javax.swing.JFrame {
      */
     public RealtyCompany() {
         initComponents();
-          this.setExtendedState(MAXIMIZED_BOTH);
+          this.setSize(1024, 768);
     }
 
     /**
