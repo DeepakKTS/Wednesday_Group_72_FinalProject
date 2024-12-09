@@ -49,6 +49,7 @@ public class ViewHouseTourrequests extends javax.swing.JPanel {
       Studenthistory history = new Studenthistory();
     public ViewHouseTourrequests() {
         initComponents();
+        this.setSize(1024, 768);
          history.getStudentHistory();
                  PopulateTable();
     }

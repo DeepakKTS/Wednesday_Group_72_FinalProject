@@ -15,6 +15,7 @@ public class MarketplacePage extends javax.swing.JFrame {
      */
     public MarketplacePage() {
         initComponents();
+        this.setSize(1024, 768);
         
     }
 

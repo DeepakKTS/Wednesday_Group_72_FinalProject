@@ -23,6 +23,7 @@ public class AddstudentsPage extends javax.swing.JPanel {
      */
     public AddstudentsPage() {
         initComponents();
+        this.setSize(1024, 768);
     }
 
     /**
@@ -47,39 +48,65 @@ public class AddstudentsPage extends javax.swing.JPanel {
         lblpassword = new javax.swing.JLabel();
         txtpassword = new javax.swing.JTextField();
         btnaddstudent = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 153, 153));
         setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
+        setLayout(null);
 
         lblid.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblid.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblid.setText("ID:");
+        add(lblid);
+        lblid.setBounds(343, 138, 25, 15);
 
         lblname.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblname.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblname.setText("Name:");
+        add(lblname);
+        lblname.setBounds(322, 184, 46, 15);
 
         lblcontactno.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblcontactno.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblcontactno.setText("Contact No:");
+        add(lblcontactno);
+        lblcontactno.setBounds(293, 232, 75, 15);
 
         lblemailid.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblemailid.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblemailid.setText("Email ID:");
+        add(lblemailid);
+        lblemailid.setBounds(309, 283, 59, 15);
 
         lblusername.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblusername.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblusername.setText("Username:");
+        add(lblusername);
+        lblusername.setBounds(303, 332, 65, 15);
+        add(txtid);
+        txtid.setBounds(410, 134, 151, 23);
 
         txtname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtnameActionPerformed(evt);
             }
         });
+        add(txtname);
+        txtname.setBounds(410, 180, 151, 23);
+        add(txtcontactno);
+        txtcontactno.setBounds(410, 228, 151, 23);
+        add(txtemailid);
+        txtemailid.setBounds(410, 279, 151, 23);
+        add(txtusername);
+        txtusername.setBounds(410, 328, 151, 23);
 
         lblpassword.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblpassword.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblpassword.setText("Password:");
+        add(lblpassword);
+        lblpassword.setBounds(296, 383, 72, 15);
+        add(txtpassword);
+        txtpassword.setBounds(410, 379, 151, 23);
 
         btnaddstudent.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
         btnaddstudent.setText("Add Student");
@@ -88,69 +115,13 @@ public class AddstudentsPage extends javax.swing.JPanel {
                 btnaddstudentActionPerformed(evt);
             }
         });
+        add(btnaddstudent);
+        btnaddstudent.setBounds(567, 460, 124, 21);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(303, 303, 303)
-                        .addComponent(lblusername))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(288, 288, 288)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblpassword, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblemailid, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblcontactno, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblname, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblid, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(42, 42, 42)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtid, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
-                    .addComponent(txtname)
-                    .addComponent(txtemailid)
-                    .addComponent(txtcontactno)
-                    .addComponent(txtusername)
-                    .addComponent(txtpassword))
-                .addContainerGap(264, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnaddstudent, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(134, 134, 134))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(134, 134, 134)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblid)
-                    .addComponent(txtid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(23, 23, 23)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblname)
-                    .addComponent(txtname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblcontactno)
-                    .addComponent(txtcontactno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblemailid)
-                    .addComponent(txtemailid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtusername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblusername))
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtpassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblpassword))
-                .addGap(58, 58, 58)
-                .addComponent(btnaddstudent)
-                .addContainerGap(125, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        add(jLabel1);
+        jLabel1.setBounds(0, -30, 930, 820);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnameActionPerformed
@@ -210,6 +181,7 @@ public class AddstudentsPage extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnaddstudent;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblcontactno;
     private javax.swing.JLabel lblemailid;
     private javax.swing.JLabel lblid;

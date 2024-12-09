@@ -36,6 +36,7 @@ public class ViewSaleRequests extends javax.swing.JPanel {
    private final Marketrequeststudenthistory history;
     public ViewSaleRequests() {
         initComponents();
+        this.setSize(1024, 768);
         history = new Marketrequeststudenthistory(); // Fetch market request history
         PopulateTable();
     }
