@@ -15,7 +15,7 @@ public class StartPage extends javax.swing.JFrame {
      */
     public StartPage() {
         initComponents();
-        this.setResizable(false);
+        this.setResizable(false); //Startpage
 
           this.setSize(1024, 768); // Set to your desired fixed size
 

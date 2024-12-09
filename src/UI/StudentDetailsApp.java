@@ -31,7 +31,7 @@ public class StudentDetailsApp extends javax.swing.JFrame {
    AppointmentRequesthistory his =  new AppointmentRequesthistory();
     public StudentDetailsApp() {
         initComponents();
-        his.getAppointmentHistory();
+        //his.getAppointmentHistory();
     }
 
     /**

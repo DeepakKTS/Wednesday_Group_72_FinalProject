@@ -71,13 +71,13 @@ public class MarketplaceAddproducts extends javax.swing.JPanel {
 
         tblmarketplace.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Product Name", "Price", "Used / Unused", "Image"
+                "Product Name", "Price", "Used / Unused"
             }
         ));
         jScrollPane1.setViewportView(tblmarketplace);
