@@ -322,9 +322,7 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
             }
         });
         add(btnrefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 320, -1, -1));
-
-        lblphoto.setText("Photo");
-        add(lblphoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 410, 418, 316));
+        add(lblphoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 390, 260, 230));
 
         btnlocation.setText("Location");
         btnlocation.addActionListener(new java.awt.event.ActionListener() {
@@ -332,7 +330,7 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
                 btnlocationActionPerformed(evt);
             }
         });
-        add(btnlocation, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 560, -1, -1));
+        add(btnlocation, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 660, -1, -1));
 
         btnbooktour.setText("Book Apartment Tour");
         btnbooktour.addActionListener(new java.awt.event.ActionListener() {
@@ -346,8 +344,7 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
         add(cmbtime, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 760));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1240, 750));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnsearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsearchActionPerformed
@@ -453,17 +450,17 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
       
         if(apt.equals("JVUE")){
         
-            ImageIcon icon = new ImageIcon("C:\\Users\\Evita Alice Paul\\OneDrive\\Documents\\NetBeansProjects\\StudentHousingApplication\\src\\Images\\jvue.jpg");
+            ImageIcon icon = new ImageIcon("C:\\Users\\sneghashree\\Documents\\Wednesday_Group_72_FinalProject\\src\\Project Images\\jvue.png");
 
            Image image=icon.getImage().getScaledInstance(lblphoto.getWidth(),lblphoto.getHeight(),Image.SCALE_SMOOTH);
         
         lblphoto.setIcon(icon);
       
-
+//cc
               
         }else if(apt.equals("Longwood") ){
             
-            ImageIcon icon = new ImageIcon("C:\\Users\\Evita Alice Paul\\OneDrive\\Documents\\NetBeansProjects\\StudentHousingApplication\\src\\Images\\longwood.jpg");
+            ImageIcon icon = new ImageIcon("C:\\Users\\sneghashree\\Documents\\Wednesday_Group_72_FinalProject\\src\\Project Images\\longwood.png");
 
            Image image=icon.getImage().getScaledInstance(lblphoto.getWidth(),lblphoto.getHeight(),Image.SCALE_SMOOTH);
         
@@ -471,68 +468,11 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
         
         }else if(apt.equals("Mission Hill")){
             
-            ImageIcon icon = new ImageIcon("C:\\Users\\Evita Alice Paul\\OneDrive\\Documents\\NetBeansProjects\\StudentHousingApplication\\src\\Images\\missionhill.jpg");
+            ImageIcon icon = new ImageIcon("C:\\Users\\sneghashree\\Documents\\Wednesday_Group_72_FinalProject\\src\\Project Images\\missionhill.png");
 
            Image image=icon.getImage().getScaledInstance(lblphoto.getWidth(),lblphoto.getHeight(),Image.SCALE_SMOOTH);
         
         lblphoto.setIcon(icon);
-        
-        }else if(apt.equals("Mission Park")){
-            
-            ImageIcon icon = new ImageIcon("C:\\Users\\Evita Alice Paul\\OneDrive\\Documents\\NetBeansProjects\\StudentHousingApplication\\src\\Images\\missionpark.jpg");
-
-           Image image=icon.getImage().getScaledInstance(lblphoto.getWidth(),lblphoto.getHeight(),Image.SCALE_SMOOTH);
-        
-        lblphoto.setIcon(icon);
-        
-        }else if(apt.equals("West Square")){
-            
-            ImageIcon icon = new ImageIcon("C:\\Users\\Evita Alice Paul\\OneDrive\\Documents\\NetBeansProjects\\StudentHousingApplication\\src\\Images\\westsquare.jpg");
-
-           Image image=icon.getImage().getScaledInstance(lblphoto.getWidth(),lblphoto.getHeight(),Image.SCALE_SMOOTH);
-        
-        lblphoto.setIcon(icon);
-        
-        }else if(apt.equals("Parkway")){
-            
-            ImageIcon icon = new ImageIcon("C:\\Users\\Evita Alice Paul\\OneDrive\\Documents\\NetBeansProjects\\StudentHousingApplication\\src\\Images\\parkway.jpg");
-
-           Image image=icon.getImage().getScaledInstance(lblphoto.getWidth(),lblphoto.getHeight(),Image.SCALE_SMOOTH);
-        
-        lblphoto.setIcon(icon);
-        
-        }else if(apt.equals("Westland")){
-            
-            ImageIcon icon = new ImageIcon("C:\\Users\\Evita Alice Paul\\OneDrive\\Documents\\NetBeansProjects\\StudentHousingApplication\\src\\Images\\westland.jpg");
-
-           Image image=icon.getImage().getScaledInstance(lblphoto.getWidth(),lblphoto.getHeight(),Image.SCALE_SMOOTH);
-        
-        lblphoto.setIcon(icon);
-        
-        }else if(apt.equals("Vero")){
-            
-            ImageIcon icon = new ImageIcon("C:\\Users\\Evita Alice Paul\\OneDrive\\Documents\\NetBeansProjects\\StudentHousingApplication\\src\\Images\\vero.jpg");
-
-           Image image=icon.getImage().getScaledInstance(lblphoto.getWidth(),lblphoto.getHeight(),Image.SCALE_SMOOTH);
-        
-        lblphoto.setIcon(icon);
-        
-        }else if(apt.equals("Church Park")){
-            
-            ImageIcon icon = new ImageIcon("C:\\Users\\Evita Alice Paul\\OneDrive\\Documents\\NetBeansProjects\\StudentHousingApplication\\src\\Images\\churchpark.jpg");
-
-           Image image=icon.getImage().getScaledInstance(lblphoto.getWidth(),lblphoto.getHeight(),Image.SCALE_SMOOTH);
-        
-        lblphoto.setIcon(icon);
-        
-        }else if(apt.equals("Greenhouse")){
-            
-            ImageIcon icon = new ImageIcon("C:\\Users\\Evita Alice Paul\\OneDrive\\Documents\\NetBeansProjects\\StudentHousingApplication\\src\\Images\\greenhouse.jpg");
-
-           Image image=icon.getImage().getScaledInstance(lblphoto.getWidth(),lblphoto.getHeight(),Image.SCALE_SMOOTH);
-        
-        lblphoto.setIcon(icon);
-        
         }else{
              JOptionPane.showMessageDialog(this,"Error");
         }   
