@@ -48,6 +48,11 @@
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JTextField" name="txtid">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Big Caslon" size="14" style="1"/>
+            </Property>
+          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="398" y="170" width="151" height="-1"/>
@@ -55,6 +60,11 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="txtname">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Big Caslon" size="14" style="1"/>
+            </Property>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtnameActionPerformed"/>
           </Events>
@@ -65,6 +75,11 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="txtcontactno">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Big Caslon" size="14" style="1"/>
+            </Property>
+          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="398" y="264" width="151" height="-1"/>
@@ -72,6 +87,11 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="txtemailid">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Big Caslon" size="14" style="1"/>
+            </Property>
+          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="398" y="315" width="151" height="-1"/>
@@ -81,7 +101,7 @@
         <Component class="javax.swing.JLabel" name="lblid">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="12" style="1"/>
+              <Font name="Big Caslon" size="14" style="1"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="4"/>
             <Property name="text" type="java.lang.String" value="ID:"/>
@@ -95,7 +115,7 @@
         <Component class="javax.swing.JLabel" name="lblname">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="12" style="1"/>
+              <Font name="Big Caslon" size="14" style="1"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="4"/>
             <Property name="text" type="java.lang.String" value="Name:"/>
@@ -109,7 +129,7 @@
         <Component class="javax.swing.JLabel" name="lblcontactno">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="12" style="1"/>
+              <Font name="Big Caslon" size="14" style="1"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="4"/>
             <Property name="text" type="java.lang.String" value="Contact No:"/>
@@ -123,7 +143,7 @@
         <Component class="javax.swing.JLabel" name="lblemailid">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="12" style="1"/>
+              <Font name="Big Caslon" size="14" style="1"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="4"/>
             <Property name="text" type="java.lang.String" value="Email ID:"/>
@@ -136,6 +156,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnrequest">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Big Caslon" size="14" style="1"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Request"/>
           </Properties>
           <Events>

@@ -84,21 +84,23 @@ public class MarketplaceAddproducts extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 496, 203));
 
+        btndelete.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btndelete.setText("REMOVE");
         btndelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btndeleteActionPerformed(evt);
             }
         });
-        add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 340, -1, -1));
+        add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 340, -1, -1));
 
+        btnAdd.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnAdd.setText("ADD");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddActionPerformed(evt);
             }
         });
-        add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 340, -1, -1));
+        add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
         jLabel2.setText("jLabel2");

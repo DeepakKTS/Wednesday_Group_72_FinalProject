@@ -53,47 +53,51 @@ public class ViewReportedissues extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         buttonGroup.add(rbtnresolved);
-        rbtnresolved.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        rbtnresolved.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         rbtnresolved.setText("Issue Resolved");
         rbtnresolved.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rbtnresolvedActionPerformed(evt);
             }
         });
-        add(rbtnresolved, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 220, -1, -1));
+        add(rbtnresolved, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 220, -1, -1));
 
         buttonGroup.add(rbtnpending);
-        rbtnpending.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        rbtnpending.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         rbtnpending.setText("Issue Pending");
         rbtnpending.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rbtnpendingActionPerformed(evt);
             }
         });
-        add(rbtnpending, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 270, -1, -1));
+        add(rbtnpending, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 270, -1, -1));
 
         txtsolution.setColumns(20);
+        txtsolution.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         txtsolution.setRows(5);
         jScrollPane1.setViewportView(txtsolution);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, 377, 172));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 170, 377, 172));
 
-        lblsuggest.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblsuggest.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblsuggest.setText("Suggest a Solution:");
-        add(lblsuggest, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 140, -1, -1));
+        add(lblsuggest, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, -1, -1));
 
-        lblstudentemail.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblstudentemail.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblstudentemail.setText("Student Email ID:");
-        add(lblstudentemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 360, -1, -1));
-        add(txtemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 360, 258, -1));
+        add(lblstudentemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 360, -1, -1));
 
+        txtemail.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        add(txtemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 360, 258, -1));
+
+        btnemail.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnemail.setText("Send ");
         btnemail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnemailActionPerformed(evt);
             }
         });
-        add(btnemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 420, -1, -1));
+        add(btnemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 420, 100, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));

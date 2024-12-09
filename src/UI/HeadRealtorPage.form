@@ -56,7 +56,7 @@
             <Component class="javax.swing.JButton" name="btnaddbrokers">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="12" style="3"/>
+                  <Font name="Big Caslon" size="14" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Add Brokers"/>
               </Properties>
@@ -72,7 +72,7 @@
             <Component class="javax.swing.JButton" name="btnviewbrokers">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="12" style="3"/>
+                  <Font name="Big Caslon" size="14" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="View Brokers"/>
               </Properties>
@@ -94,7 +94,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="0" y="0" width="380" height="770"/>
+                  <AbsoluteConstraints x="0" y="0" width="140" height="770"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -121,7 +121,6 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/Project Images/gradient (1).jpeg"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="jLabel1"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

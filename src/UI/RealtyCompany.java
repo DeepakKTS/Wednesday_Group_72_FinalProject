@@ -40,7 +40,7 @@ public class RealtyCompany extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(0, 204, 204));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnappointmentbookings.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        btnappointmentbookings.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnappointmentbookings.setText("Appointment bookings");
         btnappointmentbookings.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -49,7 +49,7 @@ public class RealtyCompany extends javax.swing.JFrame {
         });
         jPanel1.add(btnappointmentbookings, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 100, 172, 57));
 
-        jButton1.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         jButton1.setText("House tour bookings");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -59,7 +59,7 @@ public class RealtyCompany extends javax.swing.JFrame {
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 175, 173, 54));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -50, 320, 880));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -60, 190, 890));
 
         SplitPane.setLeftComponent(jPanel1);
 

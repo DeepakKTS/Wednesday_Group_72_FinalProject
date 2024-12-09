@@ -70,7 +70,7 @@ public class StudentView extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(0, 204, 204));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnbrokers.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        btnbrokers.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnbrokers.setText("View Brokers");
         btnbrokers.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,7 +79,7 @@ public class StudentView extends javax.swing.JFrame {
         });
         jPanel3.add(btnbrokers, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 178, -1));
 
-        btnapartment.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        btnapartment.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnapartment.setText("Apartment Listings");
         btnapartment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,7 +88,7 @@ public class StudentView extends javax.swing.JFrame {
         });
         jPanel3.add(btnapartment, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 188, -1));
 
-        btnroommate.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        btnroommate.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnroommate.setText("Products for Sale");
         btnroommate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,7 +97,7 @@ public class StudentView extends javax.swing.JFrame {
         });
         jPanel3.add(btnroommate, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 188, -1));
 
-        btnreportissue.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        btnreportissue.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnreportissue.setText("Report an Issue");
         btnreportissue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,7 +106,7 @@ public class StudentView extends javax.swing.JFrame {
         });
         jPanel3.add(btnreportissue, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 188, -1));
 
-        btnlogout.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        btnlogout.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnlogout.setText("Logout");
         btnlogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,7 +117,7 @@ public class StudentView extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
         jLabel2.setText("jLabel2");
-        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 750));
+        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 750));
 
         SplitPane.setLeftComponent(jPanel3);
 

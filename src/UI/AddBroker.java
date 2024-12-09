@@ -73,77 +73,92 @@ public class AddBroker extends javax.swing.JPanel {
         setBackground(new java.awt.Color(0, 153, 153));
         setLayout(null);
 
-        lblbrokername.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblbrokername.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblbrokername.setText("Broker Name:");
         add(lblbrokername);
-        lblbrokername.setBounds(330, 60, 83, 15);
+        lblbrokername.setBounds(270, 70, 82, 18);
 
-        lbllicenseno.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        lbllicenseno.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lbllicenseno.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        lbllicenseno.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbllicenseno.setText("License No:");
         add(lbllicenseno);
-        lbllicenseno.setBounds(330, 100, 83, 15);
+        lbllicenseno.setBounds(270, 110, 83, 18);
 
-        lblcontactno.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        lblcontactno.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblcontactno.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        lblcontactno.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblcontactno.setText("Contact No:");
         add(lblcontactno);
-        lblcontactno.setBounds(350, 130, 72, 15);
+        lblcontactno.setBounds(262, 140, 100, 18);
 
-        lblemail.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        lblemail.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblemail.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        lblemail.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblemail.setText("Email ID:");
         add(lblemail);
-        lblemail.setBounds(330, 170, 83, 15);
+        lblemail.setBounds(270, 180, 83, 18);
 
-        lblbrokerfee.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        lblbrokerfee.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblbrokerfee.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        lblbrokerfee.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblbrokerfee.setText("Broker Fee:");
         add(lblbrokerfee);
-        lblbrokerfee.setBounds(330, 210, 83, 15);
+        lblbrokerfee.setBounds(270, 230, 83, 18);
 
-        lblusername.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        lblusername.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblusername.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        lblusername.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblusername.setText("Username:");
         lblusername.setFocusTraversalPolicyProvider(true);
         add(lblusername);
-        lblusername.setBounds(330, 260, 83, 15);
+        lblusername.setBounds(270, 280, 83, 18);
 
-        lblpassword.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        lblpassword.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblpassword.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        lblpassword.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblpassword.setText("Password:");
         add(lblpassword);
-        lblpassword.setBounds(330, 300, 83, 15);
+        lblpassword.setBounds(270, 320, 83, 18);
 
-        lblmanagement.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        lblmanagement.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblmanagement.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        lblmanagement.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblmanagement.setText("Management:");
         add(lblmanagement);
-        lblmanagement.setBounds(330, 340, 83, 15);
+        lblmanagement.setBounds(280, 360, 79, 18);
 
+        txtbrokername.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         txtbrokername.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtbrokernameActionPerformed(evt);
             }
         });
         add(txtbrokername);
-        txtbrokername.setBounds(440, 50, 145, 23);
-        add(txtlicenseno);
-        txtlicenseno.setBounds(440, 90, 145, 23);
-        add(txtcontactno);
-        txtcontactno.setBounds(440, 130, 145, 23);
-        add(txtemailid);
-        txtemailid.setBounds(440, 170, 145, 23);
-        add(txtbrokerfee);
-        txtbrokerfee.setBounds(440, 210, 145, 23);
-        add(txtusername);
-        txtusername.setBounds(440, 250, 145, 23);
-        add(txtpassword);
-        txtpassword.setBounds(440, 290, 145, 23);
-        add(txtmanagement);
-        txtmanagement.setBounds(440, 330, 145, 23);
+        txtbrokername.setBounds(380, 60, 145, 24);
 
-        btnaddbroker.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        txtlicenseno.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        add(txtlicenseno);
+        txtlicenseno.setBounds(380, 100, 145, 24);
+
+        txtcontactno.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        add(txtcontactno);
+        txtcontactno.setBounds(380, 140, 145, 24);
+
+        txtemailid.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        add(txtemailid);
+        txtemailid.setBounds(380, 180, 145, 24);
+
+        txtbrokerfee.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        add(txtbrokerfee);
+        txtbrokerfee.setBounds(380, 230, 145, 24);
+
+        txtusername.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        add(txtusername);
+        txtusername.setBounds(380, 270, 145, 24);
+
+        txtpassword.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        add(txtpassword);
+        txtpassword.setBounds(380, 310, 145, 24);
+
+        txtmanagement.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        add(txtmanagement);
+        txtmanagement.setBounds(380, 360, 145, 24);
+
+        btnaddbroker.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnaddbroker.setText("Add Broker");
         btnaddbroker.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -151,7 +166,7 @@ public class AddBroker extends javax.swing.JPanel {
             }
         });
         add(btnaddbroker);
-        btnaddbroker.setBounds(440, 440, 100, 21);
+        btnaddbroker.setBounds(350, 450, 99, 24);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
         add(jLabel1);
@@ -195,25 +210,33 @@ public class AddBroker extends javax.swing.JPanel {
         
         System.out.println("Before try statement executed");
        
-        try {
-            System.out.println("Inside try statement executed");
-              Connection con=SQLconnection.dbconnector();
-            Statement stmt=con.createStatement();
-            
-          String Query= "INSERT INTO Brokers(name,licenseno,contactno,emailid,brokerfee,USERNAME,PASSWORD,management) values('"+txtbrokername.getText()+"','"+txtlicenseno.getText()+"','"+txtcontactno.getText()+"','"+txtemailid.getText()+"','"+txtbrokerfee.getText()+"','"+txtusername.getText()+"','"+txtpassword.getText()+"','"+txtmanagement.getText()+"')";
-          
-         
-            stmt.executeUpdate(Query);
-          stmt.close();
-          con.close();
-            JOptionPane.showMessageDialog(this, "Registered Sucessfully");
-       
-            
-        
-       
-        } catch (SQLException ex) {
-            Logger.getLogger(AddBroker.class.getName()).log(Level.SEVERE, null, ex);
-        }
+       try {
+    System.out.println("Inside try statement executed");
+
+    // Establishing the database connection
+    Connection con = SQLconnection.dbconnector();
+    Statement stmt = con.createStatement();
+
+    // Corrected SQL query with column names in the exact order of the table structure
+    String Query = "INSERT INTO Brokers (LicenseNumber, Name, ContactNumber, BrokerFee, Management, EmailID, Username, Password) " +
+                   "VALUES ('" + txtlicenseno.getText() + "', '" + txtbrokername.getText() + "', '" + txtcontactno.getText() + "', " +
+                   "'" + txtbrokerfee.getText() + "', '" + txtmanagement.getText() + "', '" + txtemailid.getText() + "', " +
+                   "'" + txtusername.getText() + "', '" + txtpassword.getText() + "')";
+    
+    // Executing the query
+    stmt.executeUpdate(Query);
+
+    // Closing the statement and connection
+    stmt.close();
+    con.close();
+
+    // Success message
+    JOptionPane.showMessageDialog(this, "Registered Successfully");
+} catch (SQLException e) {
+    // Handling SQL exceptions
+    e.printStackTrace();
+    JOptionPane.showMessageDialog(this, "Error occurred while adding broker: " + e.getMessage());
+}
         
 }
     }//GEN-LAST:event_btnaddbrokerActionPerformed

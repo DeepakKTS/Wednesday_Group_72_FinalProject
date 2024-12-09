@@ -39,7 +39,7 @@ public class TechSupportpage extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(0, 204, 204));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnviewreportedissues.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        btnviewreportedissues.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnviewreportedissues.setText("View Reported Issues ");
         btnviewreportedissues.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -49,7 +49,7 @@ public class TechSupportpage extends javax.swing.JFrame {
         jPanel1.add(btnviewreportedissues, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 149, -1, 85));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1040, 840));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 180, 760));
 
         SplitPane.setLeftComponent(jPanel1);
 

@@ -53,37 +53,45 @@ public class StudentDetailsPage extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 153));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        txtid.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         jPanel1.add(txtid, new org.netbeans.lib.awtextra.AbsoluteConstraints(398, 170, 151, -1));
 
+        txtname.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         txtname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtnameActionPerformed(evt);
             }
         });
         jPanel1.add(txtname, new org.netbeans.lib.awtextra.AbsoluteConstraints(398, 216, 151, -1));
+
+        txtcontactno.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         jPanel1.add(txtcontactno, new org.netbeans.lib.awtextra.AbsoluteConstraints(398, 264, 151, -1));
+
+        txtemailid.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         jPanel1.add(txtemailid, new org.netbeans.lib.awtextra.AbsoluteConstraints(398, 315, 151, -1));
 
-        lblid.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblid.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblid.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblid.setText("ID:");
         jPanel1.add(lblid, new org.netbeans.lib.awtextra.AbsoluteConstraints(331, 174, 25, -1));
 
-        lblname.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblname.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblname.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblname.setText("Name:");
         jPanel1.add(lblname, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 220, 46, -1));
 
-        lblcontactno.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblcontactno.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblcontactno.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblcontactno.setText("Contact No:");
         jPanel1.add(lblcontactno, new org.netbeans.lib.awtextra.AbsoluteConstraints(281, 268, 75, -1));
 
-        lblemailid.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblemailid.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblemailid.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblemailid.setText("Email ID:");
         jPanel1.add(lblemailid, new org.netbeans.lib.awtextra.AbsoluteConstraints(297, 319, 59, -1));
 
+        btnrequest.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnrequest.setText("Request");
         btnrequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

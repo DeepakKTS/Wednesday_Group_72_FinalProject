@@ -37,21 +37,24 @@ public class ViewProductsforsale extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtissue.setColumns(20);
+        txtissue.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         txtissue.setRows(5);
         jScrollPane1.setViewportView(txtissue);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 180, 382, 206));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 382, 206));
 
+        cmbissue.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         cmbissue.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "Payment ", "Appointment Booking ", "Login Issue", " ", " " }));
-        add(cmbissue, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 120, -1, -1));
+        add(cmbissue, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 120, -1, -1));
 
+        btnreport.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnreport.setText("Report");
         btnreport.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnreportActionPerformed(evt);
             }
         });
-        add(btnreport, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 410, -1, -1));
+        add(btnreport, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));

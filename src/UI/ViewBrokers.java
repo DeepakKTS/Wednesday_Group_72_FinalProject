@@ -98,7 +98,6 @@ public class ViewBrokers extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(0, 153, 153));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        tblbrokers.setBackground(new java.awt.Color(204, 255, 204));
         tblbrokers.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         tblbrokers.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -128,99 +127,110 @@ public class ViewBrokers extends javax.swing.JPanel {
         tblbrokers.setShowVerticalLines(true);
         jScrollPane1.setViewportView(tblbrokers);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 980, 180));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 670, 180));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel1.setText("Broker Fee :");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 92, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 92, -1));
 
-        cmbbrokerfee.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        cmbbrokerfee.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         cmbbrokerfee.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "1000", "2000", "3000", "4000", "5000" }));
         cmbbrokerfee.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbbrokerfeeActionPerformed(evt);
             }
         });
-        jPanel1.add(cmbbrokerfee, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 240, 168, -1));
+        jPanel1.add(cmbbrokerfee, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 168, -1));
 
-        btnsearch.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        btnsearch.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnsearch.setText("Search");
         btnsearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnsearchActionPerformed(evt);
             }
         });
-        jPanel1.add(btnsearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, 128, -1));
+        jPanel1.add(btnsearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 240, 160, 30));
 
-        btnrefresh.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        btnrefresh.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnrefresh.setText("Refresh");
         btnrefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnrefreshActionPerformed(evt);
             }
         });
-        jPanel1.add(btnrefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 240, 144, -1));
+        jPanel1.add(btnrefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 350, 160, 30));
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("License Number : ");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 101, -1));
-        jPanel1.add(txtlicenseno, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 168, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 101, -1));
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtlicenseno.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        jPanel1.add(txtlicenseno, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 290, 168, -1));
+
+        jLabel5.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel5.setText("Name : ");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 340, 49, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 340, 49, -1));
 
+        txtname.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         txtname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtnameActionPerformed(evt);
             }
         });
-        jPanel1.add(txtname, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 340, 168, -1));
+        jPanel1.add(txtname, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 168, -1));
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel6.setText("Contact Number : ");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, 113, -1));
-        jPanel1.add(txtcontactno, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 380, 168, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 113, -1));
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtcontactno.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        jPanel1.add(txtcontactno, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 380, 168, -1));
+
+        jLabel7.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel7.setText("Broker Fee :");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 420, 69, -1));
-        jPanel1.add(txtbrokerfee, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 420, 168, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(59, 420, 80, -1));
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtbrokerfee.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        jPanel1.add(txtbrokerfee, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 420, 168, -1));
+
+        jLabel8.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel8.setText("Management :");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 470, 81, -1));
-        jPanel1.add(txtmanagement, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 460, 168, -1));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 460, 120, -1));
 
-        btnbook.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        txtmanagement.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        jPanel1.add(txtmanagement, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 460, 168, -1));
+
+        btnbook.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnbook.setText("Book Appointment");
         btnbook.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnbookActionPerformed(evt);
             }
         });
-        jPanel1.add(btnbook, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 480, 145, 35));
+        jPanel1.add(btnbook, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 550, 200, 60));
 
-        btnview.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        btnview.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnview.setText("View");
         btnview.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnviewActionPerformed(evt);
             }
         });
-        jPanel1.add(btnview, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 240, 132, -1));
+        jPanel1.add(btnview, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 290, 160, 30));
 
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel10.setText("Email id :");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 500, 65, -1));
-        jPanel1.add(txtemailid, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 500, 168, -1));
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 500, 65, -1));
+
+        txtemailid.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        jPanel1.add(txtemailid, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 500, 168, -1));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1040, 760));

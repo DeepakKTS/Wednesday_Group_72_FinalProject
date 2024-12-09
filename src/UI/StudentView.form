@@ -61,7 +61,7 @@
             <Component class="javax.swing.JButton" name="btnbrokers">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI Black" size="12" style="3"/>
+                  <Font name="Big Caslon" size="14" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="View Brokers"/>
               </Properties>
@@ -77,7 +77,7 @@
             <Component class="javax.swing.JButton" name="btnapartment">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI Black" size="12" style="3"/>
+                  <Font name="Big Caslon" size="14" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Apartment Listings"/>
               </Properties>
@@ -93,7 +93,7 @@
             <Component class="javax.swing.JButton" name="btnroommate">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI Black" size="12" style="3"/>
+                  <Font name="Big Caslon" size="14" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Products for Sale"/>
               </Properties>
@@ -109,7 +109,7 @@
             <Component class="javax.swing.JButton" name="btnreportissue">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI Black" size="12" style="3"/>
+                  <Font name="Big Caslon" size="14" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Report an Issue"/>
               </Properties>
@@ -125,7 +125,7 @@
             <Component class="javax.swing.JButton" name="btnlogout">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI Black" size="12" style="3"/>
+                  <Font name="Big Caslon" size="14" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Logout"/>
               </Properties>
@@ -147,7 +147,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="0" y="0" width="260" height="750"/>
+                  <AbsoluteConstraints x="0" y="0" width="220" height="750"/>
                 </Constraint>
               </Constraints>
             </Component>

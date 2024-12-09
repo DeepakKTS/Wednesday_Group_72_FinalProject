@@ -64,8 +64,6 @@ AppointmentRequesthistory history = new AppointmentRequesthistory();
         txtcontactno = new javax.swing.JTextField();
         txtemailid = new javax.swing.JTextField();
         btnacceptbooking = new javax.swing.JButton();
-        lbltimeslot = new javax.swing.JLabel();
-        txttimeslot = new javax.swing.JTextField();
         btncancelbooking = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblviewstudent = new javax.swing.JTable();
@@ -75,72 +73,80 @@ AppointmentRequesthistory history = new AppointmentRequesthistory();
         setBackground(new java.awt.Color(0, 153, 153));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        lblstudentid.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblstudentid.setText("Student ID:");
-        add(lblstudentid, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 236, -1, -1));
+        add(lblstudentid, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, -1, -1));
 
+        lblstudentname.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblstudentname.setText("Student Name:");
-        add(lblstudentname, new org.netbeans.lib.awtextra.AbsoluteConstraints(102, 277, -1, -1));
+        add(lblstudentname, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 360, -1, -1));
 
+        lblcontactno.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblcontactno.setText("Contact Number:");
-        add(lblcontactno, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 307, -1, -1));
+        add(lblcontactno, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 400, -1, -1));
 
+        lblemailid.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblemailid.setText("Email ID: ");
-        add(lblemailid, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 359, -1, -1));
+        add(lblemailid, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 440, -1, -1));
 
+        txtstudentid.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         txtstudentid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtstudentidActionPerformed(evt);
             }
         });
-        add(txtstudentid, new org.netbeans.lib.awtextra.AbsoluteConstraints(207, 233, 518, -1));
-        add(txtstudentname, new org.netbeans.lib.awtextra.AbsoluteConstraints(207, 274, 518, -1));
-        add(txtcontactno, new org.netbeans.lib.awtextra.AbsoluteConstraints(207, 315, 518, -1));
-        add(txtemailid, new org.netbeans.lib.awtextra.AbsoluteConstraints(207, 356, 518, -1));
+        add(txtstudentid, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 310, 360, 30));
 
-        btnacceptbooking.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        txtstudentname.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        add(txtstudentname, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 350, 360, 30));
+
+        txtcontactno.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        add(txtcontactno, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 390, 360, 30));
+
+        txtemailid.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        add(txtemailid, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 430, 360, 30));
+
+        btnacceptbooking.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnacceptbooking.setText("Accept Booking");
         btnacceptbooking.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnacceptbookingActionPerformed(evt);
             }
         });
-        add(btnacceptbooking, new org.netbeans.lib.awtextra.AbsoluteConstraints(229, 568, 130, -1));
+        add(btnacceptbooking, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 540, 140, 40));
 
-        lbltimeslot.setText("Time Slot:");
-        add(lbltimeslot, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 400, -1, -1));
-        add(txttimeslot, new org.netbeans.lib.awtextra.AbsoluteConstraints(207, 397, 518, -1));
-
-        btncancelbooking.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        btncancelbooking.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btncancelbooking.setText("Cancel Booking");
         btncancelbooking.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btncancelbookingActionPerformed(evt);
             }
         });
-        add(btncancelbooking, new org.netbeans.lib.awtextra.AbsoluteConstraints(672, 568, 130, -1));
+        add(btncancelbooking, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 540, 170, 40));
 
         tblviewstudent.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "Student ID", "Student Name", "Contact Name", "Email ID", "Time Slot"
+                "Student ID", "Student Name", "Contact Name", "Email ID"
             }
         ));
         jScrollPane1.setViewportView(tblviewstudent);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 50, 512, 151));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 80, 512, 151));
 
+        btnview.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnview.setText("View");
         btnview.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnviewActionPerformed(evt);
             }
         });
-        add(btnview, new org.netbeans.lib.awtextra.AbsoluteConstraints(775, 108, -1, -1));
+        add(btnview, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, 100, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 770));
@@ -201,7 +207,7 @@ AppointmentRequesthistory history = new AppointmentRequesthistory();
         txtstudentname.setText(model.getValueAt(selectedRow, 1).toString());
         txtcontactno.setText(model.getValueAt(selectedRow, 2).toString());
         txtemailid.setText(model.getValueAt(selectedRow, 3).toString());
-        txttimeslot.setText(model.getValueAt(selectedRow, 4).toString());
+        //txttimeslot.setText(model.getValueAt(selectedRow, 4).toString());
         
     }//GEN-LAST:event_btnviewActionPerformed
 
@@ -257,13 +263,11 @@ AppointmentRequesthistory history = new AppointmentRequesthistory();
     private javax.swing.JLabel lblemailid;
     private javax.swing.JLabel lblstudentid;
     private javax.swing.JLabel lblstudentname;
-    private javax.swing.JLabel lbltimeslot;
     private javax.swing.JTable tblviewstudent;
     private javax.swing.JTextField txtcontactno;
     private javax.swing.JTextField txtemailid;
     private javax.swing.JTextField txtstudentid;
     private javax.swing.JTextField txtstudentname;
-    private javax.swing.JTextField txttimeslot;
     // End of variables declaration//GEN-END:variables
 
 private void PopulateTable() {

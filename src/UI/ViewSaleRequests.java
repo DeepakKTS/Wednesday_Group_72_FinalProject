@@ -77,15 +77,16 @@ public class ViewSaleRequests extends javax.swing.JPanel {
             tblviewstudent.getColumnModel().getColumn(4).setMaxWidth(0);
         }
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 100, 540, 240));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, 540, 240));
 
+        btnpdf.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnpdf.setText("Generate PDF");
         btnpdf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnpdfActionPerformed(evt);
             }
         });
-        add(btnpdf, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 400, -1, -1));
+        add(btnpdf, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 400, 140, 50));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
