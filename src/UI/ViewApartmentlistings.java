@@ -609,7 +609,7 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
         
         lblphoto.setIcon(icon);
       
-
+//cc
               
         }else if(apt.equals("Longwood") ){
             
