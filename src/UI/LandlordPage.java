@@ -15,7 +15,8 @@ public class LandlordPage extends javax.swing.JFrame {
      */
     public LandlordPage() {
         initComponents();
-          this.setExtendedState(MAXIMIZED_BOTH);
+        this.setSize(1024, 768);
+         
     }
 
     /**

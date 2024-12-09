@@ -42,6 +42,7 @@ AppointmentRequesthistory history = new AppointmentRequesthistory();
 
     public ViewAppointmentbookings() {
         initComponents();
+        this.setSize(1024, 768);
         PopulateTable();
     }
 

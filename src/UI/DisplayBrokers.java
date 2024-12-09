@@ -35,6 +35,7 @@ public class DisplayBrokers extends javax.swing.JPanel {
     
     public DisplayBrokers() {
         initComponents();
+        this.setSize(1024, 768);
         bd.getBrokerDirectory();
         PopulateTable();
       
@@ -68,8 +69,10 @@ public class DisplayBrokers extends javax.swing.JPanel {
         btnviewbrokerdetails = new javax.swing.JButton();
         btnupdatebrokerdetails = new javax.swing.JButton();
         btndeletebrokerdetails = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 153, 153));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tblbroker.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -95,39 +98,55 @@ public class DisplayBrokers extends javax.swing.JPanel {
             tblbroker.getColumnModel().getColumn(8).setMaxWidth(0);
         }
 
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 460, 735, 182));
+        add(txtmanagement, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 340, 145, -1));
+
         lblusername.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblusername.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblusername.setText("Username:");
         lblusername.setFocusTraversalPolicyProvider(true);
+        add(lblusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 300, 79, -1));
 
         lblmanagement.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblmanagement.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblmanagement.setText("Management:");
+        add(lblmanagement, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, -1, -1));
 
         txtbrokername.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtbrokernameActionPerformed(evt);
             }
         });
+        add(txtbrokername, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, 145, -1));
+        add(txtlicenseno, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 130, 145, -1));
+        add(txtcontactno, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 170, 145, -1));
 
         lblbrokername.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblbrokername.setText("Broker Name:");
+        add(lblbrokername, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 100, 82, -1));
+        add(txtemailid, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 210, 145, -1));
 
         lbllicenseno.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lbllicenseno.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lbllicenseno.setText("License No:");
+        add(lbllicenseno, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 79, -1));
+        add(txtbrokerfee, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 260, 145, -1));
 
         lblcontactno.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblcontactno.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblcontactno.setText("Contact No:");
+        add(lblcontactno, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, -1, -1));
+        add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 300, 145, -1));
 
         lblemail.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblemail.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblemail.setText("Email ID:");
+        add(lblemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 79, -1));
 
         lblbrokerfee.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblbrokerfee.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblbrokerfee.setText("Broker Fee:");
+        add(lblbrokerfee, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, 79, -1));
 
         btnviewbrokerdetails.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
         btnviewbrokerdetails.setText("View Broker Details");
@@ -136,6 +155,7 @@ public class DisplayBrokers extends javax.swing.JPanel {
                 btnviewbrokerdetailsActionPerformed(evt);
             }
         });
+        add(btnviewbrokerdetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 100, 167, -1));
 
         btnupdatebrokerdetails.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
         btnupdatebrokerdetails.setText("Update Broker Details");
@@ -144,6 +164,7 @@ public class DisplayBrokers extends javax.swing.JPanel {
                 btnupdatebrokerdetailsActionPerformed(evt);
             }
         });
+        add(btnupdatebrokerdetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 160, -1, -1));
 
         btndeletebrokerdetails.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
         btndeletebrokerdetails.setText("Delete Broker Details");
@@ -152,96 +173,11 @@ public class DisplayBrokers extends javax.swing.JPanel {
                 btndeletebrokerdetailsActionPerformed(evt);
             }
         });
+        add(btndeletebrokerdetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 230, 167, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(88, 88, 88)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lbllicenseno, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblbrokername, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblcontactno)
-                            .addComponent(lblemail, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblbrokerfee, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblusername, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblmanagement))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtbrokername, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtlicenseno, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtemailid, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(btnviewbrokerdetails, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btnupdatebrokerdetails, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btndeletebrokerdetails, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(79, 79, 79))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(txtusername, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(144, 423, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtcontactno, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtbrokerfee, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtmanagement, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE)))))
-                .addGap(52, 52, 52))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(54, 54, 54)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblbrokername)
-                    .addComponent(txtbrokername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnviewbrokerdetails))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lbllicenseno)
-                            .addComponent(txtlicenseno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(btnupdatebrokerdetails)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblcontactno)
-                    .addComponent(txtcontactno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblemail)
-                            .addComponent(txtemailid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(5, 5, 5)
-                        .addComponent(btndeletebrokerdetails)))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblbrokerfee)
-                    .addComponent(txtbrokerfee, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblusername)
-                    .addComponent(txtusername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtmanagement, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblmanagement))
-                .addGap(55, 55, 55)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(42, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1110, 770));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtbrokernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtbrokernameActionPerformed
@@ -342,6 +278,7 @@ public class DisplayBrokers extends javax.swing.JPanel {
     private javax.swing.JButton btndeletebrokerdetails;
     private javax.swing.JButton btnupdatebrokerdetails;
     private javax.swing.JButton btnviewbrokerdetails;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblbrokerfee;
     private javax.swing.JLabel lblbrokername;
