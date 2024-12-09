@@ -74,6 +74,7 @@ public class DisplayBrokers extends javax.swing.JPanel {
         setBackground(new java.awt.Color(0, 153, 153));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        tblbroker.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         tblbroker.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null},
@@ -98,82 +99,95 @@ public class DisplayBrokers extends javax.swing.JPanel {
             tblbroker.getColumnModel().getColumn(8).setMaxWidth(0);
         }
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 460, 735, 182));
-        add(txtmanagement, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 340, 145, -1));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 420, 735, 182));
 
-        lblusername.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtmanagement.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        add(txtmanagement, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 340, 145, -1));
+
+        lblusername.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblusername.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblusername.setText("Username:");
         lblusername.setFocusTraversalPolicyProvider(true);
-        add(lblusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 300, 79, -1));
+        add(lblusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 300, 79, -1));
 
-        lblmanagement.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblmanagement.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblmanagement.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblmanagement.setText("Management:");
-        add(lblmanagement, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, -1, -1));
+        add(lblmanagement, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, -1, -1));
 
+        txtbrokername.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         txtbrokername.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtbrokernameActionPerformed(evt);
             }
         });
-        add(txtbrokername, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, 145, -1));
-        add(txtlicenseno, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 130, 145, -1));
-        add(txtcontactno, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 170, 145, -1));
+        add(txtbrokername, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, 145, -1));
 
-        lblbrokername.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtlicenseno.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        add(txtlicenseno, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 130, 145, -1));
+
+        txtcontactno.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        add(txtcontactno, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 170, 145, -1));
+
+        lblbrokername.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblbrokername.setText("Broker Name:");
-        add(lblbrokername, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 100, 82, -1));
-        add(txtemailid, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 210, 145, -1));
+        add(lblbrokername, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 100, 100, -1));
 
-        lbllicenseno.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtemailid.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        add(txtemailid, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 145, -1));
+
+        lbllicenseno.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lbllicenseno.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lbllicenseno.setText("License No:");
-        add(lbllicenseno, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 79, -1));
-        add(txtbrokerfee, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 260, 145, -1));
+        lbllicenseno.setText("License Number:");
+        add(lbllicenseno, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, 120, -1));
 
-        lblcontactno.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtbrokerfee.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        add(txtbrokerfee, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 260, 145, -1));
+
+        lblcontactno.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblcontactno.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblcontactno.setText("Contact No:");
-        add(lblcontactno, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, -1, -1));
-        add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 300, 145, -1));
+        lblcontactno.setText("Contact Number:");
+        add(lblcontactno, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, -1, -1));
 
-        lblemail.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtusername.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 145, -1));
+
+        lblemail.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblemail.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblemail.setText("Email ID:");
-        add(lblemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 79, -1));
+        add(lblemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, 79, -1));
 
-        lblbrokerfee.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblbrokerfee.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblbrokerfee.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblbrokerfee.setText("Broker Fee:");
-        add(lblbrokerfee, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, 79, -1));
+        add(lblbrokerfee, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 260, 79, -1));
 
-        btnviewbrokerdetails.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        btnviewbrokerdetails.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnviewbrokerdetails.setText("View Broker Details");
         btnviewbrokerdetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnviewbrokerdetailsActionPerformed(evt);
             }
         });
-        add(btnviewbrokerdetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 100, 167, -1));
+        add(btnviewbrokerdetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 140, 167, -1));
 
-        btnupdatebrokerdetails.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        btnupdatebrokerdetails.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnupdatebrokerdetails.setText("Update Broker Details");
         btnupdatebrokerdetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnupdatebrokerdetailsActionPerformed(evt);
             }
         });
-        add(btnupdatebrokerdetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 160, -1, -1));
+        add(btnupdatebrokerdetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 200, -1, -1));
 
-        btndeletebrokerdetails.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        btndeletebrokerdetails.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btndeletebrokerdetails.setText("Delete Broker Details");
         btndeletebrokerdetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btndeletebrokerdetailsActionPerformed(evt);
             }
         });
-        add(btndeletebrokerdetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 230, 167, -1));
+        add(btndeletebrokerdetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 270, 167, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
         jLabel1.setText("jLabel1");

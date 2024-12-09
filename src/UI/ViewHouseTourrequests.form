@@ -25,6 +25,9 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="btnaccepttour">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Big Caslon" size="14" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Accept Tour"/>
       </Properties>
       <Events>
@@ -32,12 +35,15 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="560" y="260" width="104" height="-1"/>
+          <AbsoluteConstraints x="300" y="320" width="120" height="50"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="btndenytour">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Big Caslon" size="14" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Deny Tour"/>
       </Properties>
       <Events>
@@ -45,7 +51,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="290" y="260" width="106" height="-1"/>
+          <AbsoluteConstraints x="300" y="410" width="120" height="50"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -55,7 +61,7 @@
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="190" y="110" width="658" height="110"/>
+          <AbsoluteConstraints x="70" y="110" width="620" height="160"/>
         </Constraint>
       </Constraints>
 
@@ -64,21 +70,15 @@
         <Component class="javax.swing.JTable" name="tblviewstudent">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="5" rowCount="4">
+              <Table columnCount="4" rowCount="4">
                 <Column editable="true" title="Student ID" type="java.lang.Object"/>
                 <Column editable="true" title="Name" type="java.lang.Object"/>
                 <Column editable="true" title="Contact Number" type="java.lang.Object"/>
                 <Column editable="true" title="Email ID" type="java.lang.Object"/>
-                <Column editable="true" title="Title 5" type="java.lang.Object"/>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
               <TableColumnModel selectionModel="0">
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                  <Title/>
-                  <Editor/>
-                  <Renderer/>
-                </Column>
                 <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>

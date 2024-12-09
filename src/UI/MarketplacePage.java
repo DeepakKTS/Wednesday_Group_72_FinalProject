@@ -41,7 +41,7 @@ public class MarketplacePage extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(0, 204, 204));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnviewproducts.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        btnviewproducts.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnviewproducts.setText("View Products");
         btnviewproducts.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -50,7 +50,7 @@ public class MarketplacePage extends javax.swing.JFrame {
         });
         jPanel1.add(btnviewproducts, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 162, -1, -1));
 
-        btnsalrequests.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        btnsalrequests.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnsalrequests.setText("Sale Requests");
         btnsalrequests.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -61,7 +61,7 @@ public class MarketplacePage extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
         jLabel2.setText("jLabel2");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 150, -1));
 
         SplitPane.setLeftComponent(jPanel1);
 

@@ -47,7 +47,7 @@
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI Black" size="24" style="1"/>
+              <Font name="Big Caslon" size="14" style="1"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="LANDLORD LOGIN PAGE"/>
@@ -61,7 +61,7 @@
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI Black" size="18" style="1"/>
+              <Font name="Big Caslon" size="14" style="1"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="LOGIN"/>
@@ -75,7 +75,7 @@
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI Black" size="12" style="1"/>
+              <Font name="Big Caslon" size="14" style="1"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="USERNAME"/>
@@ -87,6 +87,11 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="txtusername">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Big Caslon" size="14" style="1"/>
+            </Property>
+          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="510" y="240" width="100" height="30"/>
@@ -94,6 +99,11 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="txtpassword">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Big Caslon" size="14" style="1"/>
+            </Property>
+          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="510" y="320" width="102" height="30"/>
@@ -103,7 +113,7 @@
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI Black" size="12" style="1"/>
+              <Font name="Big Caslon" size="14" style="1"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="PASSWORD"/>
@@ -117,7 +127,7 @@
         <Component class="javax.swing.JButton" name="btnlogin">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI Black" size="12" style="3"/>
+              <Font name="Big Caslon" size="14" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Login"/>
           </Properties>
@@ -126,14 +136,14 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="420" y="410" width="70" height="30"/>
+              <AbsoluteConstraints x="520" y="410" width="70" height="30"/>
             </Constraint>
           </Constraints>
         </Component>
         <Component class="javax.swing.JButton" name="btnclear">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI Black" size="12" style="3"/>
+              <Font name="Big Caslon" size="14" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Clear"/>
           </Properties>
@@ -142,12 +152,15 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="530" y="410" width="-1" height="30"/>
+              <AbsoluteConstraints x="400" y="410" width="-1" height="30"/>
             </Constraint>
           </Constraints>
         </Component>
         <Component class="javax.swing.JButton" name="jButton1">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Big Caslon" size="14" style="1"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Back"/>
           </Properties>
           <Events>
@@ -155,7 +168,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="480" y="510" width="-1" height="-1"/>
+              <AbsoluteConstraints x="470" y="480" width="-1" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>

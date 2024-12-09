@@ -103,17 +103,17 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
         txtid = new javax.swing.JTextField();
         btnview = new javax.swing.JButton();
         btnrefresh = new javax.swing.JButton();
-        lblphoto = new javax.swing.JLabel();
         btnlocation = new javax.swing.JButton();
         btnbooktour = new javax.swing.JButton();
         cmbtime = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
+        lblphoto = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 153, 153));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         buttonGroup.add(btnstudio);
-        btnstudio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnstudio.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnstudio.setText("Studio");
         btnstudio.setContentAreaFilled(false);
         btnstudio.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -122,48 +122,47 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
                 btnstudioActionPerformed(evt);
             }
         });
-        add(btnstudio, new org.netbeans.lib.awtextra.AbsoluteConstraints(94, 55, 73, -1));
+        add(btnstudio, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 73, -1));
 
         buttonGroup.add(btnonebhk);
-        btnonebhk.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnonebhk.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnonebhk.setText("1BHK");
         btnonebhk.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnonebhkActionPerformed(evt);
             }
         });
-        add(btnonebhk, new org.netbeans.lib.awtextra.AbsoluteConstraints(227, 55, -1, -1));
+        add(btnonebhk, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, -1, -1));
 
         buttonGroup.add(btntwobhk);
-        btntwobhk.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btntwobhk.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btntwobhk.setText("2BHK");
         btntwobhk.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btntwobhkActionPerformed(evt);
             }
         });
-        add(btntwobhk, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 55, -1, -1));
+        add(btntwobhk, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, -1, -1));
 
         buttonGroup.add(btnthreebhk);
-        btnthreebhk.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnthreebhk.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnthreebhk.setText("3BHK");
         btnthreebhk.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnthreebhkActionPerformed(evt);
             }
         });
-        add(btnthreebhk, new org.netbeans.lib.awtextra.AbsoluteConstraints(475, 55, -1, -1));
+        add(btnthreebhk, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 60, -1, -1));
 
-        btnsearch.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        btnsearch.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnsearch.setText("Search");
         btnsearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnsearchActionPerformed(evt);
             }
         });
-        add(btnsearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 50, 110, -1));
+        add(btnsearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 60, 110, -1));
 
-        tblapartmentlistings.setBackground(new java.awt.Color(204, 255, 204));
         tblapartmentlistings.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -190,7 +189,7 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
                 java.lang.Integer.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false
+                true, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -205,126 +204,134 @@ public class ViewApartmentlistings extends javax.swing.JPanel {
         tblapartmentlistings.setShowHorizontalLines(true);
         tblapartmentlistings.setShowVerticalLines(true);
         jScrollPane1.setViewportView(tblapartmentlistings);
+        if (tblapartmentlistings.getColumnModel().getColumnCount() > 0) {
+            tblapartmentlistings.getColumnModel().getColumn(0).setPreferredWidth(5);
+        }
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 105, 890, 198));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 740, 198));
 
-        lblapttype.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblapttype.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblapttype.setText("Apartment Type :");
         add(lblapttype, new org.netbeans.lib.awtextra.AbsoluteConstraints(64, 328, -1, -1));
 
         txtapttype.setEditable(false);
-        add(txtapttype, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 324, 213, -1));
+        add(txtapttype, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 317, 160, 30));
 
-        lbllandname.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lbllandname.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lbllandname.setText("Landlord Name :");
         add(lbllandname, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 369, -1, -1));
 
         txtlandname.setEditable(false);
-        add(txtlandname, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 365, 213, -1));
+        add(txtlandname, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 358, 160, 30));
 
-        lblprice.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblprice.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblprice.setText("Price :");
         add(lblprice, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 403, -1, 19));
 
         txtprice.setEditable(false);
-        add(txtprice, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 399, 213, -1));
+        add(txtprice, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 392, 160, 30));
 
-        lblutilities.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblutilities.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblutilities.setText("Utilities :");
         add(lblutilities, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 438, -1, -1));
 
         txtutilities.setEditable(false);
-        add(txtutilities, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 434, 213, -1));
+        add(txtutilities, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 427, 160, 30));
 
-        lblgrocery.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblgrocery.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblgrocery.setText("Grocery Stores :");
         add(lblgrocery, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 471, -1, 25));
 
         txtgrocery.setEditable(false);
-        add(txtgrocery, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 472, 213, -1));
+        add(txtgrocery, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 465, 160, 30));
 
-        lblhospitals.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblhospitals.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblhospitals.setText("Hospitals :");
         add(lblhospitals, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 508, -1, 25));
 
         txthospitals.setEditable(false);
-        add(txthospitals, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 509, 213, -1));
+        add(txthospitals, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 502, 160, 30));
 
-        lblmbta.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblmbta.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblmbta.setText("MBTA :");
         add(lblmbta, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 545, -1, 25));
 
         txtmbta.setEditable(false);
-        add(txtmbta, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 546, 213, -1));
+        add(txtmbta, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 539, 160, 30));
 
-        lblbrokername.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblbrokername.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblbrokername.setText("Broker name :");
         add(lblbrokername, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 580, -1, 25));
 
         txtbrokername.setEditable(false);
-        add(txtbrokername, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 582, 213, -1));
+        add(txtbrokername, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 575, 160, 30));
 
-        lblemailid.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblemailid.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblemailid.setText("Email ID :");
         add(lblemailid, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 620, -1, 25));
 
         txtemailid.setEditable(false);
-        add(txtemailid, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 620, 213, -1));
+        add(txtemailid, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 613, 160, 30));
 
-        lblaptname.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblaptname.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblaptname.setText("Apartment Name :");
         add(lblaptname, new org.netbeans.lib.awtextra.AbsoluteConstraints(59, 655, -1, 25));
 
         txtaptname.setEditable(false);
-        add(txtaptname, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 656, 213, -1));
+        add(txtaptname, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 649, 160, 30));
 
-        lblid.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblid.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblid.setText("ID :");
         add(lblid, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 692, -1, 25));
 
         txtid.setEditable(false);
-        add(txtid, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 693, 213, -1));
+        add(txtid, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 686, 160, 30));
 
-        btnview.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
-        btnview.setText("View");
+        btnview.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        btnview.setText("More Details");
         btnview.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnviewActionPerformed(evt);
             }
         });
-        add(btnview, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 320, -1, -1));
+        add(btnview, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 330, 120, 40));
 
-        btnrefresh.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        btnrefresh.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnrefresh.setText("Refresh");
         btnrefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnrefreshActionPerformed(evt);
             }
         });
-        add(btnrefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 320, -1, -1));
-        add(lblphoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 390, 260, 230));
+        add(btnrefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 390, -1, -1));
 
+        btnlocation.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnlocation.setText("Location");
         btnlocation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnlocationActionPerformed(evt);
             }
         });
-        add(btnlocation, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 660, -1, -1));
+        add(btnlocation, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 330, 120, 40));
 
+        btnbooktour.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnbooktour.setText("Book Apartment Tour");
         btnbooktour.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnbooktourActionPerformed(evt);
             }
         });
-        add(btnbooktour, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 360, -1, -1));
+        add(btnbooktour, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 550, 210, 70));
 
+        cmbtime.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         cmbtime.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "9 AM - 12 AM", "12 AM - 3 PM", "3 PM - 5 PM" }));
-        add(cmbtime, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, -1, -1));
+        add(cmbtime, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 480, 160, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1240, 750));
+
+        lblphoto.setText("jLabel2");
+        add(lblphoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 470, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnsearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsearchActionPerformed

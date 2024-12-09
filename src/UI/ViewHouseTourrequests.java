@@ -72,36 +72,38 @@ public class ViewHouseTourrequests extends javax.swing.JPanel {
         setBackground(new java.awt.Color(0, 153, 153));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnaccepttour.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnaccepttour.setText("Accept Tour");
         btnaccepttour.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnaccepttourActionPerformed(evt);
             }
         });
-        add(btnaccepttour, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 260, 104, -1));
+        add(btnaccepttour, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 320, 120, 50));
 
+        btndenytour.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btndenytour.setText("Deny Tour");
         btndenytour.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btndenytourActionPerformed(evt);
             }
         });
-        add(btndenytour, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 260, 106, -1));
+        add(btndenytour, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 410, 120, 50));
 
         tblviewstudent.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "Student ID", "Name", "Contact Number", "Email ID", "Title 5"
+                "Student ID", "Name", "Contact Number", "Email ID"
             }
         ));
         jScrollPane1.setViewportView(tblviewstudent);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 658, 110));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 620, 160));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
         jLabel1.setText("jLabel1");

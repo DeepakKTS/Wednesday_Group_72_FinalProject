@@ -40,7 +40,7 @@ public class LandlordPage extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(0, 204, 204));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnviewhousetourrequest.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        btnviewhousetourrequest.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnviewhousetourrequest.setText("View House Tour Requests");
         btnviewhousetourrequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -51,7 +51,7 @@ public class LandlordPage extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
         jLabel2.setText("jLabel2");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 270, 830));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 770));
 
         SplitPane.setLeftComponent(jPanel1);
 

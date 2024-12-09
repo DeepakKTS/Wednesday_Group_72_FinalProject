@@ -54,61 +54,72 @@ public class AddstudentsPage extends javax.swing.JPanel {
         setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
         setLayout(null);
 
-        lblid.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblid.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblid.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblid.setText("ID:");
         add(lblid);
-        lblid.setBounds(343, 138, 25, 15);
+        lblid.setBounds(320, 150, 25, 15);
 
-        lblname.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblname.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblname.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblname.setText("Name:");
         add(lblname);
-        lblname.setBounds(322, 184, 46, 15);
+        lblname.setBounds(300, 200, 46, 15);
 
-        lblcontactno.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblcontactno.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblcontactno.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblcontactno.setText("Contact No:");
         add(lblcontactno);
-        lblcontactno.setBounds(293, 232, 75, 15);
+        lblcontactno.setBounds(270, 240, 75, 15);
 
-        lblemailid.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblemailid.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblemailid.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblemailid.setText("Email ID:");
         add(lblemailid);
-        lblemailid.setBounds(309, 283, 59, 15);
+        lblemailid.setBounds(290, 300, 59, 15);
 
-        lblusername.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblusername.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblusername.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblusername.setText("Username:");
         add(lblusername);
-        lblusername.setBounds(303, 332, 65, 15);
-        add(txtid);
-        txtid.setBounds(410, 134, 151, 23);
+        lblusername.setBounds(280, 340, 65, 15);
 
+        txtid.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        add(txtid);
+        txtid.setBounds(390, 150, 151, 23);
+
+        txtname.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         txtname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtnameActionPerformed(evt);
             }
         });
         add(txtname);
-        txtname.setBounds(410, 180, 151, 23);
-        add(txtcontactno);
-        txtcontactno.setBounds(410, 228, 151, 23);
-        add(txtemailid);
-        txtemailid.setBounds(410, 279, 151, 23);
-        add(txtusername);
-        txtusername.setBounds(410, 328, 151, 23);
+        txtname.setBounds(390, 190, 151, 23);
 
-        lblpassword.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtcontactno.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        add(txtcontactno);
+        txtcontactno.setBounds(390, 240, 151, 23);
+
+        txtemailid.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        add(txtemailid);
+        txtemailid.setBounds(390, 290, 151, 23);
+
+        txtusername.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        add(txtusername);
+        txtusername.setBounds(390, 340, 151, 23);
+
+        lblpassword.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         lblpassword.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblpassword.setText("Password:");
         add(lblpassword);
-        lblpassword.setBounds(296, 383, 72, 15);
-        add(txtpassword);
-        txtpassword.setBounds(410, 379, 151, 23);
+        lblpassword.setBounds(280, 400, 72, 15);
 
-        btnaddstudent.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        txtpassword.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        add(txtpassword);
+        txtpassword.setBounds(390, 390, 151, 23);
+
+        btnaddstudent.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnaddstudent.setText("Add Student");
         btnaddstudent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -116,7 +127,7 @@ public class AddstudentsPage extends javax.swing.JPanel {
             }
         });
         add(btnaddstudent);
-        btnaddstudent.setBounds(567, 460, 124, 21);
+        btnaddstudent.setBounds(360, 460, 124, 21);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
         jLabel1.setText("jLabel1");

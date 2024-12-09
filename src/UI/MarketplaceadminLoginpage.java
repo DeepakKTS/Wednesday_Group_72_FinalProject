@@ -59,53 +59,58 @@ public class MarketplaceadminLoginpage extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(0, 153, 153));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("MARKETSPACE LOGIN PAGE");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1, 33, 1030, 50));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 30, 1030, 50));
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("LOGIN");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 150, 110, 39));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 160, 110, 39));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("USERNAME");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 230, 90, 30));
-        jPanel2.add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 230, 100, 30));
-        jPanel2.add(txtpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 310, 102, 30));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 240, 90, 30));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        txtusername.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        jPanel2.add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 240, 100, 30));
+
+        txtpassword.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
+        jPanel2.add(txtpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 320, 102, 30));
+
+        jLabel1.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("PASSWORD");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 310, 90, 30));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 320, 90, 30));
 
-        btnlogin.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        btnlogin.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnlogin.setText("Login");
         btnlogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnloginActionPerformed(evt);
             }
         });
-        jPanel2.add(btnlogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 400, -1, 30));
+        jPanel2.add(btnlogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 400, -1, 30));
 
-        btnclear.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        btnclear.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnclear.setText("Clear");
         btnclear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnclearActionPerformed(evt);
             }
         });
-        jPanel2.add(btnclear, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 400, -1, 30));
+        jPanel2.add(btnclear, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 400, -1, 30));
 
+        jButton1.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         jButton1.setText("Back");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 480, -1, -1));
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 470, -1, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));

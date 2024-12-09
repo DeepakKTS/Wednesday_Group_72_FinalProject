@@ -40,7 +40,7 @@ public class HeadRealtorPage extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 153, 51));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnaddbrokers.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        btnaddbrokers.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnaddbrokers.setText("Add Brokers");
         btnaddbrokers.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -49,7 +49,7 @@ public class HeadRealtorPage extends javax.swing.JFrame {
         });
         jPanel1.add(btnaddbrokers, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
 
-        btnviewbrokers.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        btnviewbrokers.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         btnviewbrokers.setText("View Brokers");
         btnviewbrokers.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,7 +60,7 @@ public class HeadRealtorPage extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
         jLabel2.setText("jLabel2");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 380, 770));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 140, 770));
 
         SplitPane.setLeftComponent(jPanel1);
 
@@ -68,7 +68,6 @@ public class HeadRealtorPage extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
-        jLabel1.setText("jLabel1");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 770));
 
         SplitPane.setRightComponent(jPanel2);

@@ -63,16 +63,16 @@ public class ViewProducts extends javax.swing.JPanel {
             tblmarketplace.getColumnModel().getColumn(3).setMaxWidth(0);
         }
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, -1, 160));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, -1, 160));
 
-        jButton1.setFont(new java.awt.Font("Segoe UI Black", 3, 12)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Big Caslon", 1, 14)); // NOI18N
         jButton1.setText("Buy Product");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(441, 379, 166, 39));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 380, 166, 39));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));

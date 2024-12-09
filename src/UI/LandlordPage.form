@@ -56,7 +56,7 @@
             <Component class="javax.swing.JButton" name="btnviewhousetourrequest">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="12" style="3"/>
+                  <Font name="Big Caslon" size="14" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="View House Tour Requests"/>
               </Properties>
@@ -78,7 +78,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="0" y="-40" width="270" height="830"/>
+                  <AbsoluteConstraints x="0" y="0" width="200" height="770"/>
                 </Constraint>
               </Constraints>
             </Component>
