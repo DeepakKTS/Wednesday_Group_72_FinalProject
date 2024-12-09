@@ -46,8 +46,10 @@ public class ViewHousetourbookings extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         tblviewapartment = new javax.swing.JTable();
         btnrequest = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 153, 153));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tblviewstudent.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -67,6 +69,8 @@ public class ViewHousetourbookings extends javax.swing.JPanel {
             tblviewstudent.getColumnModel().getColumn(4).setMaxWidth(0);
         }
 
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 660, 140));
+
         tblviewapartment.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -85,6 +89,8 @@ public class ViewHousetourbookings extends javax.swing.JPanel {
             tblviewapartment.getColumnModel().getColumn(5).setMaxWidth(0);
         }
 
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 658, 129));
+
         btnrequest.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         btnrequest.setText("Request Landlord");
         btnrequest.addActionListener(new java.awt.event.ActionListener() {
@@ -92,36 +98,10 @@ public class ViewHousetourbookings extends javax.swing.JPanel {
                 btnrequestActionPerformed(evt);
             }
         });
+        add(btnrequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 430, 145, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane2)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jScrollPane1)
-                                .addGap(38, 38, 38))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(274, 274, 274)
-                        .addComponent(btnrequest, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(133, 133, 133))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(70, 70, 70)
-                .addComponent(btnrequest)
-                .addContainerGap(156, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1090, 770));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnrequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnrequestActionPerformed
@@ -142,6 +122,7 @@ public class ViewHousetourbookings extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnrequest;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable tblviewapartment;

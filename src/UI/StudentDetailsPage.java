@@ -46,33 +46,43 @@ public class StudentDetailsPage extends javax.swing.JFrame {
         lblcontactno = new javax.swing.JLabel();
         lblemailid = new javax.swing.JLabel();
         btnrequest = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 153, 153));
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.add(txtid, new org.netbeans.lib.awtextra.AbsoluteConstraints(398, 170, 151, -1));
 
         txtname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtnameActionPerformed(evt);
             }
         });
+        jPanel1.add(txtname, new org.netbeans.lib.awtextra.AbsoluteConstraints(398, 216, 151, -1));
+        jPanel1.add(txtcontactno, new org.netbeans.lib.awtextra.AbsoluteConstraints(398, 264, 151, -1));
+        jPanel1.add(txtemailid, new org.netbeans.lib.awtextra.AbsoluteConstraints(398, 315, 151, -1));
 
         lblid.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblid.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblid.setText("ID:");
+        jPanel1.add(lblid, new org.netbeans.lib.awtextra.AbsoluteConstraints(331, 174, 25, -1));
 
         lblname.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblname.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblname.setText("Name:");
+        jPanel1.add(lblname, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 220, 46, -1));
 
         lblcontactno.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblcontactno.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblcontactno.setText("Contact No:");
+        jPanel1.add(lblcontactno, new org.netbeans.lib.awtextra.AbsoluteConstraints(281, 268, 75, -1));
 
         lblemailid.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblemailid.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblemailid.setText("Email ID:");
+        jPanel1.add(lblemailid, new org.netbeans.lib.awtextra.AbsoluteConstraints(297, 319, 59, -1));
 
         btnrequest.setText("Request");
         btnrequest.addActionListener(new java.awt.event.ActionListener() {
@@ -80,57 +90,10 @@ public class StudentDetailsPage extends javax.swing.JFrame {
                 btnrequestActionPerformed(evt);
             }
         });
+        jPanel1.add(btnrequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 400, -1, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(580, Short.MAX_VALUE)
-                .addComponent(btnrequest)
-                .addGap(178, 178, 178))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(281, 281, 281)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(lblemailid, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lblcontactno, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lblname, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lblid, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(42, 42, 42)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(txtid, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
-                        .addComponent(txtname)
-                        .addComponent(txtemailid)
-                        .addComponent(txtcontactno))
-                    .addContainerGap(281, Short.MAX_VALUE)))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(496, Short.MAX_VALUE)
-                .addComponent(btnrequest)
-                .addGap(83, 83, 83))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(170, 170, 170)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblid)
-                        .addComponent(txtid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(23, 23, 23)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblname)
-                        .addComponent(txtname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(25, 25, 25)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblcontactno)
-                        .addComponent(txtcontactno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(28, 28, 28)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblemailid)
-                        .addComponent(txtemailid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addContainerGap(268, Short.MAX_VALUE)))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project Images/gradient (1).jpeg"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 770));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -236,6 +199,7 @@ public class StudentDetailsPage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnrequest;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblcontactno;
     private javax.swing.JLabel lblemailid;
